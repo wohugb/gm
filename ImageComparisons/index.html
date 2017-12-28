@@ -31,22 +31,22 @@
       
         <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
       
-      <link rel="shortcut icon" href="./assets/images/favicon.png">
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.2.5">
     
     
       
-        <title>GM</title>
+        <title>比较 - GM</title>
       
     
     
-      <link rel="stylesheet" href="./assets/stylesheets/application.bcabdff3.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.bcabdff3.css">
       
-        <link rel="stylesheet" href="./assets/stylesheets/application-palette.792431c1.css">
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.792431c1.css">
       
     
     
-      <script src="./assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
     
     
       
@@ -81,7 +81,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="." title="GM" class="md-header-nav__button md-logo">
+        <a href=".." title="GM" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -98,7 +98,7 @@
                 GM
               </span>
               <span class="md-header-nav__topic">
-                概述
+                比较
               </span>
             
           
@@ -175,7 +175,7 @@
         
   <li class="md-tabs__item">
     
-      <a href="." title="概述" class="md-tabs__link md-tabs__link--active">
+      <a href=".." title="概述" class="md-tabs__link md-tabs__link--active">
         概述
       </a>
     
@@ -241,20 +241,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-    <a href="." title="概述" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href=".." title="概述" class="md-nav__link">
       概述
     </a>
-    
   </li>
 
     
@@ -264,7 +255,7 @@
 
 
   <li class="md-nav__item">
-    <a href="Manipulation/" title="处理" class="md-nav__link">
+    <a href="../Manipulation/" title="处理" class="md-nav__link">
       处理
     </a>
   </li>
@@ -276,7 +267,7 @@
 
 
   <li class="md-nav__item">
-    <a href="Getters/" title="获得者" class="md-nav__link">
+    <a href="../Getters/" title="获得者" class="md-nav__link">
       获得者
     </a>
   </li>
@@ -288,7 +279,7 @@
 
 
   <li class="md-nav__item">
-    <a href="Drawing/" title="绘画" class="md-nav__link">
+    <a href="../Drawing/" title="绘画" class="md-nav__link">
       绘画
     </a>
   </li>
@@ -298,11 +289,20 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="ImageComparisons/" title="比较" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+    <a href="./" title="比较" class="md-nav__link md-nav__link--active">
       比较
     </a>
+    
   </li>
 
     
@@ -312,7 +312,7 @@
 
 
   <li class="md-nav__item">
-    <a href="UsingImagemagick/" title="使用" class="md-nav__link">
+    <a href="../UsingImagemagick/" title="使用" class="md-nav__link">
       使用
     </a>
   </li>
@@ -346,9 +346,26 @@
               
                 
                 
-                <h1 id="get-it">Get it!<a class="headerlink" href="#get-it" title="Permanent link">&para;</a></h1>
-<p>首先需要安装 <a href="http://www.graphicsmagick.org/">GraphicsMagick</a> 或者 <a href="http://www.imagemagick.org/">ImageMagick</a>. 然后:</p>
-<div class="codehilite"><pre><span></span>&gt; npm install gm
+                <h1 id="_1">图像比较<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>Both GraphicsMagick and ImageMagick support image comparisons which are exposed through gm.compare().</p>
+<p>Currently both path1 and path2 must be strings (no Buffers or Streams). Optionally pass a custom tolerance level if 0.4 (the default) is too lax for your use case.</p>
+<p>Your callback will be passed four arguments:</p>
+<div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">.</span><span class="nx">compare</span><span class="p">(</span><span class="nx">path1</span><span class="p">,</span> <span class="nx">path2</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">isEqual</span><span class="p">,</span> <span class="nx">equality</span><span class="p">,</span> <span class="nx">raw</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="k">throw</span> <span class="nx">err</span><span class="p">;</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;The images are equal: %s&#39;</span><span class="p">,</span> <span class="nx">isEqual</span><span class="p">);</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Actual equality: %d&#39;</span><span class="p">,</span> <span class="nx">equality</span><span class="p">)</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Raw output was: %j&#39;</span><span class="p">,</span> <span class="nx">raw</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+
+<p>You can also output a diff image of the two images by passing a configuration object in place of the tolerance:</p>
+<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">highlightColor</span><span class="o">:</span> <span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="c1">// optional. Defaults to red</span>
+  <span class="nx">file</span><span class="o">:</span> <span class="s1">&#39;./diff.png&#39;</span> <span class="c1">// required</span>
+<span class="p">};</span>
+<span class="nx">gm</span><span class="p">.</span><span class="nx">compare</span><span class="p">(</span><span class="nx">path1</span><span class="p">,</span> <span class="nx">path2</span><span class="p">,</span> <span class="nx">options</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="k">throw</span> <span class="nx">err</span><span class="p">;</span>
+<span class="p">});</span>
 </pre></div>
                 
                   
@@ -368,14 +385,28 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
+          <a href="../Drawing/" title="绘画" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                绘画
+              </span>
+            </div>
+          </a>
         
-          <a href="Manipulation/" title="处理" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+        
+          <a href="../UsingImagemagick/" title="使用" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   前进
                 </span>
-                处理
+                使用
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -423,22 +454,22 @@
       
     </div>
     
-      <script src="./assets/javascripts/application.6cdc17f0.js"></script>
+      <script src="../assets/javascripts/application.6cdc17f0.js"></script>
       
         
         
           
-          <script src="./assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          <script src="../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
           
             
               
-              <script src="./assets/javascripts/lunr/lunr.zh.js"></script>
+              <script src="../assets/javascripts/lunr/lunr.zh.js"></script>
             
           
           
         
       
-      <script>app.initialize({version:"0.17.2",url:{base:"."}})</script>
+      <script>app.initialize({version:"0.17.2",url:{base:".."}})</script>
       
     
     

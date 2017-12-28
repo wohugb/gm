@@ -31,22 +31,22 @@
       
         <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
       
-      <link rel="shortcut icon" href="./assets/images/favicon.png">
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.2.5">
     
     
       
-        <title>GM</title>
+        <title>使用 - GM</title>
       
     
     
-      <link rel="stylesheet" href="./assets/stylesheets/application.bcabdff3.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.bcabdff3.css">
       
-        <link rel="stylesheet" href="./assets/stylesheets/application-palette.792431c1.css">
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.792431c1.css">
       
     
     
-      <script src="./assets/javascripts/modernizr.1aa3b519.js"></script>
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
     
     
       
@@ -81,7 +81,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="." title="GM" class="md-header-nav__button md-logo">
+        <a href=".." title="GM" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -98,7 +98,7 @@
                 GM
               </span>
               <span class="md-header-nav__topic">
-                概述
+                使用
               </span>
             
           
@@ -175,7 +175,7 @@
         
   <li class="md-tabs__item">
     
-      <a href="." title="概述" class="md-tabs__link md-tabs__link--active">
+      <a href=".." title="概述" class="md-tabs__link md-tabs__link--active">
         概述
       </a>
     
@@ -241,20 +241,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-    <a href="." title="概述" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href=".." title="概述" class="md-nav__link">
       概述
     </a>
-    
   </li>
 
     
@@ -264,7 +255,7 @@
 
 
   <li class="md-nav__item">
-    <a href="Manipulation/" title="处理" class="md-nav__link">
+    <a href="../Manipulation/" title="处理" class="md-nav__link">
       处理
     </a>
   </li>
@@ -276,7 +267,7 @@
 
 
   <li class="md-nav__item">
-    <a href="Getters/" title="获得者" class="md-nav__link">
+    <a href="../Getters/" title="获得者" class="md-nav__link">
       获得者
     </a>
   </li>
@@ -288,7 +279,7 @@
 
 
   <li class="md-nav__item">
-    <a href="Drawing/" title="绘画" class="md-nav__link">
+    <a href="../Drawing/" title="绘画" class="md-nav__link">
       绘画
     </a>
   </li>
@@ -300,7 +291,7 @@
 
 
   <li class="md-nav__item">
-    <a href="ImageComparisons/" title="比较" class="md-nav__link">
+    <a href="../ImageComparisons/" title="比较" class="md-nav__link">
       比较
     </a>
   </li>
@@ -310,11 +301,20 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="UsingImagemagick/" title="使用" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+    <a href="./" title="使用" class="md-nav__link md-nav__link--active">
       使用
     </a>
+    
   </li>
 
     
@@ -346,10 +346,18 @@
               
                 
                 
-                <h1 id="get-it">Get it!<a class="headerlink" href="#get-it" title="Permanent link">&para;</a></h1>
-<p>首先需要安装 <a href="http://www.graphicsmagick.org/">GraphicsMagick</a> 或者 <a href="http://www.imagemagick.org/">ImageMagick</a>. 然后:</p>
-<div class="codehilite"><pre><span></span>&gt; npm install gm
+                <h1 id="imagemagick">使用 IMAGEMAGICK<a class="headerlink" href="#imagemagick" title="Permanent link">&para;</a></h1>
+<p>We have compatibility with ImageMagick too. Just subclass the gm constructor passing the imageMagick option.</p>
+<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">imageMagick</span> <span class="o">=</span> <span class="nx">gm</span><span class="p">.</span><span class="nx">subClass</span><span class="p">({</span> <span class="nx">imageMagick</span><span class="o">:</span> <span class="kc">true</span> <span class="p">});</span>
 </pre></div>
+
+<div class="codehilite"><pre><span></span><span class="nx">imageMagick</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">autoOrient</span><span class="p">().</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;/path&#39;</span><span class="p">,</span> <span class="nx">callback</span><span class="p">);</span>
+</pre></div>
+
+<p>IMAGEMAGICK OPTIONS</p>
+<p>Unlike GraphicsMagick, ImageMagick supports the WebP format. However, you must compile ImageMagick with the WebP option. To do so on OS X, install ImageMagick with the following command using Homebrew:</p>
+<p>brew install imagemagick --with-webp
+If you have already installed ImageMagick, you would have to uninstall it then reinstall it.</p>
                 
                   
                 
@@ -368,20 +376,20 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-        
-          <a href="Manipulation/" title="处理" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../ImageComparisons/" title="比较" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
-                  前进
+                  后退
                 </span>
-                处理
+                比较
               </span>
             </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
           </a>
+        
         
       </nav>
     </div>
@@ -423,22 +431,22 @@
       
     </div>
     
-      <script src="./assets/javascripts/application.6cdc17f0.js"></script>
+      <script src="../assets/javascripts/application.6cdc17f0.js"></script>
       
         
         
           
-          <script src="./assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          <script src="../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
           
             
               
-              <script src="./assets/javascripts/lunr/lunr.zh.js"></script>
+              <script src="../assets/javascripts/lunr/lunr.zh.js"></script>
             
           
           
         
       
-      <script>app.initialize({version:"0.17.2",url:{base:"."}})</script>
+      <script>app.initialize({version:"0.17.2",url:{base:".."}})</script>
       
     
     
