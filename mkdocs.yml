@@ -1,0 +1,64 @@
+site_name: GM
+site_description: GraphicsMagick and ImageMagick for node
+site_author: Nosy
+copyright: '版权 &copy; 2017 - 2018 wohugb.github.io'
+
+# Repository
+repo_name: wohugb/gm
+repo_url: https://github.com/wohugb/gm
+edit_uri: ""
+
+theme:
+  name: material
+
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+
+  # Default values, taken from mkdocs_theme.yml
+  language: zh
+  feature:
+    tabs: true
+  palette:
+    primary: indigo
+    accent: indigo
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/images/favicon.png
+  logo:
+    icon: "\uE80C"
+  extra_css: [assets/stylesheets/extra.css]
+# Customization
+extra:
+  social:
+    - type: globe
+      link: http://wohugb.github.io
+    - type: github-alt
+      link: https://github.com/wohugb
+    - type: twitter
+      link: https://twitter.com/wohugb
+    - type: linkedin
+      link: https://linkedin.com/in/wohugb
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite:
+      linenums: false
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.details
+
+# Page tree
+pages:
+  - 概述: index.md
+  - 处理: Manipulation.md
+  - 获得者: Getters.md
+  - 绘画: Drawing.md
+  - 比较: ImageComparisons.md
+  - 使用: UsingImagemagick.md
+
