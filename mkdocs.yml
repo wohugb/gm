@@ -56,9 +56,22 @@ markdown_extensions:
 # Page tree
 pages:
   - 概述: index.md
-  - 处理: Manipulation.md
-  - 获得者: Getters.md
-  - 绘画: Drawing.md
+  - 基础用法: BasicUsage.md
+  - 流: Streams.md
+  - 缓冲区: Buffers.md
+  - 蒙太奇: Montage.md
+  - 自定义:
+      - 参数: custom/arguments.md
+      - 标识格式字符串: custom/IdentifyFormatString.md
+  - 方法: Manipulation.md
+  - 获取器: Getters.md
+  - 绘画: 
+    - 命令: drawing/index.md
+    - 举例: drawing/example.md
+  - 合成:
+    - 概述: composite/index.md
+    - 代码: composite/example.md
   - 比较: ImageComparisons.md
-  - 使用: UsingImagemagick.md
+  - 使用IM: UsingImagemagick.md
+  - 扩展: Extending.md
 

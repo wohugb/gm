@@ -1,18 +1,18 @@
 # 获取器
 
-All getters have the same signature:
+所有的获取器都有相同的签名:
 
 ```js
 gm("image.png").size(function(err, value){
-  // note : value may be undefined
+  // 注意 : 值可能为 undefined
 })
 ```
 
-* size - returns the size (WxH) of the image
-* format - returns the image format (gif, jpeg, png, etc)
-* depth - returns the image color depth
-* color - returns the number of colors
-* res - returns the image resolution
-* filesize - returns image filesize
-* identify - returns all image data available
-* orientation - returns the EXIF orientation of the image
+* size - 图像宽高 (WxH)
+* format - 格式 (gif, jpeg, png, etc)
+* depth - 颜色深度
+* color - 颜色数
+* res - 分辨率
+* filesize - 文件大小
+* identify - 数据可用性
+* orientation - EXIF方向
