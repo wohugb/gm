@@ -36,7 +36,7 @@
     
     
       
-        <title>比较 - GM</title>
+        <title>概述 - GM</title>
       
     
     
@@ -98,7 +98,7 @@
                 GM
               </span>
               <span class="md-header-nav__topic">
-                比较
+                概述
               </span>
             
           
@@ -168,14 +168,16 @@
       
         
 
-<nav class="md-tabs" data-md-component="tabs">
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
   <li class="md-tabs__item">
     
-      <a href=".." title="概述" class="md-tabs__link md-tabs__link--active">
+      <a href=".." title="概述" class="md-tabs__link">
         概述
       </a>
     
@@ -225,7 +227,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../composite/" title="合成" class="md-tabs__link">
+        <a href="./" title="合成" class="md-tabs__link md-tabs__link--active">
           合成
         </a>
       
@@ -468,10 +470,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10" checked>
     
     <label class="md-nav__link" for="nav-10">
       合成
@@ -487,11 +491,20 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../composite/" title="概述" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+    <a href="./" title="概述" class="md-nav__link md-nav__link--active">
       概述
     </a>
+    
   </li>
 
         
@@ -501,7 +514,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../composite/example/" title="代码" class="md-nav__link">
+    <a href="example/" title="代码" class="md-nav__link">
       代码
     </a>
   </li>
@@ -516,47 +529,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        比较
-      </label>
-    
-    <a href="./" title="比较" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../ImageComparisons/" title="比较" class="md-nav__link">
       比较
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="toc">目录</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" title="图像比较" class="md-nav__link">
-    图像比较
-  </a>
-  
-</li>
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -601,20 +578,6 @@
     
   
   
-    <label class="md-nav__title" for="toc">目录</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" title="图像比较" class="md-nav__link">
-    图像比较
-  </a>
-  
-</li>
-      
-      
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -626,66 +589,18 @@
               
                 
                 
-                <h1 id="_1">比较<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>Graphicsmagicks <code>compare</code> command is exposed through <code>gm.compare()</code>. This allows us to determine if two images can be considered "equal".</p>
-<p>Currently <code>gm.compare</code> only accepts file paths.</p>
-<div class="codehilite"><pre><span></span>gm.compare(path1, path2 [, options], callback)
+                <h1 id="_1">合并<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>GraphicsMagick supports compositing one image on top of another. This is exposed through <code>gm.composite()</code>. Its first argument is an image path with the changes to the base image, and an optional mask image.</p>
+<p>Currently, <code>gm.composite()</code> only accepts file paths.</p>
+<div class="codehilite"><pre><span></span>gm.composite(other [, mask])
 </pre></div>
 
 
-<div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">.</span><span class="nx">compare</span><span class="p">(</span><span class="s1">&#39;/path/to/image1.jpg&#39;</span><span class="p">,</span> <span class="s1">&#39;/path/to/another.png&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">isEqual</span><span class="p">,</span> <span class="nx">equality</span><span class="p">,</span> <span class="nx">raw</span><span class="p">,</span> <span class="nx">path1</span><span class="p">,</span> <span class="nx">path2</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="k">return</span> <span class="nx">handle</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
-
-  <span class="c1">// if the images were considered equal, `isEqual` will be true, otherwise, false.</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;The images were equal: %s&#39;</span><span class="p">,</span> <span class="nx">isEqual</span><span class="p">);</span>
-
-  <span class="c1">// to see the total equality returned by graphicsmagick we can inspect the `equality` argument.</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Actual equality: %d&#39;</span><span class="p">,</span> <span class="nx">equality</span><span class="p">);</span>
-
-  <span class="c1">// inspect the raw output</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">raw</span><span class="p">);</span>
-
-  <span class="c1">// print file paths</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">path1</span><span class="p">,</span> <span class="nx">path2</span><span class="p">);</span>
-<span class="p">})</span>
-</pre></div>
-
-<p>You may wish to pass a custom tolerance threshold to increase or decrease the default level of <code>0.4</code>.</p>
-<div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">.</span><span class="nx">compare</span><span class="p">(</span><span class="s1">&#39;/path/to/image1.jpg&#39;</span><span class="p">,</span> <span class="s1">&#39;/path/to/another.png&#39;</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">isEqual</span><span class="p">)</span> <span class="p">{</span>
-  <span class="p">...</span>
-<span class="p">})</span>
-</pre></div>
-
-<p>To output a diff image, pass a configuration object to define the diff options and tolerance.</p>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">file</span><span class="o">:</span> <span class="s1">&#39;/path/to/diff.png&#39;</span><span class="p">,</span>
-  <span class="nx">highlightColor</span><span class="o">:</span> <span class="s1">&#39;yellow&#39;</span><span class="p">,</span>
-  <span class="nx">tolerance</span><span class="o">:</span> <span class="mf">0.02</span>
-<span class="p">}</span>
-<span class="nx">gm</span><span class="p">.</span><span class="nx">compare</span><span class="p">(</span><span class="s1">&#39;/path/to/image1.jpg&#39;</span><span class="p">,</span> <span class="s1">&#39;/path/to/another.png&#39;</span><span class="p">,</span> <span class="nx">options</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">isEqual</span><span class="p">,</span> <span class="nx">equality</span><span class="p">,</span> <span class="nx">raw</span><span class="p">)</span> <span class="p">{</span>
-  <span class="p">...</span>
-<span class="p">})</span>
-</pre></div>
-
-<h2 id="_2">图像比较<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>Both GraphicsMagick and ImageMagick support image comparisons which are exposed through gm.compare().</p>
-<p>Currently both path1 and path2 must be strings (no Buffers or Streams). Optionally pass a custom tolerance level if 0.4 (the default) is too lax for your use case.</p>
-<p>Your callback will be passed four arguments:</p>
-<div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">.</span><span class="nx">compare</span><span class="p">(</span><span class="nx">path1</span><span class="p">,</span> <span class="nx">path2</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">isEqual</span><span class="p">,</span> <span class="nx">equality</span><span class="p">,</span> <span class="nx">raw</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="k">throw</span> <span class="nx">err</span><span class="p">;</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;The images are equal: %s&#39;</span><span class="p">,</span> <span class="nx">isEqual</span><span class="p">);</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Actual equality: %d&#39;</span><span class="p">,</span> <span class="nx">equality</span><span class="p">)</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Raw output was: %j&#39;</span><span class="p">,</span> <span class="nx">raw</span><span class="p">);</span>
-<span class="p">});</span>
-</pre></div>
-
-<p>You can also output a diff image of the two images by passing a configuration object in place of the tolerance:</p>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">highlightColor</span><span class="o">:</span> <span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="c1">// optional. Defaults to red</span>
-  <span class="nx">file</span><span class="o">:</span> <span class="s1">&#39;./diff.png&#39;</span> <span class="c1">// required</span>
-<span class="p">};</span>
-<span class="nx">gm</span><span class="p">.</span><span class="nx">compare</span><span class="p">(</span><span class="nx">path1</span><span class="p">,</span> <span class="nx">path2</span><span class="p">,</span> <span class="nx">options</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="k">throw</span> <span class="nx">err</span><span class="p">;</span>
+<div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s1">&#39;/path/to/image.jpg&#39;</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">composite</span><span class="p">(</span><span class="s1">&#39;/path/to/second_image.jpg&#39;</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">geometry</span><span class="p">(</span><span class="s1">&#39;+100+150&#39;</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;/path/to/composite.png&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">err</span><span class="p">)</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Written composite image.&quot;</span><span class="p">);</span>
 <span class="p">});</span>
 </pre></div>
                 
@@ -706,7 +621,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../composite/example/" title="代码" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../drawing/example/" title="举例" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -715,19 +630,19 @@
                 <span class="md-footer-nav__direction">
                   后退
                 </span>
-                代码
+                举例
               </span>
             </div>
           </a>
         
         
-          <a href="../UsingImagemagick/" title="使用IM" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="example/" title="代码" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   前进
                 </span>
-                使用IM
+                代码
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

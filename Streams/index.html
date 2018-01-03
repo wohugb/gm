@@ -36,7 +36,7 @@
     
     
       
-        <title>比较 - GM</title>
+        <title>流 - GM</title>
       
     
     
@@ -98,7 +98,7 @@
                 GM
               </span>
               <span class="md-header-nav__topic">
-                比较
+                流
               </span>
             
           
@@ -312,11 +312,20 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../Streams/" title="流" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+    <a href="./" title="流" class="md-nav__link md-nav__link--active">
       流
     </a>
+    
   </li>
 
     
@@ -516,47 +525,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        比较
-      </label>
-    
-    <a href="./" title="比较" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../ImageComparisons/" title="比较" class="md-nav__link">
       比较
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="toc">目录</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" title="图像比较" class="md-nav__link">
-    图像比较
-  </a>
-  
-</li>
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -601,20 +574,6 @@
     
   
   
-    <label class="md-nav__title" for="toc">目录</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" title="图像比较" class="md-nav__link">
-    图像比较
-  </a>
-  
-</li>
-      
-      
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -626,68 +585,78 @@
               
                 
                 
-                <h1 id="_1">比较<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>Graphicsmagicks <code>compare</code> command is exposed through <code>gm.compare()</code>. This allows us to determine if two images can be considered "equal".</p>
-<p>Currently <code>gm.compare</code> only accepts file paths.</p>
-<div class="codehilite"><pre><span></span>gm.compare(path1, path2 [, options], callback)
-</pre></div>
-
-
-<div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">.</span><span class="nx">compare</span><span class="p">(</span><span class="s1">&#39;/path/to/image1.jpg&#39;</span><span class="p">,</span> <span class="s1">&#39;/path/to/another.png&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">isEqual</span><span class="p">,</span> <span class="nx">equality</span><span class="p">,</span> <span class="nx">raw</span><span class="p">,</span> <span class="nx">path1</span><span class="p">,</span> <span class="nx">path2</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="k">return</span> <span class="nx">handle</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
-
-  <span class="c1">// if the images were considered equal, `isEqual` will be true, otherwise, false.</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;The images were equal: %s&#39;</span><span class="p">,</span> <span class="nx">isEqual</span><span class="p">);</span>
-
-  <span class="c1">// to see the total equality returned by graphicsmagick we can inspect the `equality` argument.</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Actual equality: %d&#39;</span><span class="p">,</span> <span class="nx">equality</span><span class="p">);</span>
-
-  <span class="c1">// inspect the raw output</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">raw</span><span class="p">);</span>
-
-  <span class="c1">// print file paths</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">path1</span><span class="p">,</span> <span class="nx">path2</span><span class="p">);</span>
-<span class="p">})</span>
-</pre></div>
-
-<p>You may wish to pass a custom tolerance threshold to increase or decrease the default level of <code>0.4</code>.</p>
-<div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">.</span><span class="nx">compare</span><span class="p">(</span><span class="s1">&#39;/path/to/image1.jpg&#39;</span><span class="p">,</span> <span class="s1">&#39;/path/to/another.png&#39;</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">isEqual</span><span class="p">)</span> <span class="p">{</span>
-  <span class="p">...</span>
-<span class="p">})</span>
-</pre></div>
-
-<p>To output a diff image, pass a configuration object to define the diff options and tolerance.</p>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">file</span><span class="o">:</span> <span class="s1">&#39;/path/to/diff.png&#39;</span><span class="p">,</span>
-  <span class="nx">highlightColor</span><span class="o">:</span> <span class="s1">&#39;yellow&#39;</span><span class="p">,</span>
-  <span class="nx">tolerance</span><span class="o">:</span> <span class="mf">0.02</span>
-<span class="p">}</span>
-<span class="nx">gm</span><span class="p">.</span><span class="nx">compare</span><span class="p">(</span><span class="s1">&#39;/path/to/image1.jpg&#39;</span><span class="p">,</span> <span class="s1">&#39;/path/to/another.png&#39;</span><span class="p">,</span> <span class="nx">options</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">isEqual</span><span class="p">,</span> <span class="nx">equality</span><span class="p">,</span> <span class="nx">raw</span><span class="p">)</span> <span class="p">{</span>
-  <span class="p">...</span>
-<span class="p">})</span>
-</pre></div>
-
-<h2 id="_2">图像比较<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>Both GraphicsMagick and ImageMagick support image comparisons which are exposed through gm.compare().</p>
-<p>Currently both path1 and path2 must be strings (no Buffers or Streams). Optionally pass a custom tolerance level if 0.4 (the default) is too lax for your use case.</p>
-<p>Your callback will be passed four arguments:</p>
-<div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">.</span><span class="nx">compare</span><span class="p">(</span><span class="nx">path1</span><span class="p">,</span> <span class="nx">path2</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">isEqual</span><span class="p">,</span> <span class="nx">equality</span><span class="p">,</span> <span class="nx">raw</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="k">throw</span> <span class="nx">err</span><span class="p">;</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;The images are equal: %s&#39;</span><span class="p">,</span> <span class="nx">isEqual</span><span class="p">);</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Actual equality: %d&#39;</span><span class="p">,</span> <span class="nx">equality</span><span class="p">)</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Raw output was: %j&#39;</span><span class="p">,</span> <span class="nx">raw</span><span class="p">);</span>
+                <h1 id="_1">流<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<details class="note" open="open"><summary>输入流</summary><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">readStream</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">createReadStream</span><span class="p">(</span><span class="s1">&#39;/path/to/my/img.jpg&#39;</span><span class="p">);</span>
+<span class="nx">gm</span><span class="p">(</span><span class="nx">readStream</span><span class="p">,</span> <span class="s1">&#39;img.jpg&#39;</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;/path/to/reformat.png&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">err</span><span class="p">)</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;done&#39;</span><span class="p">);</span>
 <span class="p">});</span>
 </pre></div>
+</details><details class="note" open="open"><summary>输入远程流</summary><div class="codehilite"><pre><span></span><span class="c1">// </span>
 
-<p>You can also output a diff image of the two images by passing a configuration object in place of the tolerance:</p>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">highlightColor</span><span class="o">:</span> <span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="c1">// optional. Defaults to red</span>
-  <span class="nx">file</span><span class="o">:</span> <span class="s1">&#39;./diff.png&#39;</span> <span class="c1">// required</span>
-<span class="p">};</span>
-<span class="nx">gm</span><span class="p">.</span><span class="nx">compare</span><span class="p">(</span><span class="nx">path1</span><span class="p">,</span> <span class="nx">path2</span><span class="p">,</span> <span class="nx">options</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="k">throw</span> <span class="nx">err</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">request</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;request&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="s2">&quot;www.abc.com/pic.jpg&quot;</span>
+
+<span class="nx">gm</span><span class="p">(</span><span class="nx">request</span><span class="p">(</span><span class="nx">url</span><span class="p">))</span>
+<span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;/path/to/reformat.png&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">err</span><span class="p">)</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;done&#39;</span><span class="p">);</span>
 <span class="p">});</span>
 </pre></div>
+</details><details class="note" open="open"><summary>输出可读流</summary><div class="codehilite"><pre><span></span><span class="c1">// can also stream output to a ReadableStream</span>
+<span class="c1">// (can be piped to a local file or remote server)</span>
+<span class="nx">gm</span><span class="p">(</span><span class="s1">&#39;/path/to/my/img.jpg&#39;</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">resize</span><span class="p">(</span><span class="s1">&#39;200&#39;</span><span class="p">,</span> <span class="s1">&#39;200&#39;</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">stream</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">stdout</span><span class="p">,</span> <span class="nx">stderr</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">writeStream</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">createWriteStream</span><span class="p">(</span><span class="s1">&#39;/path/to/my/resized.jpg&#39;</span><span class="p">);</span>
+  <span class="nx">stdout</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">writeStream</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="c1">// without a callback, .stream() returns a stream</span>
+<span class="c1">// this is just a convenience wrapper for above.</span>
+<span class="kd">var</span> <span class="nx">writeStream</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">createWriteStream</span><span class="p">(</span><span class="s1">&#39;/path/to/my/resized.jpg&#39;</span><span class="p">);</span>
+<span class="nx">gm</span><span class="p">(</span><span class="s1">&#39;/path/to/my/img.jpg&#39;</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">resize</span><span class="p">(</span><span class="s1">&#39;200&#39;</span><span class="p">,</span> <span class="s1">&#39;200&#39;</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">stream</span><span class="p">()</span>
+<span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">writeStream</span><span class="p">);</span>
+</pre></div>
+</details><details class="note" open="open"><summary>通过格式或文件名gm将提供相应格式的数据</summary><div class="codehilite"><pre><span></span><span class="c1">// pass a format or filename to stream() and</span>
+<span class="c1">// gm will provide image data in that format</span>
+<span class="nx">gm</span><span class="p">(</span><span class="s1">&#39;/path/to/my/img.jpg&#39;</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">stream</span><span class="p">(</span><span class="s1">&#39;png&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">stdout</span><span class="p">,</span> <span class="nx">stderr</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">writeStream</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">createWriteStream</span><span class="p">(</span><span class="s1">&#39;/path/to/my/reformatted.png&#39;</span><span class="p">);</span>
+  <span class="nx">stdout</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">writeStream</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="c1">// or without the callback</span>
+<span class="kd">var</span> <span class="nx">writeStream</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">createWriteStream</span><span class="p">(</span><span class="s1">&#39;/path/to/my/reformatted.png&#39;</span><span class="p">);</span>
+<span class="nx">gm</span><span class="p">(</span><span class="s1">&#39;/path/to/my/img.jpg&#39;</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">stream</span><span class="p">(</span><span class="s1">&#39;png&#39;</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">writeStream</span><span class="p">);</span>
+</pre></div>
+</details><details class="note" open="open"><summary>combine the two for true streaming image processing</summary><div class="codehilite"><pre><span></span><span class="c1">// combine the two for true streaming image processing</span>
+<span class="kd">var</span> <span class="nx">readStream</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">createReadStream</span><span class="p">(</span><span class="s1">&#39;/path/to/my/img.jpg&#39;</span><span class="p">);</span>
+<span class="nx">gm</span><span class="p">(</span><span class="nx">readStream</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">resize</span><span class="p">(</span><span class="s1">&#39;200&#39;</span><span class="p">,</span> <span class="s1">&#39;200&#39;</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">stream</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">stdout</span><span class="p">,</span> <span class="nx">stderr</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">writeStream</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">createWriteStream</span><span class="p">(</span><span class="s1">&#39;/path/to/my/resized.jpg&#39;</span><span class="p">);</span>
+  <span class="nx">stdout</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">writeStream</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</details><details class="note" open="open"><summary>GOTCHA</summary><div class="codehilite"><pre><span></span><span class="c1">// GOTCHA:</span>
+<span class="c1">// when working with input streams and any &#39;identify&#39;</span>
+<span class="c1">// operation (size, format, etc), you must pass &quot;{bufferStream: true}&quot; if</span>
+<span class="c1">// you also need to convert (write() or stream()) the image afterwards</span>
+<span class="c1">// NOTE: this buffers the readStream in memory!</span>
+<span class="kd">var</span> <span class="nx">readStream</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">createReadStream</span><span class="p">(</span><span class="s1">&#39;/path/to/my/img.jpg&#39;</span><span class="p">);</span>
+<span class="nx">gm</span><span class="p">(</span><span class="nx">readStream</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">size</span><span class="p">({</span><span class="nx">bufferStream</span><span class="o">:</span> <span class="kc">true</span><span class="p">},</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">size</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">resize</span><span class="p">(</span><span class="nx">size</span><span class="p">.</span><span class="nx">width</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="nx">size</span><span class="p">.</span><span class="nx">height</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;/path/to/resized.jpg&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">err</span><span class="p">)</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;done&#39;</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+</pre></div>
+</details>
                 
                   
                 
@@ -706,7 +675,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../composite/example/" title="代码" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../BasicUsage/" title="基础用法" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -715,19 +684,19 @@
                 <span class="md-footer-nav__direction">
                   后退
                 </span>
-                代码
+                基础用法
               </span>
             </div>
           </a>
         
         
-          <a href="../UsingImagemagick/" title="使用IM" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Buffers/" title="缓冲区" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   前进
                 </span>
-                使用IM
+                缓冲区
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

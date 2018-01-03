@@ -4,15 +4,63 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-12-29</lastmod>
+     <lastmod>2018-01-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
     <url>
+     <loc>/BasicUsage/</loc>
+     <lastmod>2018-01-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/Streams/</loc>
+     <lastmod>2018-01-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/Buffers/</loc>
+     <lastmod>2018-01-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/Montage/</loc>
+     <lastmod>2018-01-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+        
+    <url>
+     <loc>/custom/arguments/</loc>
+     <lastmod>2018-01-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/custom/IdentifyFormatString/</loc>
+     <lastmod>2018-01-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+    <url>
      <loc>/Manipulation/</loc>
-     <lastmod>2017-12-29</lastmod>
+     <lastmod>2018-01-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -20,23 +68,47 @@
     
     <url>
      <loc>/Getters/</loc>
-     <lastmod>2017-12-29</lastmod>
+     <lastmod>2018-01-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
+        
     <url>
-     <loc>/Drawing/</loc>
-     <lastmod>2017-12-29</lastmod>
+     <loc>/drawing/</loc>
+     <lastmod>2018-01-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
+    <url>
+     <loc>/drawing/example/</loc>
+     <lastmod>2018-01-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/composite/</loc>
+     <lastmod>2018-01-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/composite/example/</loc>
+     <lastmod>2018-01-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
     
     <url>
      <loc>/ImageComparisons/</loc>
-     <lastmod>2017-12-29</lastmod>
+     <lastmod>2018-01-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -44,7 +116,15 @@
     
     <url>
      <loc>/UsingImagemagick/</loc>
-     <lastmod>2017-12-29</lastmod>
+     <lastmod>2018-01-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/Extending/</loc>
+     <lastmod>2018-01-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
     

@@ -36,7 +36,7 @@
     
     
       
-        <title>比较 - GM</title>
+        <title>基础用法 - GM</title>
       
     
     
@@ -98,7 +98,7 @@
                 GM
               </span>
               <span class="md-header-nav__topic">
-                比较
+                基础用法
               </span>
             
           
@@ -300,11 +300,20 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../BasicUsage/" title="基础用法" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+    <a href="./" title="基础用法" class="md-nav__link md-nav__link--active">
       基础用法
     </a>
+    
   </li>
 
     
@@ -516,47 +525,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="toc">
-        比较
-      </label>
-    
-    <a href="./" title="比较" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../ImageComparisons/" title="比较" class="md-nav__link">
       比较
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="toc">目录</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" title="图像比较" class="md-nav__link">
-    图像比较
-  </a>
-  
-</li>
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -601,20 +574,6 @@
     
   
   
-    <label class="md-nav__title" for="toc">目录</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" title="图像比较" class="md-nav__link">
-    图像比较
-  </a>
-  
-</li>
-      
-      
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -626,68 +585,85 @@
               
                 
                 
-                <h1 id="_1">比较<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>Graphicsmagicks <code>compare</code> command is exposed through <code>gm.compare()</code>. This allows us to determine if two images can be considered "equal".</p>
-<p>Currently <code>gm.compare</code> only accepts file paths.</p>
-<div class="codehilite"><pre><span></span>gm.compare(path1, path2 [, options], callback)
+                <h1 id="_1">基础用法<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<div class="codehilite"><pre><span></span><span class="c1">// 引入组件</span>
+<span class="kd">var</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">)</span>
+  <span class="p">,</span> <span class="nx">gm</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;gm&#39;</span><span class="p">);</span>
 </pre></div>
 
-
-<div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">.</span><span class="nx">compare</span><span class="p">(</span><span class="s1">&#39;/path/to/image1.jpg&#39;</span><span class="p">,</span> <span class="s1">&#39;/path/to/another.png&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">isEqual</span><span class="p">,</span> <span class="nx">equality</span><span class="p">,</span> <span class="nx">raw</span><span class="p">,</span> <span class="nx">path1</span><span class="p">,</span> <span class="nx">path2</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="k">return</span> <span class="nx">handle</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
-
-  <span class="c1">// if the images were considered equal, `isEqual` will be true, otherwise, false.</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;The images were equal: %s&#39;</span><span class="p">,</span> <span class="nx">isEqual</span><span class="p">);</span>
-
-  <span class="c1">// to see the total equality returned by graphicsmagick we can inspect the `equality` argument.</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Actual equality: %d&#39;</span><span class="p">,</span> <span class="nx">equality</span><span class="p">);</span>
-
-  <span class="c1">// inspect the raw output</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">raw</span><span class="p">);</span>
-
-  <span class="c1">// print file paths</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">path1</span><span class="p">,</span> <span class="nx">path2</span><span class="p">);</span>
-<span class="p">})</span>
-</pre></div>
-
-<p>You may wish to pass a custom tolerance threshold to increase or decrease the default level of <code>0.4</code>.</p>
-<div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">.</span><span class="nx">compare</span><span class="p">(</span><span class="s1">&#39;/path/to/image1.jpg&#39;</span><span class="p">,</span> <span class="s1">&#39;/path/to/another.png&#39;</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">isEqual</span><span class="p">)</span> <span class="p">{</span>
-  <span class="p">...</span>
-<span class="p">})</span>
-</pre></div>
-
-<p>To output a diff image, pass a configuration object to define the diff options and tolerance.</p>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">file</span><span class="o">:</span> <span class="s1">&#39;/path/to/diff.png&#39;</span><span class="p">,</span>
-  <span class="nx">highlightColor</span><span class="o">:</span> <span class="s1">&#39;yellow&#39;</span><span class="p">,</span>
-  <span class="nx">tolerance</span><span class="o">:</span> <span class="mf">0.02</span>
-<span class="p">}</span>
-<span class="nx">gm</span><span class="p">.</span><span class="nx">compare</span><span class="p">(</span><span class="s1">&#39;/path/to/image1.jpg&#39;</span><span class="p">,</span> <span class="s1">&#39;/path/to/another.png&#39;</span><span class="p">,</span> <span class="nx">options</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">isEqual</span><span class="p">,</span> <span class="nx">equality</span><span class="p">,</span> <span class="nx">raw</span><span class="p">)</span> <span class="p">{</span>
-  <span class="p">...</span>
-<span class="p">})</span>
-</pre></div>
-
-<h2 id="_2">图像比较<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>Both GraphicsMagick and ImageMagick support image comparisons which are exposed through gm.compare().</p>
-<p>Currently both path1 and path2 must be strings (no Buffers or Streams). Optionally pass a custom tolerance level if 0.4 (the default) is too lax for your use case.</p>
-<p>Your callback will be passed four arguments:</p>
-<div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">.</span><span class="nx">compare</span><span class="p">(</span><span class="nx">path1</span><span class="p">,</span> <span class="nx">path2</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">isEqual</span><span class="p">,</span> <span class="nx">equality</span><span class="p">,</span> <span class="nx">raw</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="k">throw</span> <span class="nx">err</span><span class="p">;</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;The images are equal: %s&#39;</span><span class="p">,</span> <span class="nx">isEqual</span><span class="p">);</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Actual equality: %d&#39;</span><span class="p">,</span> <span class="nx">equality</span><span class="p">)</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Raw output was: %j&#39;</span><span class="p">,</span> <span class="nx">raw</span><span class="p">);</span>
+<details class="note" open="open"><summary>调整和删除EXIF配置文件数据</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s1">&#39;/path/to/my/img.jpg&#39;</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">resize</span><span class="p">(</span><span class="mi">240</span><span class="p">,</span> <span class="mi">240</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">noProfile</span><span class="p">()</span>
+<span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;/path/to/resize.png&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">err</span><span class="p">)</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;done&#39;</span><span class="p">);</span>
 <span class="p">});</span>
 </pre></div>
+</details><details class="note" open="open"><summary>忽略纵横比</summary><div class="codehilite"><pre><span></span><span class="c1">// some files would not be resized appropriately</span>
+<span class="c1">// http://stackoverflow.com/questions/5870466/imagemagick-incorrect-dimensions</span>
+<span class="c1">// you have two options:</span>
+<span class="c1">// use the &#39;!&#39; flag to ignore aspect ratio</span>
+<span class="nx">gm</span><span class="p">(</span><span class="s1">&#39;/path/to/my/img.jpg&#39;</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">resize</span><span class="p">(</span><span class="mi">240</span><span class="p">,</span> <span class="mi">240</span><span class="p">,</span> <span class="s1">&#39;!&#39;</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;/path/to/resize.png&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">err</span><span class="p">)</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;done&#39;</span><span class="p">);</span>
+<span class="p">});</span>
 
-<p>You can also output a diff image of the two images by passing a configuration object in place of the tolerance:</p>
-<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">highlightColor</span><span class="o">:</span> <span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="c1">// optional. Defaults to red</span>
-  <span class="nx">file</span><span class="o">:</span> <span class="s1">&#39;./diff.png&#39;</span> <span class="c1">// required</span>
-<span class="p">};</span>
-<span class="nx">gm</span><span class="p">.</span><span class="nx">compare</span><span class="p">(</span><span class="nx">path1</span><span class="p">,</span> <span class="nx">path2</span><span class="p">,</span> <span class="nx">options</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="k">throw</span> <span class="nx">err</span><span class="p">;</span>
+<span class="c1">// use the .resizeExact with only width and/or height arguments</span>
+<span class="nx">gm</span><span class="p">(</span><span class="s1">&#39;/path/to/my/img.jpg&#39;</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">resizeExact</span><span class="p">(</span><span class="mi">240</span><span class="p">,</span> <span class="mi">240</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;/path/to/resize.png&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">err</span><span class="p">)</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;done&#39;</span><span class="p">);</span>
 <span class="p">});</span>
 </pre></div>
+</details><details class="note" open="open"><summary>获取图像的大小</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s1">&#39;/path/to/my/img.jpg&#39;</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">size</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">size</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">err</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">size</span><span class="p">.</span><span class="nx">width</span> <span class="o">&gt;</span> <span class="nx">size</span><span class="p">.</span><span class="nx">height</span> <span class="o">?</span> <span class="s1">&#39;wider&#39;</span> <span class="o">:</span> <span class="s1">&#39;taller than you&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</details><details class="note" open="open"><summary>输出所有可用的图像属性</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s1">&#39;/path/to/img.png&#39;</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">identify</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">err</span><span class="p">)</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>
+<span class="p">});</span>
+</pre></div>
+</details><details class="note" open="open"><summary>拉出动画GIF的第一帧，并保存为PNG</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s1">&#39;/path/to/animated.gif[0]&#39;</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;/path/to/firstframe.png&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;aaw, shucks&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</details><details class="note" open="open"><summary>自动定位图像</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s1">&#39;/path/to/img.jpg&#39;</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">autoOrient</span><span class="p">()</span>
+<span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;/path/to/oriented.jpg&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">...</span>
+<span class="p">})</span>
+</pre></div>
+</details><details class="note" open="open"><summary>疯狂的小镇</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s1">&#39;/path/to/my/img.jpg&#39;</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">flip</span><span class="p">()</span>
+<span class="p">.</span><span class="nx">magnify</span><span class="p">()</span>
+<span class="p">.</span><span class="nx">rotate</span><span class="p">(</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="mi">45</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">blur</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">crop</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">130</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">edge</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;/path/to/crazy.jpg&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">err</span><span class="p">)</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;crazytown has arrived&#39;</span><span class="p">);</span>
+<span class="p">})</span>
+</pre></div>
+</details><details class="note" open="open"><summary>注释一个图像</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s1">&#39;/path/to/my/img.jpg&#39;</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">stroke</span><span class="p">(</span><span class="s2">&quot;#ffffff&quot;</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">drawCircle</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">font</span><span class="p">(</span><span class="s2">&quot;Helvetica.ttf&quot;</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">drawText</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="s2">&quot;GMagick!&quot;</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;/path/to/drawing.png&quot;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">err</span><span class="p">)</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;done&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+</details><details class="note" open="open"><summary>创造一个形象</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="s2">&quot;#ddff99f3&quot;</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">drawText</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="s2">&quot;from scratch&quot;</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;/path/to/brandNewImg.jpg&quot;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// ...</span>
+<span class="p">});</span>
+</pre></div>
+</details>
                 
                   
                 
@@ -706,7 +682,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../composite/example/" title="代码" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href=".." title="概述" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -715,19 +691,19 @@
                 <span class="md-footer-nav__direction">
                   后退
                 </span>
-                代码
+                概述
               </span>
             </div>
           </a>
         
         
-          <a href="../UsingImagemagick/" title="使用IM" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Streams/" title="流" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   前进
                 </span>
-                使用IM
+                流
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
