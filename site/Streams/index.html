@@ -36,7 +36,7 @@
     
     
       
-        <title>命令 - GM</title>
+        <title>流 - GM</title>
       
     
     
@@ -98,7 +98,7 @@
                 GM
               </span>
               <span class="md-header-nav__topic">
-                命令
+                流
               </span>
             
           
@@ -168,16 +168,14 @@
       
         
 
-  
-
-<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+<nav class="md-tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
   <li class="md-tabs__item">
     
-      <a href=".." title="概述" class="md-tabs__link">
+      <a href=".." title="概述" class="md-tabs__link md-tabs__link--active">
         概述
       </a>
     
@@ -214,7 +212,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="./" title="绘画" class="md-tabs__link md-tabs__link--active">
+        <a href="../drawing/" title="绘画" class="md-tabs__link">
           绘画
         </a>
       
@@ -314,11 +312,20 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../Streams/" title="流" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+    <a href="./" title="流" class="md-nav__link md-nav__link--active">
       流
     </a>
+    
   </li>
 
     
@@ -422,12 +429,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
     
     <label class="md-nav__link" for="nav-9">
       绘画
@@ -443,20 +448,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-    <a href="./" title="命令" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../drawing/" title="命令" class="md-nav__link">
       命令
     </a>
-    
   </li>
 
         
@@ -466,7 +462,7 @@
 
 
   <li class="md-nav__item">
-    <a href="example/" title="举例" class="md-nav__link">
+    <a href="../drawing/example/" title="举例" class="md-nav__link">
       举例
     </a>
   </li>
@@ -589,43 +585,78 @@
               
                 
                 
-                <h1 id="_1">基本绘图<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>查看 <a href="example/">drawing.js</a> 文件里的示例.</p>
-<details class="note"><summary>画 - draw</summary><p>Annotate an image with one or more graphic primitives (shapes, text, transformations, pixel operations). Used internally for all drawing methods.
-<div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">draw</span><span class="p">(</span><span class="nx">args</span><span class="p">)</span>
-</pre></div></p></details><details class="note"><summary>矩形 - drawArc</summary><p>Inscribe an elliptical arc within a rectangle. Requires a start and end point as well as the degrees of rotation.
-<div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawArc</span><span class="p">(</span><span class="nx">x0</span><span class="p">,</span> <span class="nx">y0</span><span class="p">,</span> <span class="nx">x1</span><span class="p">,</span> <span class="nx">y1</span><span class="p">,</span> <span class="nx">r0</span><span class="p">,</span> <span class="nx">r1</span><span class="p">)</span>
-</pre></div></p></details><details class="note"><summary>贝塞尔曲线 - drawBezier</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawBezier</span><span class="p">([</span><span class="nx">x0</span><span class="p">,</span> <span class="nx">y0</span><span class="p">],</span> <span class="p">...</span> <span class="p">[</span><span class="nx">xn</span><span class="p">,</span> <span class="nx">yn</span><span class="p">])</span>
+                <h1 id="_1">流<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<details class="note" open="open"><summary>输入流</summary><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">readStream</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">createReadStream</span><span class="p">(</span><span class="s1">&#39;/path/to/my/img.jpg&#39;</span><span class="p">);</span>
+<span class="nx">gm</span><span class="p">(</span><span class="nx">readStream</span><span class="p">,</span> <span class="s1">&#39;img.jpg&#39;</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;/path/to/reformat.png&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">err</span><span class="p">)</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;done&#39;</span><span class="p">);</span>
+<span class="p">});</span>
 </pre></div>
-</details><details class="note"><summary>圆 - drawCircle</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawCircle</span><span class="p">(</span><span class="nx">x0</span><span class="p">,</span> <span class="nx">y0</span><span class="p">,</span> <span class="nx">x1</span><span class="p">,</span> <span class="nx">y1</span><span class="p">)</span>
+</details><details class="note" open="open"><summary>输入远程流</summary><div class="codehilite"><pre><span></span><span class="c1">// </span>
+
+<span class="kd">var</span> <span class="nx">request</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;request&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="s2">&quot;www.abc.com/pic.jpg&quot;</span>
+
+<span class="nx">gm</span><span class="p">(</span><span class="nx">request</span><span class="p">(</span><span class="nx">url</span><span class="p">))</span>
+<span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;/path/to/reformat.png&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">err</span><span class="p">)</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;done&#39;</span><span class="p">);</span>
+<span class="p">});</span>
 </pre></div>
-</details><details class="note"><summary>椭圆形 - drawEllipse</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawEllipse</span><span class="p">(</span><span class="nx">x0</span><span class="p">,</span> <span class="nx">y0</span><span class="p">,</span> <span class="nx">r0</span><span class="p">,</span> <span class="nx">ry</span><span class="p">,</span> <span class="nx">r0</span><span class="p">,</span> <span class="nx">r1</span><span class="p">)</span>
+</details><details class="note" open="open"><summary>输出可读流</summary><div class="codehilite"><pre><span></span><span class="c1">// can also stream output to a ReadableStream</span>
+<span class="c1">// (can be piped to a local file or remote server)</span>
+<span class="nx">gm</span><span class="p">(</span><span class="s1">&#39;/path/to/my/img.jpg&#39;</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">resize</span><span class="p">(</span><span class="s1">&#39;200&#39;</span><span class="p">,</span> <span class="s1">&#39;200&#39;</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">stream</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">stdout</span><span class="p">,</span> <span class="nx">stderr</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">writeStream</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">createWriteStream</span><span class="p">(</span><span class="s1">&#39;/path/to/my/resized.jpg&#39;</span><span class="p">);</span>
+  <span class="nx">stdout</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">writeStream</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="c1">// without a callback, .stream() returns a stream</span>
+<span class="c1">// this is just a convenience wrapper for above.</span>
+<span class="kd">var</span> <span class="nx">writeStream</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">createWriteStream</span><span class="p">(</span><span class="s1">&#39;/path/to/my/resized.jpg&#39;</span><span class="p">);</span>
+<span class="nx">gm</span><span class="p">(</span><span class="s1">&#39;/path/to/my/img.jpg&#39;</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">resize</span><span class="p">(</span><span class="s1">&#39;200&#39;</span><span class="p">,</span> <span class="s1">&#39;200&#39;</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">stream</span><span class="p">()</span>
+<span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">writeStream</span><span class="p">);</span>
 </pre></div>
-</details><details class="note"><summary>线 - drawLine</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawLine</span><span class="p">(</span><span class="nx">x0</span><span class="p">,</span> <span class="nx">y0</span><span class="p">,</span> <span class="nx">x1</span><span class="p">,</span> <span class="nx">y1</span><span class="p">)</span>
+</details><details class="note" open="open"><summary>通过格式或文件名gm将提供相应格式的数据</summary><div class="codehilite"><pre><span></span><span class="c1">// pass a format or filename to stream() and</span>
+<span class="c1">// gm will provide image data in that format</span>
+<span class="nx">gm</span><span class="p">(</span><span class="s1">&#39;/path/to/my/img.jpg&#39;</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">stream</span><span class="p">(</span><span class="s1">&#39;png&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">stdout</span><span class="p">,</span> <span class="nx">stderr</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">writeStream</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">createWriteStream</span><span class="p">(</span><span class="s1">&#39;/path/to/my/reformatted.png&#39;</span><span class="p">);</span>
+  <span class="nx">stdout</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">writeStream</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="c1">// or without the callback</span>
+<span class="kd">var</span> <span class="nx">writeStream</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">createWriteStream</span><span class="p">(</span><span class="s1">&#39;/path/to/my/reformatted.png&#39;</span><span class="p">);</span>
+<span class="nx">gm</span><span class="p">(</span><span class="s1">&#39;/path/to/my/img.jpg&#39;</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">stream</span><span class="p">(</span><span class="s1">&#39;png&#39;</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">writeStream</span><span class="p">);</span>
 </pre></div>
-</details><details class="note"><summary>点 - drawPoint</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawPoint</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span>
+</details><details class="note" open="open"><summary>combine the two for true streaming image processing</summary><div class="codehilite"><pre><span></span><span class="c1">// combine the two for true streaming image processing</span>
+<span class="kd">var</span> <span class="nx">readStream</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">createReadStream</span><span class="p">(</span><span class="s1">&#39;/path/to/my/img.jpg&#39;</span><span class="p">);</span>
+<span class="nx">gm</span><span class="p">(</span><span class="nx">readStream</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">resize</span><span class="p">(</span><span class="s1">&#39;200&#39;</span><span class="p">,</span> <span class="s1">&#39;200&#39;</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">stream</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">stdout</span><span class="p">,</span> <span class="nx">stderr</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">writeStream</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">createWriteStream</span><span class="p">(</span><span class="s1">&#39;/path/to/my/resized.jpg&#39;</span><span class="p">);</span>
+  <span class="nx">stdout</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">writeStream</span><span class="p">);</span>
+<span class="p">});</span>
 </pre></div>
-</details><details class="note"><summary>多边形 - drawPolygon</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawPolygon</span><span class="p">([</span><span class="nx">x0</span><span class="p">,</span> <span class="nx">y0</span><span class="p">]</span> <span class="p">...</span> <span class="p">[</span><span class="nx">xn</span><span class="p">,</span> <span class="nx">yn</span><span class="p">])</span>
+</details><details class="note" open="open"><summary>GOTCHA</summary><div class="codehilite"><pre><span></span><span class="c1">// GOTCHA:</span>
+<span class="c1">// when working with input streams and any &#39;identify&#39;</span>
+<span class="c1">// operation (size, format, etc), you must pass &quot;{bufferStream: true}&quot; if</span>
+<span class="c1">// you also need to convert (write() or stream()) the image afterwards</span>
+<span class="c1">// NOTE: this buffers the readStream in memory!</span>
+<span class="kd">var</span> <span class="nx">readStream</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">createReadStream</span><span class="p">(</span><span class="s1">&#39;/path/to/my/img.jpg&#39;</span><span class="p">);</span>
+<span class="nx">gm</span><span class="p">(</span><span class="nx">readStream</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">size</span><span class="p">({</span><span class="nx">bufferStream</span><span class="o">:</span> <span class="kc">true</span><span class="p">},</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">size</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">resize</span><span class="p">(</span><span class="nx">size</span><span class="p">.</span><span class="nx">width</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="nx">size</span><span class="p">.</span><span class="nx">height</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;/path/to/resized.jpg&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">err</span><span class="p">)</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;done&#39;</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="p">});</span>
 </pre></div>
-</details><details class="note"><summary>多段线 - drawPolyline</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawPolyline</span><span class="p">([</span><span class="nx">x0</span><span class="p">,</span> <span class="nx">y0</span><span class="p">]</span> <span class="p">...</span> <span class="p">[</span><span class="nx">xn</span><span class="p">,</span> <span class="nx">yn</span><span class="p">])</span>
-</pre></div>
-</details><details class="note"><summary>矩形 - drawRectangle</summary><p>wc and hc are optional and add roundness to the corners.
-<div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawRectangle</span><span class="p">(</span><span class="nx">x0</span><span class="p">,</span> <span class="nx">y0</span><span class="p">,</span> <span class="nx">x1</span><span class="p">,</span> <span class="nx">y1</span> <span class="p">[,</span> <span class="nx">wc</span><span class="p">,</span> <span class="nx">hc</span><span class="p">])</span>
-</pre></div></p></details><details class="danger" open="open"><summary>文本 - drawText</summary><p>Draws text on an image at x/y coordinates.
-<div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawText</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">text</span> <span class="p">[,</span> <span class="nx">gravity</span><span class="p">])</span>
-</pre></div></p></details><details class="note"><summary>填充颜色 - fill</summary><p>Specifies the color to use when filling a drawn shape.
-<div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">fill</span><span class="p">(</span><span class="nx">color</span><span class="p">)</span>
-</pre></div></p></details><details class="note"><summary>字体 - font</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">font</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span>
-</pre></div>
-</details><details class="note"><summary>字体大小 - fontSize</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">fontSize</span><span class="p">(</span><span class="nx">size</span><span class="p">)</span>
-</pre></div>
-</details><details class="note"><summary>划 - stroke</summary><p>Specifies the color to use when stroking a drawn shape.
-<div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">stroke</span><span class="p">(</span><span class="nx">color</span> <span class="p">[,</span> <span class="nx">width</span><span class="p">])</span>
-</pre></div></p></details><details class="note"><summary>设置边的宽度 - strokeWidth</summary><p>Specifies the stroke width to use when stroking a drawn shape.
-<div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">strokeWidth</span><span class="p">(</span><span class="nx">width</span><span class="p">)</span>
-</pre></div></p></details><details class="note"><summary>设置属性 - setDraw</summary><p>Sets drawing properties. property can be either "color" or "matte".
-<div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">setDraw</span><span class="p">(</span><span class="nx">property</span><span class="p">,</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">method</span><span class="p">)</span>
-</pre></div></p></details>
+</details>
                 
                   
                 
@@ -644,7 +675,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../Getters/" title="获取器" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../BasicUsage/" title="基础用法" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -653,19 +684,19 @@
                 <span class="md-footer-nav__direction">
                   后退
                 </span>
-                获取器
+                基础用法
               </span>
             </div>
           </a>
         
         
-          <a href="example/" title="举例" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Buffers/" title="缓冲区" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   前进
                 </span>
-                举例
+                缓冲区
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

@@ -36,7 +36,7 @@
     
     
       
-        <title>命令 - GM</title>
+        <title>扩展 - GM</title>
       
     
     
@@ -98,7 +98,7 @@
                 GM
               </span>
               <span class="md-header-nav__topic">
-                命令
+                扩展
               </span>
             
           
@@ -168,16 +168,14 @@
       
         
 
-  
-
-<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+<nav class="md-tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
   <li class="md-tabs__item">
     
-      <a href=".." title="概述" class="md-tabs__link">
+      <a href=".." title="概述" class="md-tabs__link md-tabs__link--active">
         概述
       </a>
     
@@ -214,7 +212,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="./" title="绘画" class="md-tabs__link md-tabs__link--active">
+        <a href="../drawing/" title="绘画" class="md-tabs__link">
           绘画
         </a>
       
@@ -422,12 +420,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
     
     <label class="md-nav__link" for="nav-9">
       绘画
@@ -443,20 +439,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-    <a href="./" title="命令" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../drawing/" title="命令" class="md-nav__link">
       命令
     </a>
-    
   </li>
 
         
@@ -466,7 +453,7 @@
 
 
   <li class="md-nav__item">
-    <a href="example/" title="举例" class="md-nav__link">
+    <a href="../drawing/example/" title="举例" class="md-nav__link">
       举例
     </a>
   </li>
@@ -553,11 +540,18 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../Extending/" title="扩展" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+    <a href="./" title="扩展" class="md-nav__link md-nav__link--active">
       扩展
     </a>
+    
   </li>
 
     
@@ -568,64 +562,34 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                <h1 id="_1">基本绘图<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>查看 <a href="example/">drawing.js</a> 文件里的示例.</p>
-<details class="note"><summary>画 - draw</summary><p>Annotate an image with one or more graphic primitives (shapes, text, transformations, pixel operations). Used internally for all drawing methods.
-<div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">draw</span><span class="p">(</span><span class="nx">args</span><span class="p">)</span>
-</pre></div></p></details><details class="note"><summary>矩形 - drawArc</summary><p>Inscribe an elliptical arc within a rectangle. Requires a start and end point as well as the degrees of rotation.
-<div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawArc</span><span class="p">(</span><span class="nx">x0</span><span class="p">,</span> <span class="nx">y0</span><span class="p">,</span> <span class="nx">x1</span><span class="p">,</span> <span class="nx">y1</span><span class="p">,</span> <span class="nx">r0</span><span class="p">,</span> <span class="nx">r1</span><span class="p">)</span>
-</pre></div></p></details><details class="note"><summary>贝塞尔曲线 - drawBezier</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawBezier</span><span class="p">([</span><span class="nx">x0</span><span class="p">,</span> <span class="nx">y0</span><span class="p">],</span> <span class="p">...</span> <span class="p">[</span><span class="nx">xn</span><span class="p">,</span> <span class="nx">yn</span><span class="p">])</span>
+                  <h1>扩展</h1>
+                
+                <p>用你自定义的方法扩展 gm 是很容易的. 所有必要的是将你的方法添加到 <code>gm.prototype</code>. 例如, 让我们写一个棕褐色的扩展名，它会给任何图像一个很好的“<a href="http://en.wikipedia.org/wiki/Sepia_tone#Sepia_toning tone">sepia</a>”.</p>
+<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">gm</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;gm&quot;</span><span class="p">)</span>
+<span class="nx">gm</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">sepia</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">modulate</span><span class="p">(</span><span class="mi">115</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">).</span><span class="nx">colorize</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+  <span class="k">return</span> <span class="k">this</span>
+<span class="p">}</span>
 </pre></div>
-</details><details class="note"><summary>圆 - drawCircle</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawCircle</span><span class="p">(</span><span class="nx">x0</span><span class="p">,</span> <span class="nx">y0</span><span class="p">,</span> <span class="nx">x1</span><span class="p">,</span> <span class="nx">y1</span><span class="p">)</span>
+
+<p>嘿，看起来很简单吧？ 你可以这样使用它：</p>
+<div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;path/to/img.png&quot;</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">sepia</span><span class="p">()</span>
+  <span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;iLoveSepiaAndSoShouldYou.png&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">){</span> <span class="p">...</span> <span class="p">})</span>
 </pre></div>
-</details><details class="note"><summary>椭圆形 - drawEllipse</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawEllipse</span><span class="p">(</span><span class="nx">x0</span><span class="p">,</span> <span class="nx">y0</span><span class="p">,</span> <span class="nx">r0</span><span class="p">,</span> <span class="nx">ry</span><span class="p">,</span> <span class="nx">r0</span><span class="p">,</span> <span class="nx">r1</span><span class="p">)</span>
+
+<p>So let's take a looky at what's going on here. Within the sepia method, <code>this</code> refers to the current instance of gm so you have access to all of the other gm methods and extensions. We're just utilizing two built in <code>gm</code> methods here to get the effect we want. Notice also that we return <code>this</code>, which let's us retain the ability to continue chaining methods. We could return a little more elegantly too since, by convention, every method returns <code>this</code>:</p>
+<div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">gm</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;gm&quot;</span><span class="p">)</span>
+<span class="nx">gm</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">sepia</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+  <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">modulate</span><span class="p">(</span><span class="mi">115</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">).</span><span class="nx">colorize</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+<span class="p">}</span>
 </pre></div>
-</details><details class="note"><summary>线 - drawLine</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawLine</span><span class="p">(</span><span class="nx">x0</span><span class="p">,</span> <span class="nx">y0</span><span class="p">,</span> <span class="nx">x1</span><span class="p">,</span> <span class="nx">y1</span><span class="p">)</span>
-</pre></div>
-</details><details class="note"><summary>点 - drawPoint</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawPoint</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span>
-</pre></div>
-</details><details class="note"><summary>多边形 - drawPolygon</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawPolygon</span><span class="p">([</span><span class="nx">x0</span><span class="p">,</span> <span class="nx">y0</span><span class="p">]</span> <span class="p">...</span> <span class="p">[</span><span class="nx">xn</span><span class="p">,</span> <span class="nx">yn</span><span class="p">])</span>
-</pre></div>
-</details><details class="note"><summary>多段线 - drawPolyline</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawPolyline</span><span class="p">([</span><span class="nx">x0</span><span class="p">,</span> <span class="nx">y0</span><span class="p">]</span> <span class="p">...</span> <span class="p">[</span><span class="nx">xn</span><span class="p">,</span> <span class="nx">yn</span><span class="p">])</span>
-</pre></div>
-</details><details class="note"><summary>矩形 - drawRectangle</summary><p>wc and hc are optional and add roundness to the corners.
-<div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawRectangle</span><span class="p">(</span><span class="nx">x0</span><span class="p">,</span> <span class="nx">y0</span><span class="p">,</span> <span class="nx">x1</span><span class="p">,</span> <span class="nx">y1</span> <span class="p">[,</span> <span class="nx">wc</span><span class="p">,</span> <span class="nx">hc</span><span class="p">])</span>
-</pre></div></p></details><details class="danger" open="open"><summary>文本 - drawText</summary><p>Draws text on an image at x/y coordinates.
-<div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawText</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">text</span> <span class="p">[,</span> <span class="nx">gravity</span><span class="p">])</span>
-</pre></div></p></details><details class="note"><summary>填充颜色 - fill</summary><p>Specifies the color to use when filling a drawn shape.
-<div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">fill</span><span class="p">(</span><span class="nx">color</span><span class="p">)</span>
-</pre></div></p></details><details class="note"><summary>字体 - font</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">font</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span>
-</pre></div>
-</details><details class="note"><summary>字体大小 - fontSize</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">fontSize</span><span class="p">(</span><span class="nx">size</span><span class="p">)</span>
-</pre></div>
-</details><details class="note"><summary>划 - stroke</summary><p>Specifies the color to use when stroking a drawn shape.
-<div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">stroke</span><span class="p">(</span><span class="nx">color</span> <span class="p">[,</span> <span class="nx">width</span><span class="p">])</span>
-</pre></div></p></details><details class="note"><summary>设置边的宽度 - strokeWidth</summary><p>Specifies the stroke width to use when stroking a drawn shape.
-<div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">strokeWidth</span><span class="p">(</span><span class="nx">width</span><span class="p">)</span>
-</pre></div></p></details><details class="note"><summary>设置属性 - setDraw</summary><p>Sets drawing properties. property can be either "color" or "matte".
-<div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">setDraw</span><span class="p">(</span><span class="nx">property</span><span class="p">,</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">method</span><span class="p">)</span>
-</pre></div></p></details>
                 
                   
                 
@@ -644,7 +608,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../Getters/" title="获取器" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../UsingImagemagick/" title="使用IM" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -653,25 +617,11 @@
                 <span class="md-footer-nav__direction">
                   后退
                 </span>
-                获取器
+                使用IM
               </span>
             </div>
           </a>
         
-        
-          <a href="example/" title="举例" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  前进
-                </span>
-                举例
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
         
       </nav>
     </div>

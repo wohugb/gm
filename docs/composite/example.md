@@ -32,7 +32,7 @@ module.exports = exports = function(proto) {
 }
 ```
 
-## stackoverflow 答案
+## 图片拼接(mosaic) stackoverflow 答案
 
 ```js
 var gm = require('gm');
@@ -46,4 +46,20 @@ gm()
   .write('tesOutput.jpg', function (err) {
     if (err) console.log(err);
   });
+```
+
+## 图片合成(compose)
+
+```js
+gm()
+.command("composite")
+.in("-gravity", "center")
+.in(change_image_url)
+.in(base_image_url)
+.write( output_file, function (err) {
+  if (!err)
+    console.log(' hooray! ');
+  else
+    console.log(err);
+});
 ```

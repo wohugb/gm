@@ -805,16 +805,22 @@
 
 ??? note "resample"
     Resamples the image to specified horizontal and vertical resolution.
+
     ```js
-    gm("img.png").resample(horizontal, vertical)
+        gm("img.png").resample(horizontal, vertical)
     ```
 
 ??? note "resize"
-    Resize the image.
 
-    options
+    调整图像的大小.
+
+    选项
+
     %, @, !, < or > see the GraphicsMagick docs for details
-    gm("img.png").resize(width [, height [, options]])
+
+    ```js
+        gm("img.png").resize(width [, height [, options]])
+    ```
     To resize an image to a width of 40px while maintaining aspect ratio: gm("img.png").resize(40)
 
     To resize an image to a height of 50px while maintaining aspect ratio: gm("img.png").resize(null, 50)

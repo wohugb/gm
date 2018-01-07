@@ -74,4 +74,26 @@ pages:
   - 比较: ImageComparisons.md
   - 使用IM: UsingImagemagick.md
   - 扩展: Extending.md
+  - GM:
+    - 概述: GraphicsMagick/index.md
+    - 下载: GraphicsMagick/Download.md
+    - 安装: GraphicsMagick/Install.md
+    - 工具: GraphicsMagick/Utilities.md
+    - 手册: 
+      - 主页: GraphicsMagick/Manual/index.md
+      - 动画: GraphicsMagick/Manual/animate.md
+      - 批量: GraphicsMagick/Manual/batch.md
+      - 基准: GraphicsMagick/Manual/benchmark.md
+      - 比较: GraphicsMagick/Manual/compare.md
+      - 合并: GraphicsMagick/Manual/composite.md
+      - 魔术: GraphicsMagick/Manual/conjure.md
+      - 转换: GraphicsMagick/Manual/convert.md
+      - 显示: GraphicsMagick/Manual/display.md
+      - 识别: GraphicsMagick/Manual/identify.md
+      - 导入: GraphicsMagick/Manual/import.md
+      - mogrify: GraphicsMagick/Manual/mogrify.md
+      - 蒙太奇: GraphicsMagick/Manual/montage.md
+      - 时间: GraphicsMagick/Manual/time.md
+      - 版本: GraphicsMagick/Manual/version.md
+    - FAQ: GraphicsMagick/FAQ.md
 

@@ -36,7 +36,7 @@
     
     
       
-        <title>命令 - GM</title>
+        <title>缓冲区 - GM</title>
       
     
     
@@ -98,7 +98,7 @@
                 GM
               </span>
               <span class="md-header-nav__topic">
-                命令
+                缓冲区
               </span>
             
           
@@ -168,16 +168,14 @@
       
         
 
-  
-
-<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+<nav class="md-tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
   <li class="md-tabs__item">
     
-      <a href=".." title="概述" class="md-tabs__link">
+      <a href=".." title="概述" class="md-tabs__link md-tabs__link--active">
         概述
       </a>
     
@@ -214,7 +212,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="./" title="绘画" class="md-tabs__link md-tabs__link--active">
+        <a href="../drawing/" title="绘画" class="md-tabs__link">
           绘画
         </a>
       
@@ -326,11 +324,20 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../Buffers/" title="缓冲区" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+    <a href="./" title="缓冲区" class="md-nav__link md-nav__link--active">
       缓冲区
     </a>
+    
   </li>
 
     
@@ -422,12 +429,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
     
     <label class="md-nav__link" for="nav-9">
       绘画
@@ -443,20 +448,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-    <a href="./" title="命令" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../drawing/" title="命令" class="md-nav__link">
       命令
     </a>
-    
   </li>
 
         
@@ -466,7 +462,7 @@
 
 
   <li class="md-nav__item">
-    <a href="example/" title="举例" class="md-nav__link">
+    <a href="../drawing/example/" title="举例" class="md-nav__link">
       举例
     </a>
   </li>
@@ -589,43 +585,28 @@
               
                 
                 
-                <h1 id="_1">基本绘图<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>查看 <a href="example/">drawing.js</a> 文件里的示例.</p>
-<details class="note"><summary>画 - draw</summary><p>Annotate an image with one or more graphic primitives (shapes, text, transformations, pixel operations). Used internally for all drawing methods.
-<div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">draw</span><span class="p">(</span><span class="nx">args</span><span class="p">)</span>
-</pre></div></p></details><details class="note"><summary>矩形 - drawArc</summary><p>Inscribe an elliptical arc within a rectangle. Requires a start and end point as well as the degrees of rotation.
-<div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawArc</span><span class="p">(</span><span class="nx">x0</span><span class="p">,</span> <span class="nx">y0</span><span class="p">,</span> <span class="nx">x1</span><span class="p">,</span> <span class="nx">y1</span><span class="p">,</span> <span class="nx">r0</span><span class="p">,</span> <span class="nx">r1</span><span class="p">)</span>
-</pre></div></p></details><details class="note"><summary>贝塞尔曲线 - drawBezier</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawBezier</span><span class="p">([</span><span class="nx">x0</span><span class="p">,</span> <span class="nx">y0</span><span class="p">],</span> <span class="p">...</span> <span class="p">[</span><span class="nx">xn</span><span class="p">,</span> <span class="nx">yn</span><span class="p">])</span>
+                <h1 id="_1">缓冲器<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<div class="codehilite"><pre><span></span><span class="c1">// A buffer can be passed instead of a filepath as well</span>
+<span class="kd">var</span> <span class="nx">buf</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">).</span><span class="nx">readFileSync</span><span class="p">(</span><span class="s1">&#39;/path/to/image.jpg&#39;</span><span class="p">);</span>
+
+<span class="nx">gm</span><span class="p">(</span><span class="nx">buf</span><span class="p">,</span> <span class="s1">&#39;image.jpg&#39;</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">noise</span><span class="p">(</span><span class="s1">&#39;laplacian&#39;</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;/path/to/out.jpg&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="k">return</span> <span class="nx">handle</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Created an image from a Buffer!&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="cm">/*</span>
+<span class="cm">A buffer can also be returned instead of a stream</span>
+<span class="cm">The first argument to toBuffer is optional, it specifies the image format</span>
+<span class="cm">*/</span>
+<span class="nx">gm</span><span class="p">(</span><span class="s1">&#39;img.jpg&#39;</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">resize</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">toBuffer</span><span class="p">(</span><span class="s1">&#39;PNG&#39;</span><span class="p">,</span><span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">buffer</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="k">return</span> <span class="nx">handle</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;done!&#39;</span><span class="p">);</span>
+<span class="p">})</span>
 </pre></div>
-</details><details class="note"><summary>圆 - drawCircle</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawCircle</span><span class="p">(</span><span class="nx">x0</span><span class="p">,</span> <span class="nx">y0</span><span class="p">,</span> <span class="nx">x1</span><span class="p">,</span> <span class="nx">y1</span><span class="p">)</span>
-</pre></div>
-</details><details class="note"><summary>椭圆形 - drawEllipse</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawEllipse</span><span class="p">(</span><span class="nx">x0</span><span class="p">,</span> <span class="nx">y0</span><span class="p">,</span> <span class="nx">r0</span><span class="p">,</span> <span class="nx">ry</span><span class="p">,</span> <span class="nx">r0</span><span class="p">,</span> <span class="nx">r1</span><span class="p">)</span>
-</pre></div>
-</details><details class="note"><summary>线 - drawLine</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawLine</span><span class="p">(</span><span class="nx">x0</span><span class="p">,</span> <span class="nx">y0</span><span class="p">,</span> <span class="nx">x1</span><span class="p">,</span> <span class="nx">y1</span><span class="p">)</span>
-</pre></div>
-</details><details class="note"><summary>点 - drawPoint</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawPoint</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span>
-</pre></div>
-</details><details class="note"><summary>多边形 - drawPolygon</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawPolygon</span><span class="p">([</span><span class="nx">x0</span><span class="p">,</span> <span class="nx">y0</span><span class="p">]</span> <span class="p">...</span> <span class="p">[</span><span class="nx">xn</span><span class="p">,</span> <span class="nx">yn</span><span class="p">])</span>
-</pre></div>
-</details><details class="note"><summary>多段线 - drawPolyline</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawPolyline</span><span class="p">([</span><span class="nx">x0</span><span class="p">,</span> <span class="nx">y0</span><span class="p">]</span> <span class="p">...</span> <span class="p">[</span><span class="nx">xn</span><span class="p">,</span> <span class="nx">yn</span><span class="p">])</span>
-</pre></div>
-</details><details class="note"><summary>矩形 - drawRectangle</summary><p>wc and hc are optional and add roundness to the corners.
-<div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawRectangle</span><span class="p">(</span><span class="nx">x0</span><span class="p">,</span> <span class="nx">y0</span><span class="p">,</span> <span class="nx">x1</span><span class="p">,</span> <span class="nx">y1</span> <span class="p">[,</span> <span class="nx">wc</span><span class="p">,</span> <span class="nx">hc</span><span class="p">])</span>
-</pre></div></p></details><details class="danger" open="open"><summary>文本 - drawText</summary><p>Draws text on an image at x/y coordinates.
-<div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawText</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">text</span> <span class="p">[,</span> <span class="nx">gravity</span><span class="p">])</span>
-</pre></div></p></details><details class="note"><summary>填充颜色 - fill</summary><p>Specifies the color to use when filling a drawn shape.
-<div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">fill</span><span class="p">(</span><span class="nx">color</span><span class="p">)</span>
-</pre></div></p></details><details class="note"><summary>字体 - font</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">font</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span>
-</pre></div>
-</details><details class="note"><summary>字体大小 - fontSize</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">fontSize</span><span class="p">(</span><span class="nx">size</span><span class="p">)</span>
-</pre></div>
-</details><details class="note"><summary>划 - stroke</summary><p>Specifies the color to use when stroking a drawn shape.
-<div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">stroke</span><span class="p">(</span><span class="nx">color</span> <span class="p">[,</span> <span class="nx">width</span><span class="p">])</span>
-</pre></div></p></details><details class="note"><summary>设置边的宽度 - strokeWidth</summary><p>Specifies the stroke width to use when stroking a drawn shape.
-<div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">strokeWidth</span><span class="p">(</span><span class="nx">width</span><span class="p">)</span>
-</pre></div></p></details><details class="note"><summary>设置属性 - setDraw</summary><p>Sets drawing properties. property can be either "color" or "matte".
-<div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">setDraw</span><span class="p">(</span><span class="nx">property</span><span class="p">,</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">method</span><span class="p">)</span>
-</pre></div></p></details>
                 
                   
                 
@@ -644,7 +625,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../Getters/" title="获取器" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Streams/" title="流" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -653,19 +634,19 @@
                 <span class="md-footer-nav__direction">
                   后退
                 </span>
-                获取器
+                流
               </span>
             </div>
           </a>
         
         
-          <a href="example/" title="举例" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Montage/" title="蒙太奇" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   前进
                 </span>
-                举例
+                蒙太奇
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

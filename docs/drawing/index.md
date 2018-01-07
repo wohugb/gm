@@ -8,7 +8,7 @@
     gm("img.png").draw(args)
     ```
 
-??? note "矩形 - drawArc"
+??? note "弧角 - drawArc"
     Inscribe an elliptical arc within a rectangle. Requires a start and end point as well as the degrees of rotation.
     ```js
     gm("img.png").drawArc(x0, y0, x1, y1, r0, r1)
