@@ -1,0 +1,1164 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="GraphicsMagick and ImageMagick for node">
+      
+      
+      
+        <meta name="author" content="Nosy">
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="zh">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.2.5">
+    
+    
+      
+        <title>合并 - GM</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.bcabdff3.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.792431c1.css">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    
+    
+    
+      <body data-md-color-primary="indigo" data-md-color-accent="indigo">
+    
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../.." title="GM" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                GM
+              </span>
+              <span class="md-header-nav__topic">
+                合并
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">&#xE5CD;</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/wohugb/gm" title="前往 Github 仓库" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      wohugb/gm
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../.." title="概述" class="md-tabs__link">
+        概述
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../custom/arguments/" title="自定义" class="md-tabs__link">
+          自定义
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../drawing/" title="绘画" class="md-tabs__link">
+          绘画
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../composite/" title="合成" class="md-tabs__link">
+          合成
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+        
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../" title="GM" class="md-tabs__link md-tabs__link--active">
+          GM
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </span>
+    GM
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/wohugb/gm" title="前往 Github 仓库" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      wohugb/gm
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="概述" class="md-nav__link">
+      概述
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../BasicUsage/" title="基础用法" class="md-nav__link">
+      基础用法
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../Streams/" title="流" class="md-nav__link">
+      流
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../Buffers/" title="缓冲区" class="md-nav__link">
+      缓冲区
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../Montage/" title="蒙太奇" class="md-nav__link">
+      蒙太奇
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      自定义
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        自定义
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../custom/arguments/" title="参数" class="md-nav__link">
+      参数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../custom/IdentifyFormatString/" title="标识格式字符串" class="md-nav__link">
+      标识格式字符串
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../Manipulation/" title="方法" class="md-nav__link">
+      方法
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../Getters/" title="获取器" class="md-nav__link">
+      获取器
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      绘画
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        绘画
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../drawing/" title="命令" class="md-nav__link">
+      命令
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../drawing/example/" title="举例" class="md-nav__link">
+      举例
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      合成
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        合成
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../composite/" title="概述" class="md-nav__link">
+      概述
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../composite/example/" title="代码" class="md-nav__link">
+      代码
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../ImageComparisons/" title="比较" class="md-nav__link">
+      比较
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../UsingImagemagick/" title="使用IM" class="md-nav__link">
+      使用IM
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../Extending/" title="扩展" class="md-nav__link">
+      扩展
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14" checked>
+    
+    <label class="md-nav__link" for="nav-14">
+      GM
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-14">
+        GM
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../" title="概述" class="md-nav__link">
+      概述
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Download/" title="下载" class="md-nav__link">
+      下载
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Install/" title="安装" class="md-nav__link">
+      安装
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Utilities/" title="工具" class="md-nav__link">
+      工具
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-14-5" type="checkbox" id="nav-14-5" checked>
+    
+    <label class="md-nav__link" for="nav-14-5">
+      手册
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-14-5">
+        手册
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="主页" class="md-nav__link">
+      主页
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../animate/" title="动画" class="md-nav__link">
+      动画
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../batch/" title="批量" class="md-nav__link">
+      批量
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../benchmark/" title="基准" class="md-nav__link">
+      基准
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../compare/" title="比较" class="md-nav__link">
+      比较
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        合并
+      </label>
+    
+    <a href="./" title="合并" class="md-nav__link md-nav__link--active">
+      合并
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="命名" class="md-nav__link">
+    命名
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="内容" class="md-nav__link">
+    内容
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="概要" class="md-nav__link">
+    概要
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="描述" class="md-nav__link">
+    描述
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="举例" class="md-nav__link">
+    举例
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" title="选项" class="md-nav__link">
+    选项
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../conjure/" title="魔术" class="md-nav__link">
+      魔术
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../convert/" title="转换" class="md-nav__link">
+      转换
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../display/" title="显示" class="md-nav__link">
+      显示
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../identify/" title="识别" class="md-nav__link">
+      识别
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../import/" title="导入" class="md-nav__link">
+      导入
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mogrify/" title="mogrify" class="md-nav__link">
+      mogrify
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../montage/" title="蒙太奇" class="md-nav__link">
+      蒙太奇
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../time/" title="时间" class="md-nav__link">
+      时间
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../version/" title="版本" class="md-nav__link">
+      版本
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../FAQ/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="命名" class="md-nav__link">
+    命名
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="内容" class="md-nav__link">
+    内容
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="概要" class="md-nav__link">
+    概要
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="描述" class="md-nav__link">
+    描述
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="举例" class="md-nav__link">
+    举例
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" title="选项" class="md-nav__link">
+    选项
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="gm-composite">gm composite<a class="headerlink" href="#gm-composite" title="Permanent link">&para;</a></h1>
+<h2 id="_1">命名<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>composite - composite images together.</p>
+<h2 id="_2">内容<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>概要</li>
+<li>描述</li>
+<li>举例</li>
+<li>选项</li>
+</ul>
+<h2 id="_3">概要<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>gm composite [ options ... ] change-image base-image [ mask-image ] output-image </p>
+<h2 id="_4">描述<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>composite composites (combines) images to create new images.</p>
+<p>base-image is the base image and change-image contains the changes. ouput-image is the result, and normally has the same dimensions as base-image.</p>
+<p>The optional mask-image can be used to provide opacity information for change-image when it has none or if you want a different mask. A mask image is typically grayscale and the same size as base-image. If mask-image is not grayscale, it is converted to grayscale and the resulting intensities are used as opacity information.</p>
+<h2 id="_5">举例<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>To composite an image of a cockatoo with a perch, use:</p>
+<div class="codehilite"><pre><span></span>gm composite cockatoo.miff perch.ras composite.miff
+</pre></div>
+
+
+<p>To compute the difference between images in a series, use:</p>
+<div class="codehilite"><pre><span></span>gm composite -compose difference series.2 series.1 difference.miff
+</pre></div>
+
+
+<p>To composite an image of a cockatoo with a perch starting at location (100,150), use:</p>
+<div class="codehilite"><pre><span></span>gm composite -geometry +100+150 cockatoo.miff perch.ras composite.miff
+</pre></div>
+
+
+<p>To tile a logo across your image of a cockatoo, use</p>
+<div class="codehilite"><pre><span></span>gm convert +shade 30x60 cockatoo.miff mask.miff
+gm composite -compose bumpmap -tile logo.png
+          cockatoo.miff mask.miff composite.miff
+</pre></div>
+
+
+<p>To composite a red, green, and blue color plane into a single composite image, try</p>
+<div class="codehilite"><pre><span></span>gm composite -compose CopyGreen green.png red.png red-green.png
+gm composite -compose CopyBlue blue.png red-green.png composite.png
+</pre></div>
+
+
+<h2 id="_6">选项<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p>Options are processed in command line order. Any option you specify on the command line remains in effect only for the image that follows. All options are reset to their default values after each image is read.</p>
+<p>For a more detailed description of each option, see Options, above. GraphicsMagick(1). </p>
+<details class="info"><summary>-authenticate <code>&lt;string&gt;</code></summary><p>decrypt image with this password</p></details><details class="info"><summary>-background <code>&lt;color&gt;</code></summary><p>the background color</p></details><details class="info"><summary>-blue-primary <code>&lt;x&gt;</code>,<code>&lt;y&gt;</code></summary><p>blue chromaticity primary point</p></details><details class="info"><summary>-colors <code>&lt;value&gt;</code></summary><p>preferred number of colors in the image</p></details><details class="info"><summary>-colorspace <code>&lt;value&gt;</code></summary><p>the type of colorspace</p></details><details class="info"><summary>-comment <code>&lt;string&gt;</code></summary><p>annotate an image with a comment</p></details><details class="info"><summary>-compose <code>&lt;operator&gt;</code></summary><p>the type of image composition</p></details><details class="info"><summary>-compress <code>&lt;type&gt;</code></summary><p>the type of image compression</p></details><details class="info"><summary>-debug <code>&lt;events&gt;</code></summary><p>enable debug printout</p></details><details class="info"><summary>-define <code>&lt;key&gt;</code>{=<code>&lt;value&gt;</code>},...</summary><p>add coder/decoder specific options</p></details><details class="info"><summary>-density <code>&lt;width&gt;</code>x<code>&lt;height&gt;</code></summary><p>horizontal and vertical resolution in pixels of the image</p></details><details class="info"><summary>-depth <code>&lt;value&gt;</code></summary><p>depth of the image</p></details><details class="info"><summary>-displace <code>&lt;horizontal scale&gt;</code>x<code>&lt;vertical scale&gt;</code></summary><p>shift image pixels as defined by a displacement map</p></details><details class="info"><summary>-display <code>&lt;host:display[.screen]&gt;</code></summary><p>specifies the X server to contact</p></details><details class="info"><summary>-dispose <code>&lt;method&gt;</code></summary><p>GIF disposal method</p></details><details class="info"><summary>-dissolve <code>&lt;percent&gt;</code></summary><p>dissolve an image into another by the given percent</p></details><details class="info"><summary>-dither</summary><p>apply Floyd/Steinberg error diffusion to the image</p></details><details class="info"><summary>-encoding <code>&lt;type&gt;</code></summary><p>specify the text encoding</p></details><details class="info"><summary>-endian <code>&lt;type&gt;</code></summary><p>specify endianness (MSB, LSB, or Native) of image</p></details><details class="info"><summary>-filter <code>&lt;type&gt;</code></summary><p>use this type of filter when resizing an image</p></details><details class="info"><summary>-font <code>&lt;name&gt;</code></summary><p>use this font when annotating the image with text</p></details><details class="info"><summary>-geometry <code>&lt;width&gt;</code>x<code>&lt;height&gt;</code>{+-}<code>&lt;x&gt;</code>{+-}<code>&lt;y&gt;</code>{%}{@}{!}{^}{<code>&lt;}{&gt;</code>}</summary><p>Specify dimension, offset, and resize options.</p></details><details class="info"><summary>-gravity <code>&lt;type&gt;</code></summary><p>direction primitive gravitates to when annotating the image.</p></details><details class="info"><summary>-green-primary <code>&lt;x&gt;</code>,<code>&lt;y&gt;</code></summary><p>green chromaticity primary point</p></details><details class="info"><summary>-help</summary><p>print usage instructions</p></details><details class="info"><summary>-interlace <code>&lt;type&gt;</code></summary><p>the type of interlacing scheme</p></details><details class="info"><summary>-label <code>&lt;name&gt;</code></summary><p>assign a label to an image</p></details><details class="info"><summary>-limit <code>&lt;type??? info "</code><value>`</summary><p>Disk, File, Map, Memory, Pixels, Width, Height or Threads resource limit</p></details><details class="info"><summary>-log <code>&lt;string&gt;</code></summary><p>Specify format for debug log</p></details><details class="info"><summary>-matte</summary><p>store matte channel if the image has one</p></details><details class="info"><summary>-monitor</summary><p>show progress indication</p></details><details class="info"><summary>-monochrome</summary><p>transform the image to black and white</p></details><details class="info"><summary>-negate</summary><p>replace every pixel with its complementary color</p></details><details class="info"><summary>-page <code>&lt;width&gt;</code>x<code>&lt;height&gt;</code>{+-}<code>&lt;x&gt;</code>{+-}<code>&lt;y&gt;</code>{%}{!}{<code>&lt;}{&gt;</code>}</summary><p>size and location of an image canvas</p></details><details class="info"><summary>-profile <code>&lt;filename&gt;</code></summary><p>add ICM, IPTC, or generic profile to image</p></details><details class="info"><summary>-quality <code>&lt;value&gt;</code></summary><p>JPEG/MIFF/PNG/TIFF compression level</p></details><details class="info"><summary>-recolor <code>&lt;matrix&gt;</code></summary><p>apply a color translation matrix to image channels</p></details><details class="info"><summary>-red-primary <code>&lt;x&gt;</code>,<code>&lt;y&gt;</code></summary><p>red chromaticity primary point</p></details><details class="info"><summary>-render</summary><p>render vector operations</p></details><details class="info"><summary>-repage <code>&lt;width&gt;</code>x<code>&lt;height&gt;</code>+xoff+yoff[!]</summary><p>Adjust image page offsets</p></details><details class="info"><summary>-resize <code>&lt;width&gt;</code>x<code>&lt;height&gt;</code>{%}{@}{!}{<code>&lt;}{&gt;</code>}</summary><p>resize an image</p></details><details class="info"><summary>-rotate <code>&lt;degrees&gt;</code>{<code>&lt;}{&gt;</code>}</summary><p>rotate the image</p></details><details class="info"><summary>-sampling-factor <code>&lt;horizontal_factor&gt;</code>x<code>&lt;vertical_factor&gt;</code></summary><p>chroma subsampling factors</p></details><details class="info"><summary>-scene <code>&lt;value&gt;</code></summary><p>set scene number</p></details><details class="info"><summary>-set <code>&lt;attribute??? info "</code><value>`</summary><p>set an image attribute</p></details><details class="info"><summary>+set <code>&lt;attribute&gt;</code></summary><p>unset an image attribute</p></details><details class="info"><summary>-sharpen <code>&lt;radius&gt;</code>{x<code>&lt;sigma&gt;</code>}</summary><p>sharpen the image</p></details><details class="info"><summary>-size <code>&lt;width&gt;</code>x<code>&lt;height&gt;</code>{+offset}</summary><p>width and height of the image</p></details><details class="info"><summary>-stegano <code>&lt;offset&gt;</code></summary><p>hide watermark within an image</p></details><details class="info"><summary>-stereo</summary><p>composite two images to create a stereo anaglyph</p></details><details class="info"><summary>-strip</summary><p>remove all profiles and text attributes from the image</p></details><details class="info"><summary>-thumbnail <code>&lt;width&gt;</code>x<code>&lt;height&gt;</code>{%}{@}{!}{<code>&lt;}{&gt;</code>}</summary><p>resize an image (quickly)</p></details><details class="info"><summary>-treedepth <code>&lt;value&gt;</code></summary><p>tree depth for the color reduction algorithm</p></details><details class="info"><summary>-trim</summary><p>trim an image</p></details><details class="info"><summary>-type <code>&lt;type&gt;</code></summary><p>the image type</p></details><details class="info"><summary>-units <code>&lt;type&gt;</code></summary><p>the units of image resolution</p></details><details class="info"><summary>-unsharp <code>&lt;radius&gt;</code>{x<code>&lt;sigma&gt;</code>}{+<code>&lt;amount&gt;</code>}{+<code>&lt;threshold&gt;</code>}</summary><p>sharpen the image with an unsharp mask operator</p></details><details class="info"><summary>-verbose</summary><p>print detailed information about the image</p></details><details class="info"><summary>-version</summary><p>print GraphicsMagick version string</p></details><details class="info"><summary>-watermark <code>&lt;brightness&gt;</code>x<code>&lt;saturation&gt;</code></summary><p>percent brightness and saturation of a watermark</p></details><details class="info"><summary>-white-point <code>&lt;x&gt;</code>,<code>&lt;y&gt;</code></summary><p>chromaticity white point</p></details><details class="info"><summary>-write <code>&lt;filename&gt;</code></summary><p>write an intermediate image [convert, composite]</p></details><p>For a more detailed description of each option, see Options, above. GraphicsMagick(1). </p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../compare/" title="比较" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                比较
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../conjure/" title="魔术" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前进
+                </span>
+                魔术
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            版权 &copy; 2017 - 2018 wohugb.github.io
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="http://wohugb.github.io" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://github.com/wohugb" class="md-footer-social__link fa fa-github-alt"></a>
+    
+      <a href="https://twitter.com/wohugb" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/wohugb" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.6cdc17f0.js"></script>
+      
+        
+        
+          
+          <script src="../../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              <script src="../../../assets/javascripts/lunr/lunr.zh.js"></script>
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"0.17.2",url:{base:"../../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1176 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="GraphicsMagick and ImageMagick for node">
+      
+      
+      
+        <meta name="author" content="Nosy">
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="zh">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.2.5">
+    
+    
+      
+        <title>FAQ - GM</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.bcabdff3.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.792431c1.css">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    
+    
+    
+      <body data-md-color-primary="indigo" data-md-color-accent="indigo">
+    
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="GM" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                GM
+              </span>
+              <span class="md-header-nav__topic">
+                FAQ
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">&#xE5CD;</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/wohugb/gm" title="前往 Github 仓库" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      wohugb/gm
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." title="概述" class="md-tabs__link">
+        概述
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../custom/arguments/" title="自定义" class="md-tabs__link">
+          自定义
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../drawing/" title="绘画" class="md-tabs__link">
+          绘画
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../composite/" title="合成" class="md-tabs__link">
+          合成
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+        
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../" title="GM" class="md-tabs__link md-tabs__link--active">
+          GM
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </span>
+    GM
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/wohugb/gm" title="前往 Github 仓库" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      wohugb/gm
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="概述" class="md-nav__link">
+      概述
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../BasicUsage/" title="基础用法" class="md-nav__link">
+      基础用法
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../Streams/" title="流" class="md-nav__link">
+      流
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../Buffers/" title="缓冲区" class="md-nav__link">
+      缓冲区
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../Montage/" title="蒙太奇" class="md-nav__link">
+      蒙太奇
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      自定义
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        自定义
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../custom/arguments/" title="参数" class="md-nav__link">
+      参数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../custom/IdentifyFormatString/" title="标识格式字符串" class="md-nav__link">
+      标识格式字符串
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../Manipulation/" title="方法" class="md-nav__link">
+      方法
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../Getters/" title="获取器" class="md-nav__link">
+      获取器
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      绘画
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        绘画
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../drawing/" title="命令" class="md-nav__link">
+      命令
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../drawing/example/" title="举例" class="md-nav__link">
+      举例
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      合成
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        合成
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../composite/" title="概述" class="md-nav__link">
+      概述
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../composite/example/" title="代码" class="md-nav__link">
+      代码
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../ImageComparisons/" title="比较" class="md-nav__link">
+      比较
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../UsingImagemagick/" title="使用IM" class="md-nav__link">
+      使用IM
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../Extending/" title="扩展" class="md-nav__link">
+      扩展
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14" checked>
+    
+    <label class="md-nav__link" for="nav-14">
+      GM
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-14">
+        GM
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="概述" class="md-nav__link">
+      概述
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Download/" title="下载" class="md-nav__link">
+      下载
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Install/" title="安装" class="md-nav__link">
+      安装
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Utilities/" title="工具" class="md-nav__link">
+      工具
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-14-5" type="checkbox" id="nav-14-5">
+    
+    <label class="md-nav__link" for="nav-14-5">
+      手册
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-14-5">
+        手册
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Manual/" title="主页" class="md-nav__link">
+      主页
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Manual/animate/" title="动画" class="md-nav__link">
+      动画
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Manual/batch/" title="批量" class="md-nav__link">
+      批量
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Manual/benchmark/" title="基准" class="md-nav__link">
+      基准
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Manual/compare/" title="比较" class="md-nav__link">
+      比较
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Manual/composite/" title="合并" class="md-nav__link">
+      合并
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Manual/conjure/" title="魔术" class="md-nav__link">
+      魔术
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Manual/convert/" title="转换" class="md-nav__link">
+      转换
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Manual/display/" title="显示" class="md-nav__link">
+      显示
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Manual/identify/" title="识别" class="md-nav__link">
+      识别
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Manual/import/" title="导入" class="md-nav__link">
+      导入
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Manual/mogrify/" title="mogrify" class="md-nav__link">
+      mogrify
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Manual/montage/" title="蒙太奇" class="md-nav__link">
+      蒙太奇
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Manual/time/" title="时间" class="md-nav__link">
+      时间
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Manual/version/" title="版本" class="md-nav__link">
+      版本
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        FAQ
+      </label>
+    
+    <a href="./" title="FAQ" class="md-nav__link md-nav__link--active">
+      FAQ
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="问题内容" class="md-nav__link">
+    问题内容
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="问题列表" class="md-nav__link">
+    问题列表
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="问题内容" class="md-nav__link">
+    问题内容
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="问题列表" class="md-nav__link">
+    问题列表
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="graphicsmagick">GraphicsMagick 常见问题<a class="headerlink" href="#graphicsmagick" title="Permanent link">&para;</a></h1>
+<h2 id="_1">问题内容<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>How does GraphicsMagick differ from ImageMagick?</li>
+<li>How often does GraphicsMagick pick up new code from ImageMagick?</li>
+<li>Are there any plans to use OpenCL or CUDA to use a GPU?</li>
+<li>What is the meaning of "magick"?</li>
+<li>How can I process many files at once?</li>
+<li>I received the following message, "?????? delegation failed ...". What does it mean?</li>
+<li>How do I set the transparency index in a GIF image so it displays properly within Mozilla?</li>
+<li>How can I stop the filenames from changing in the title bar of the animate(1) image window?</li>
+<li>The image grabbed by import(1) does not look like the image on my X server. What's wrong?</li>
+<li>How do I animate a digital YUV image sequence?</li>
+<li>How do I change the default PostScript page size?</li>
+<li>I get a memory allocation error. What can I do?</li>
+<li>How do I concatenate three images left-to-right with no borders, frames, or text?</li>
+<li>How do I create a GIF animation sequence to display within Firefox?</li>
+<li>When I display a PostScript image, white borders are trimmed.</li>
+<li>What are visual image directories? How do I use them?</li>
+<li>How can I include the window frame when importing a window?</li>
+<li>I displayed an image and it appears as one solid color. What did I do wrong?</li>
+<li>I received the following message, "???? library is not available...".</li>
+<li>I want to inspect the values of the matte channel within my image.</li>
+<li>How can I add one of those cool bevels to my image that I see used on the Web?</li>
+<li>I try to launch display from my window manager and it fails. What's up?</li>
+<li>How can I make Postscript text look good?</li>
+<li>How can I annotate an image with text that is 2 to 3 inches tall?</li>
+<li>How can I convert my GIF animation sequence to individual image files?</li>
+<li>How can I remove the background that prints around my image when I display it with Firefox?</li>
+<li>How do I create a GIF or PNG image with Web safe colors?</li>
+<li>How can I add a matte layer to my image?</li>
+<li>How can I draw with text using 'convert' under Windows NT?</li>
+<li>Why are my JPEG files larger than expected?</li>
+<li>How do I extract a single image from a multi-image file?</li>
+<li>How can I extract and combine CMYK channels in a CMYK image?</li>
+<li>How can I create a solid or patterned canvas image?</li>
+<li>What does identify report?</li>
+</ul>
+<h2 id="_2">问题列表<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<details class="faq"><summary>GraphicsMagick 与 ImageMagick 有何不同?</summary><p>GraphicsMagick is originally based on (forked from) ImageMagick 5.5.2 in November 2002, from the version distributed by ImageMagick Studio LLC, which is itself forked in August 1999 from ImageMagick developed by E. I. du Pont de Nemours and Company starting in 1992. Other than utilities being executed as sub-commands of the 'gm' command, the command-line syntax and programming APIs remain entirely upward compatible with ImageMagick 5.5.2. A better question might be "How does ImageMagick differ from ImageMagick?" since ImageMagick continues to alter and evolve its interfaces so they are no longer completely compatible with earlier versions. While GraphicsMagick also adds new features, it does so in a way which assures that existing features work as they did before. ImageMagick focuses on adding new functionality and features and has dramatically mutated several times since the fork.</p><p>GraphicsMagick maintains a stable release branch, maintains a detailed ChangeLog, and maintains a stable source repository with complete version history so that changes are controlled, and changes between releases are accurately described. GraphicsMagick provides continued support for a release branch. ImageMagick does not offer any of these things.</p><p>Since GraphicsMagick is more stable, more time has been spent optimizing and debugging its code.</p><p>GraphicsMagick is much smaller than ImageMagick and has dramatically fewer dependencies on external libraries. For example, on the FreeBSD operating system, a fully-featured install of GraphicsMagick depends on 36 libraries whereas ImageMagick requires 64. GraphicsMagick's installation footprint is 3-5X smaller than ImageMagick.</p><p>GraphicsMagick is usually faster than ImageMagick. The baseline execution overhead for simple commands is much lower, and GraphicsMagick is also more efficient at dealing with large images.</p></details><details class="faq"><summary>How often does GraphicsMagick pick up new code from ImageMagick?</summary><p>GraphicsMagick never picks up new code from ImageMagick as distributed by ImageMagick Studio LLC. Not long after the GraphicsMagick project was started in November 2002, ImageMagick from ImageMagick Studio LLC abandoned the MIT X11 style license it had been using since 1992, and switched between several different licenses until it ended up with one based on the Apache license, which is intended to penalize projects which borrow some of its source code, or fork from it. Since that time, GraphicsMagick has not incorporated any ImageMagick source code.</p><p>On November 27, 2003 ImageMagick Studio LLC applied to register "ImageMagick" as its trademark, and it was awarded this registered trademark (serial number 78333969) on August 30, 2005. Those who re-distribute modified versions of "ImageMagick" (e.g. patched or improved) under license as "ImageMagick" now face the risk of arbitrary trademark infringement claims by ImageMagick Studio LLC.</p><p>Authors of new features are encouraged to independently contribute their work to the GraphicsMagick project so that it can be released under GraphicsMagick's MIT X11 style license without additional encumberment. In order for a work to be accepted, it must have been developed entirely outside the ImageMagick source base to avoid any possibility of copyright taint.</p></details><details class="faq"><summary>Are there any plans to use OpenCL or CUDA to use a GPU?</summary><p>It is well known that some math-intensive algorithms run very quickly on video-card (and stand-alone) GPUs. Video card vendors encourage you to buy an expensive video card with quite a lot of installed RAM and modify applications to use the GPU via their proprietary or limited-purpose APIs. GPUs are quite effective at producing images for real-time display, such as for video games and virtual reality. GraphicsMagick has been significantly updated to use multiple CPU cores to speed up the image processing, and work continues to thread the few remaining algorithms, or remove inefficiencies in algorithms which don't see as much speed-up as they should. Linear speedup as cores are added is typical for CPU-bound algorithms on well-designed CPUs. Regardless, Amdahl's law is a significant factor in GraphicsMagick, with non-parallelizable code paths often dominating the time.</p><p>It is my belief that stand-alone GPUs are a poor design (expensive, inefficient, failure-prone, bandwidth bottlenecked, lack functionality, are insecure, and are not supported in servers) and that multi-core CPUs will ultimately prevail. Functionality which currently works best in a GPU will simply be integrated into tomorrow's multi-core CPUs and C compilers will naturally support that functionality. Once GPU capabilities are integrated into CPUs, there will be no more need to develop specialized code for a GPU. Today 16 core CPUs are readily available for purchase in systems at reasonable prices, and this trend is certain to continue.</p><p>Intel's Xeon Phi offers a 61 core 'x86 CPU in a GPU-like plugin form-factor which provides over a TeraFLOP of performance. Being based on power-hungry plug-in cards, this solution suffers from many of the issues associated with GPUs. However, since it supports OpenMP, it may be a suitable target for executing some GraphicsMagick algorithms. Effective use of Xeon Phi currently requires use of Intel's development tools so from that standpoint it is not much more open than GPUs.</p><p>Future multi-core CPUs will use a similar amount of power to today's CPUs, will idle at very low power consumption levels, and will fit into a very small chassis. Due to this trend, there is no value obtained by expending energy toward developing specialized code for today's GPUs.</p></details><details class="faq"><summary>What is the meaning of "magick"?</summary><p>According to the infamous British accultist Aleister Crowley, the definition of magick is "the science and art of causing change to occur in conformity with the will".</p></details><details class="faq"><summary>How can I process many files at once?</summary><p>Use 'gm mogrify'. The 'mogrify' subcommand is designed to operate on any number of files in one command. Normally 'mogrify' overwrites the input files but the -output-directory option (which must appear before any input file names!) allows sending the modified files to a different directory (which could be in a subdirectory). For example:</p><div class="codehilite"><pre><span></span>gm mogrify -output-directory .thumbs -resize 320x200 *.jpg
+</pre></div>
+<p>If you encounter command line length limitations then you can have GraphicsMagick expand the file list by quoting the wildcard argument to prevent it from being expanded by your command shell:</p><div class="codehilite"><pre><span></span>gm mogrify -output-directory .thumbs -resize 320x200 <span class="s2">&quot;*.jpg&quot;</span>
+</pre></div>
+<p>and you can also retrieve a list of files to process from a text file (e.g. named 'files.txt') like:</p><div class="codehilite"><pre><span></span>gm mogrify -output-directory .thumbs -resize 320x200 @files.txt
+</pre></div>
+<p>where files.txt has one line per file name. If the input file paths contain relative sub-directory paths (e.g. "foo/file1", "bar/file2"), you can instruct GraphicsMagick to create a similar subdirectory structure under the output directory by adding the -create-directories option:</p><div class="codehilite"><pre><span></span>gm mogrify -output-directory .thumbs -create-directories -resize 320x200 @files.txt
+</pre></div>
+<p>Note that the algorithm used to generate output file names is quite simple. If -output-directory is "/foo" and the file path is "bar/none.jpg" then the final path will be "foo/bar/none.jpg". Based on this it should be clear that when -output-directory is used, file paths should be relative paths rather than absolute paths or else the concatenation won't work.</p></details><details class="faq"><summary>I received the following message, "?????? delegation failed ...". What does it mean?</summary><p>GraphicsMagick uses several freely available packages to perform the translation of certain image formats (PostScript, MPEG, etc.). Make sure these packages are available as described in the README file. Also verify that you have plenty of temporary disk space. If not, set the MAGICK_TMPDIR (or TMPDIR) environment variable to an area where sufficient space is available. Finally, for PostScript, verify that Ghostscript supports the pnmraw or ppmraw device (gs -h) and that the document contains valid PostScript statements (gs image.ps).</p></details><details class="faq"><summary>How do I set the transparency index in a GIF image so it displays properly within Mozilla?</summary><p>Display your GIF image with display. Choose Matte from the Image Edit command menu and identify a pixel that has the transparency color. Press Method and select a matte edit method from a pop-up menu. Choose from these methods:</p><p>point
+replace
+floodfill
+The point method changes the matte value of any pixel selected with the pointer until the button is is released. The replace method changes the matte value of any pixel that matches the color of the pixel you select with a button press. Floodfill changes the matte value of any pixel that matches the color of the pixel you select with a button press and is a neighbor.</p><p>Select your transparent pixel with the pointer and press a button. The image is redisplayed with any transparent pixels recolored to the background color. You can select other pixels or areas to force to transparent. When you are satisfied, press Return.</p><p>Finally, choose Save from the command menu and write your GIF image to a file. Note that setting transparency works best on a TrueColor or DirectColor visual. If your server only exports colormapped visuals you will need to use a Standard Colormap to set transparency.</p><p>xstdcmap -best
+gm display -map list image.gif
+[ choose Matte Edit ]
+[ select your transparent pixel then press Return ]
+[ choose Save '
+If you do not have the xstdcmap(1) program, try</p><p>gm display -visual TrueColor image.gif</p></details><details class="faq"><summary>How can I stop the filenames from changing in the title bar of the animate(1) image window?</summary><p>Animate updates the image file name in the title bar of the image window as each image is displayed from the image sequence. To display just a single name that will not change, use -title:</p><p>gm animate -title "My Image Sequence" images.</p></details><details class="faq"><summary>The image grabbed by import(1) does not look like the image on my X server. What's wrong?</summary><p>Use the -descend option:</p><p>gm import -descend image.miff
+or set this X resource:</p><p>gm import.descend: True
+By default, import quickly grabs the image from the X server. However, it may not always have the correct colors in some areas. This can happen when a subwindow has a different colormap than its parent. With -descend, import descends the window hierarchy. Descending involves grabbing the image and colormap of each window or subwindow associated with the window you select and compositing it on a blank canvas. This can be significantly slower than just grabbing the top-level window but ensures the correct image.</p></details><details class="faq"><summary>How do I animate a digital YUV image sequence?</summary><p>Suppose your sequence is 72 352x240 frames titled frame0.Y, frame0.U, frame0.V, frame1.Y, frame1.U, etc. Use this command:</p><p>gm animate -geometry 352x240 -scene 0-71 yuv3:frame%d</p></details><details class="faq"><summary>How do I change the default PostScript page size?</summary><p>The default dimensions of a PostScript page is 612x792. If you prefer another default, change the page geometries (PSPageGeometry) in magick/image.h and recompile.</p></details><details class="faq"><summary>I get a memory allocation error. What can I do?</summary><p>Memory allocation is a complex topic in GraphicsMagick and image processing requires a lot of memory. GraphicsMagick tries to take best advantage of the resources available by optimizing its use of virtual memory. Virtual memory is normally the amount of RAM (Random Access Memory) available to the process plus the amount of free space in the system paging area (known as "swap" under Unix, or a "page file" under Windows). In addition to the RAM and the paging area, GraphicsMagick is able to expand the amount of virtual memory available by using memory-mapped files which cause the file to be treated as extra memory. A piece of hardware known as the Memory Management Unit (MMU) performs the magic which allows the system paging area and memory-mapped files to be treated as more memory by your system's CPU.</p><p>Usually when a memory allocation error occurs, it is because the system's paging area is full, or the programs memory (heap) is fragmented badly enough that there is no large-enough block of memory available to satisfy the request. In some cases the operating system may artificially limit the memory available to the program. Failures of small memory allocations are generally considered fatal by GraphicsMagick. If it is impossible to allocate even a little bit of memory, then there is no point in continuing. When large memory allocations associated with allocating memory for image pixels fail, GraphicsMagick uses that as a key to know that it should start using memory-mapped temporary files to increase virtual memory. Under Unix and other POSIX-compliant systems, these memory-mapped temporary files are created in either the system default location (e.g. /var/tmp) or the directory set by the TMPDIR environment variable. Under Windows, temporary files are created in the directory set by the TEMP or TMP environment variable. Use the MAGICK_TMPDIR environment variable to specify a directory for GraphicsMagick to write its temporary files.</p><p>If the temporary file directory is too small, or is itself mapped to the system's paging area (no win!), then GraphicsMagick will fail to allocate more virtual memory via the temporary file and will return an error.</p><p>The single biggest factor in how much memory is required by GraphicsMagick is the QuantumDepth setting when it was compiled. The amount of memory (in bytes) required to store a single image in memory is may be calculated via the equation (QuantumDepth<em>Rows</em>Columns*5)/8. As a means of example, the following table shows the amount of memory consumed by a single 1024x768 image using the supported QuantumDepth settings:</p><p>QuantumDepth    Virtual Memory
+8   3MB
+16  8MB
+32  15MB
+Performing an image processing operation may require that several images be in memory at one time. In the case of animations, hundreds of images may be in memory at one time.</p><p>GraphicsMagick is designed to be general purpose. It can display many image storage formats (Monochrome, PseudoColor, or TrueColor) on many different types of X visuals (StaticGray, StaticColor, PseudoColor, GrayScale, DirectColor, or TrueColor). To support all these combinations of image storage formats and X visuals, extra memory is required. Additionally, animate and montage store an entire image sequence in memory.</p><p>It is recommended that systems used to run GraphicsMagick have at least 96MB of RAM and 140MB free in their paging area. Systems used to process large images (do the math!) may require considerably more memory to operate efficiently. GraphicsMagick is proven to be far more efficient at processing huge images when it is compiled as a 64-bit application on a 64-bit capable CPU. RAM is typically 1000 times faster than disk, so it is important to keep as much data in RAM as possible (buy lots of RAM). The temporary file area should have plenty of free space. The size of the temporary file area is usually the deciding factor as to whether GraphicsMagick is able to complete an operation. With sufficient free disk space, GraphicsMagick is primarily limited by your CPU, your operating system's ability to address memory, and your degree of patience. GraphicsMagick has been used to process RGB images 64K by 64K pixels in size!</p></details><details class="faq"><summary>How do I concatenate three images left-to-right with no borders, frames, or text?</summary><p>Assume your three images are called image1.ppm, image2.ppm, and image3.ppm. Type</p><p>gm montage -mode concatenate -tile 3x1 image1.ppm image2.ppm \
+  image3.ppm concatenated.miff
+To concatenate the images top-to-bottom, use -tile 1x3.</p><p>For more control over the placement of an image, use composite. First create a matte image and position your images onto the matte. For example,</p><p>gm convert -size 350x500 xc:black composite.miff
+gm composite -geometry +0+0 composite.miff image1.gif composite.miff
+gm composite -geometry "+1"00+0 composite.miff image2.gif composite.miff
+gm composite -geometry +0+300 composite.miff image3.gif composite.miff
+gm composite -geometry +0+375 composite.miff image4.gif composite.miff</p></details><details class="faq"><summary>How do I create a GIF animation sequence to display within Firefox?</summary><p>Use convert with the -delay and -page options. The -delay option is used to specify the delay in 1/100ths of a second between the display of each frame of the animation. For example,</p><p>gm convert -delay 20 frame*.gif animation.gif
+You can also declare specific delays for each frame of the image sequence. For example, if the delay was 20, 10, and 5, use</p><p>gm convert -delay 20 frame1.gif -delay 10 frame2.gif \
+  -delay 5 frame3.gif animation.gif
+Use -page to specify the left and top locations of the image frame</p><p>gm convert frame1.gif -page +50"+1"00 frame2.gif -page +0"+1"00 \
+  frame3.gif animation.gif
+Finally, if you want the image to loop within FireFox, use -loop</p><p>gm convert -loop 50 frame*.gif animation.gif
+Note, that all the images are composited into a single multi-image GIF animation. If you want a single image produced for each frame, use +adjoin</p><p>gm convert +adjoin images.* frames%d.gif</p></details><details class="faq"><summary>When I display a PostScript image, white borders are trimmed.</summary><p>GraphicsMagick automatically trims any PostScript image as defined by the bounding box. To preempt this behavior, remove the bounding box statement from the Postscript or explicitly set the page size. For example,</p><p>gm display -page letter image.ps</p></details><details class="faq"><summary>What are visual image directories? How do I use them?</summary><p>A visual image directory (VID) is an image that contains thumbnails of one or more images in a file directory. Rather than displaying each individual image at its full resolution, you can browse the visual image directory and choose an image to display. You can create a VID with either of these commands:</p><p>gm montage <em>.jpg directory.vid
+gm convert 'vid:</em>.jpg' directory.vid
+Of course you can substitute any filenames you desire. Montage has many relevant command line options. You can exercise more control over the appearance of the VID than with convert.</p><p>Next display the directory:</p><p>gm display directory.vid
+Finally browse and select an image to display. Move the pointer to the image and press button 3.</p><p>You can create the VID directory with this command:</p><p>gm display 'vid:*.jpg'
+You can also select Visual Image... from the File menu of the command widget.</p><p>Note, that creating a VID is time consuming. Creating them on-the-fly within display may be less convenient than using montage or convert . Also, if you create them with montage. or convert, you can reuse them as often as necessary.</p><p>Note that a visual image directory is useful for looking at individual frames of an image sequence:</p><p>gm display vid:movie.mpg</p></details><details class="faq"><summary>How can I include the window frame when importing a window?</summary><p>I use the window ID reported by xwininfo(1) with import and it does not include the window manager frame as expected. How can I save the window with its frame?</p><p>By default, xwininfo(1) returns the ID of the window you click on. Use the -frame option to get the reparented window ID:</p><p>xwininfo -frame
+You can then use the returned window ID with import:</p><p>gm import -frame -window ID window.miff
+I displayed an image and it appears as one solid color. What did I do wrong?
+A blank image generally means that the image is either corrupt or it has a matte channel and the matte values are all zero. GraphicsMagick treats a matte value of zero as completely transparent. To determine if this is the problem, try</p><p>gm display +matte image.miff
+I received the following message, "???? library is not available...".
+GraphicsMagick requires source libraries not included with the distribution to view or convert certain image formats such as JPEG or TIFF. The above message means you did not compile the required library and link with the GraphicsMagick utilities. See README for the location of these libraries and compiling instructions.</p><p>I want to inspect the values of the matte channel within my image.
+View the matte image as a gray scale image. Suppose you have a TIFF image that has a matte channel and is 640 pixels in width and 480 in height. Type:</p><p>gm convert image.tiff image.matte
+gm display -size 640x480 gray:image.matte</p></details><details class="faq"><summary>How can I add one of those cool bevels to my image that I see used on the Web?</summary><p>There are four types of ornamental borders you can add to your image with GraphicsMagick. Each is listed below with the procedure to use them with your image.</p><p>Surround the image with a border of color</p><p>Use -border followed by the width and height of the border. Set the color of the border with -bordercolor. For example, to surround your image with a red border that is 25 pixels wide on each side, use</p><p>gm convert -bordercolor red -border 25x25 image.jpg image.gif
+Lighten or darken image edges to create a 3-D effect</p><p>Use -raise followed by the width of the image edge. For example, to create a raised edge effect of 25 pixels, use</p><p>gm convert -raise 25 image.jpg image.gif
+Surround the image with an ornamental frame</p><p>Use -frame followed by the width and height of the frame. Set the color of the border with -mattecolor. For example, to surround your image with a gray frame that is 25 pixels wide on each side, use</p><p>gm convert -mattecolor gray -frame 25x25 image.jpg image.gif
+Surround the image with a raised or sunken bevel</p><p>Use -frame followed by the width and height of the bevel. Set the color of the border with -mattecolor. This is just like the description above except you specify a bevel width that matches the frame width. For example, to surround your image with a gray bevel that is 25 pixels wide on each side, use</p><p>gm convert -mattecolor gray -frame 25x25+0+25 image.jpg image.gif
+gm convert -mattecolor gray -frame 25x25+25+0 image.jpg image.gif</p></details><details class="faq"><summary>I try to launch display from my window manager and it fails. What's up?</summary><p>Display determines if it is executing interactively and behaves differently depending on the result. To convince display <display.html> you are running in an interactive environment when launching from a window manager, use either of</p><p>display logo:Untitled
+display &lt; /dev/console
+Note that this issue no longer exists as of GraphicsMagick 1.2.</p></details><details class="faq"><summary>How can I make Postscript text look good?</summary><p>Simple. Increase the dots-per-inch when converting and sub-sample:</p><p>gm convert -density 288 -geometry 25% image.ps image.gif
+Change the density to 144 and geometry to 50% if the above command fails due to insufficient memory. Alternatively, see the Ghostscript documentation about using high-quality fonts.</p><p>The -density option increases the number of pixels (or dots) generated by Ghostscript when processing the input postscript file. However as all other images formats are generally displayed on screens which are typically about 72 to 100 dots per inch, the output image will be larger.</p><p>The -geometry option reduces the large image output of ghostscript image back to a normal 72 dpi resolution (25% of 288 dpi gives 72 dpi) but in the process anti-aliases (or smooths) the fonts and lines of the image so as to remove the jaggies you would otherwise get from a normal postscript to image conversion.</p></details><details class="faq"><summary>How can I annotate an image with text that is 2 to 3 inches tall?</summary><p>If you do not access to a particular named font that is large, try scalable fonts. First see if you have any scalable fonts. Type</p><p>xlsfonts -fn '<em>-0-0-0-0-</em>'
+Or if you are using display, use the font pattern above within the Font Browser (see Image Edit-&gt;Annotate). Next substitute the appropriate resolution. Keep in mind that a scalable font must be fully qualified to work. That is, all 14 fields must be specified. Here is one example where we annotate an image with large Helvetica text:</p><p>gm convert -font '-<em>-helvetica-</em>-<em>-</em>--300-300-<em>-</em>-<em>-</em>-iso8859-1' \
+-fill green -draw 'text 50,300 Magick' image.gif annotated.gif
+If you have the FreeType support built into GraphicsMagick, just increase your pointsize and/or density:</p><p>gm convert -font Helvetica -pointsize 100 -density 300 ...</p></details><details class="faq"><summary>How can I convert my GIF animation sequence to individual image files?</summary><p>Use the scene embedded file format with convert:</p><p>gm convert animation.gif +adjoin frame%02d.gif
+The resulting image files are titled frame01.gif, frame02.gif, frame03.gif, etc.</p></details><details class="faq"><summary>How can I remove the background that prints around my image when I display it with Firefox?</summary><p>Use the +page option of the convert command:</p><p>gm convert +page alpha.gif beta.gif
+GIF allows for a page offset relative to some background. The page offset information may have been in your GIF image already or it could have been introduced by GraphicsMagick. Either way, +page removes the unwanted page offset and FireFox should behave as expected.</p></details><details class="faq"><summary>How do I create a GIF or PNG image with Web safe colors?</summary><p>Web safe colors are not normally needed any more since almost all computers now have true color displays. However, this FAQ may still be useful since it demonstrates how a colormap from an image may be applied to another image..</p><p>Use the -map option of the convert command:</p><p>gm convert -map netscape: alpha.gif beta.gif
+Netscape predefines 216 colors for colormapped displays. Use the above command to ensure only these predefined colors are used. Otherwise Netscape dithers your image with varying degrees of image fidelity.</p></details><details class="faq"><summary>How can I add a matte layer to my image?</summary><p>One way is to use a bitmap as your transparency mask First, use the -matte option to add an all-opaque opacity channel, then use the composite utility to copy the graylevel samples from the mask file into your new opacity channel:</p><p>gm convert image.gif -matte temp.miff
+gm composite -compose CopyOpacity mask.xbm temp.miff transparent.gif
+Note, GIF is limited to one transparent color. If your mask has variable opacity, use a format like MIFF, TIFF, or PNG as your output image format.</p></details><details class="faq"><summary>How can I draw with text using 'convert' under Windows NT?</summary><p>The problem is that NT interprets the command line differently than Unix does, causing the documented command to fail. The following command has been reported to work correctly (all on one line):</p><p>gm convert -font Arial -fill blue -draw "text 10,10 'your text here'" \
+d:\test.tif png:d:\test.png
+and here is another example which is reported to work (which relies on Ghostscript's 'gs' program to installed):</p><p>gm convert.exe -pointsize 18 -draw "text 0,0 "This is my text!"" \
+C:\blank.gif c:\text.gif
+Why are my JPEG files larger than expected?
+Your JPEG files may contain embedded "profiles" such as Exif or IPTC, or they may contain uncompressed thumbnails. You can use the +profile "*" commandline option or an equivalent API method to remove them.</p></details><details class="faq"><summary>How do I extract a single image from a multi-image file?</summary><p>Use a square-bracket syntax to indicate which frame or frames you want. For example,</p><div class="codehilite"><pre><span></span>gm convert <span class="s2">&quot;Image.gif[0]&quot;</span> first.gif
+</pre></div>
+<p>Will extract the first image (scene 0) from a GIF animation. Be sure to surround the file specification with quotation marks, to prevent the shell from interpreting the square brackets.</p></details><details class="faq"><summary>How can I extract and combine CMYK channels in a CMYK image?</summary><p>GraphicsMagick 1.2.2 and later support combining multiple channels in of any image file format in order to create a CMYK image file. For example, starting with a CMYK JPEG file, we can create a set of separate files with one file per channel:</p><p><div class="codehilite"><pre><span></span>gm convert cmyk.jpg -channel cyan cyan.tiff
+gm convert cmyk.jpg -channel magenta magenta.tiff
+gm convert cmyk.jpg -channel yellow yellow.tiff
+gm convert cmyk.jpg -channel black black.tiff
+</pre></div>
+and then we can join them back together:
+<div class="codehilite"><pre><span></span>gm composite -compose CopyMagenta magenta.tiff cyan.tiff result.tiff
+gm composite -compose CopyYellow yellow.tiff result.tiff result.tiff
+gm composite -compose CopyBlack black.tiff result.tiff result.tiff
+</pre></div></p><p>Perhaps it is possible to accomplish this in one composite command. We will leave that as an exercise for later. Note that it is possible to extract just one channel, manipulate it, and then insert it back into the original image file.</p><p>There is also built-in support for a Partition interlace format which can split to a set of files, and join a set of files, but the only supported format is a raw format which is not easy to deal with.</p></details><details class="faq"><summary>How can I create a solid or patterned canvas image?</summary><p>Canvas images may be created using the 'XC:' or 'TILE:' pseudo-image formats. XC produces solid color images based on an color you specify while TILE produces a tiled image based on an an image you specify. Both of these require that the desired size be specified, and the desired image type may be specified as well.</p><p>To create a solid red canvas image:
+<div class="codehilite"><pre><span></span>gm convert -size 640x480 xc:red canvas.tiff
+</pre></div>
+or using hex syntax to specify the color:
+<div class="codehilite"><pre><span></span>gm convert -size 640x480 <span class="s2">&quot;xc:#f00&quot;</span> canvas.tiff
+</pre></div>
+To create a solid red canvas image using truecolor pixels:
+<div class="codehilite"><pre><span></span>gm convert -size 640x480 -type TrueColor xc:red canvas.tiff
+</pre></div>
+To create a patterned canvas image using a built-in crosshatch pattern:
+<div class="codehilite"><pre><span></span>gm convert -size 640x480 tile:image:CROSSHATCH45 canvas.tiff
+</pre></div>
+To create a patterned canvas image using a user-supplied image:
+<div class="codehilite"><pre><span></span>gm convert -size 640x480 tile:myimage.tiff canvas.tiff
+</pre></div></p></details><details class="faq"><summary>What does identify report?</summary><p>GraphicsMagick is sophisticated image handling software supporting perhaps a hundred formats, and hundreds of subformats, yet it needs to be able to apply image processing algorithms in a consistent way, and save to many output formats. Some image types are radically different from others. Due to this, GraphicsMagick normalizes images it reads into only nine internal in-memory formats (see the description of -type) which are a specialization of just two internal formats. The identify command reports the characteristics of one of those internal formats rather than the genuine properties of the input image file. In fact, if the properties of all the input files were to be reported, it would require a book to describe all of the properties. For example, the WMF vector-drawing format is much different from the PNG image file format, yet GraphicsMagick can read both.</p><p>Only limited original properties are preserved, and it depends on how GraphicsMagick was built. For example, a "Q8" build can only report up to a depth of 8 bits, but a "Q32" build can report a depth of up to 32 bits. The original image depth is reported if it is at least 8 bits, and equal to or less than the build depth.</p><p>By default identify reports only the most basic properties:
+<div class="codehilite"><pre><span></span>% gm identify seaworld.jpg
+</pre></div></p><p>seaworld.jpg JPEG 1530x1020+0+0 DirectClass 8-bit 204.0K 0.000u 0:01
+but with -verbose it can report on a large number of properties.</p></details>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../Manual/version/" title="版本" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                版本
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            版权 &copy; 2017 - 2018 wohugb.github.io
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="http://wohugb.github.io" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://github.com/wohugb" class="md-footer-social__link fa fa-github-alt"></a>
+    
+      <a href="https://twitter.com/wohugb" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/wohugb" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.6cdc17f0.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              <script src="../../assets/javascripts/lunr/lunr.zh.js"></script>
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"0.17.2",url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

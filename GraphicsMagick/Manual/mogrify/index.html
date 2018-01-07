@@ -1,0 +1,1712 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="GraphicsMagick and ImageMagick for node">
+      
+      
+      
+        <meta name="author" content="Nosy">
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="zh">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.2.5">
+    
+    
+      
+        <title>mogrify - GM</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application.bcabdff3.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-palette.792431c1.css">
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    
+    
+    
+      <body data-md-color-primary="indigo" data-md-color-accent="indigo">
+    
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../.." title="GM" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                GM
+              </span>
+              <span class="md-header-nav__topic">
+                mogrify
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">&#xE5CD;</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/wohugb/gm" title="前往 Github 仓库" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      wohugb/gm
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../.." title="概述" class="md-tabs__link">
+        概述
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../custom/arguments/" title="自定义" class="md-tabs__link">
+          自定义
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../drawing/" title="绘画" class="md-tabs__link">
+          绘画
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../composite/" title="合成" class="md-tabs__link">
+          合成
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+        
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../" title="GM" class="md-tabs__link md-tabs__link--active">
+          GM
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </span>
+    GM
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/wohugb/gm" title="前往 Github 仓库" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      wohugb/gm
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="概述" class="md-nav__link">
+      概述
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../BasicUsage/" title="基础用法" class="md-nav__link">
+      基础用法
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../Streams/" title="流" class="md-nav__link">
+      流
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../Buffers/" title="缓冲区" class="md-nav__link">
+      缓冲区
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../Montage/" title="蒙太奇" class="md-nav__link">
+      蒙太奇
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      自定义
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        自定义
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../custom/arguments/" title="参数" class="md-nav__link">
+      参数
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../custom/IdentifyFormatString/" title="标识格式字符串" class="md-nav__link">
+      标识格式字符串
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../Manipulation/" title="方法" class="md-nav__link">
+      方法
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../Getters/" title="获取器" class="md-nav__link">
+      获取器
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      绘画
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        绘画
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../drawing/" title="命令" class="md-nav__link">
+      命令
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../drawing/example/" title="举例" class="md-nav__link">
+      举例
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      合成
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        合成
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../composite/" title="概述" class="md-nav__link">
+      概述
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../composite/example/" title="代码" class="md-nav__link">
+      代码
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../ImageComparisons/" title="比较" class="md-nav__link">
+      比较
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../UsingImagemagick/" title="使用IM" class="md-nav__link">
+      使用IM
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../Extending/" title="扩展" class="md-nav__link">
+      扩展
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14" checked>
+    
+    <label class="md-nav__link" for="nav-14">
+      GM
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-14">
+        GM
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../" title="概述" class="md-nav__link">
+      概述
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Download/" title="下载" class="md-nav__link">
+      下载
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Install/" title="安装" class="md-nav__link">
+      安装
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Utilities/" title="工具" class="md-nav__link">
+      工具
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-14-5" type="checkbox" id="nav-14-5" checked>
+    
+    <label class="md-nav__link" for="nav-14-5">
+      手册
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-14-5">
+        手册
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="主页" class="md-nav__link">
+      主页
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../animate/" title="动画" class="md-nav__link">
+      动画
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../batch/" title="批量" class="md-nav__link">
+      批量
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../benchmark/" title="基准" class="md-nav__link">
+      基准
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../compare/" title="比较" class="md-nav__link">
+      比较
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../composite/" title="合并" class="md-nav__link">
+      合并
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../conjure/" title="魔术" class="md-nav__link">
+      魔术
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../convert/" title="转换" class="md-nav__link">
+      转换
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../display/" title="显示" class="md-nav__link">
+      显示
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../identify/" title="识别" class="md-nav__link">
+      识别
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../import/" title="导入" class="md-nav__link">
+      导入
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        mogrify
+      </label>
+    
+    <a href="./" title="mogrify" class="md-nav__link md-nav__link--active">
+      mogrify
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#name" title="NAME" class="md-nav__link">
+    NAME
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contents" title="Contents" class="md-nav__link">
+    Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#synopsis" title="Synopsis" class="md-nav__link">
+    Synopsis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" title="Description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" title="Examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#options" title="Options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../montage/" title="蒙太奇" class="md-nav__link">
+      蒙太奇
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../time/" title="时间" class="md-nav__link">
+      时间
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../version/" title="版本" class="md-nav__link">
+      版本
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../FAQ/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#name" title="NAME" class="md-nav__link">
+    NAME
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contents" title="Contents" class="md-nav__link">
+    Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#synopsis" title="Synopsis" class="md-nav__link">
+    Synopsis
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#description" title="Description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" title="Examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#options" title="Options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="gm-mogrify">gm mogrify<a class="headerlink" href="#gm-mogrify" title="Permanent link">&para;</a></h1>
+<h2 id="name">NAME<a class="headerlink" href="#name" title="Permanent link">&para;</a></h2>
+<p>mogrify - mogrify an image</p>
+<h2 id="contents">Contents<a class="headerlink" href="#contents" title="Permanent link">&para;</a></h2>
+<p>Synopsis
+Description
+Examples
+Options</p>
+<h2 id="synopsis">Synopsis<a class="headerlink" href="#synopsis" title="Permanent link">&para;</a></h2>
+<p>gm mogrify [ options ... ] file ... </p>
+<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
+<p>Mogrify transforms an image or a sequence of images. These transforms include image scaling, image rotation, color reduction, and others. Each transmogrified image overwrites the corresponding original image, unless an option such as -format causes the output filename to be different from the input filename. </p>
+<p>The graphics formats supported by mogrify are listed in GraphicsMagick(1).</p>
+<p>Back to Contents  </p>
+<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
+<p>To convert all the TIFF files in a particular directory to JPEG, use:</p>
+<div class="codehilite"><pre><span></span>gm mogrify -format jpeg *.tiff
+</pre></div>
+
+
+<p>To convert a directory full of JPEG images to thumbnails, use:</p>
+<div class="codehilite"><pre><span></span>gm mogrify -size 120x120 *.jpg -resize 120x120 +profile &quot;*&quot;
+</pre></div>
+
+
+<p>In this example, '-size 120x120' gives a hint to the JPEG decoder that the images are going to be downscaled to 120x120, allowing it to run faster by avoiding returning full-resolution images to GraphicsMagick for the subsequent resizing operation. The '-resize 120x120' specifies the desired dimensions of the output images. It will be scaled so its largest dimension is 120 pixels. The '+profile "*"' removes any ICM, EXIF, IPTC, or other profiles that might be present in the input and aren't needed in the thumbnails.
+To scale an image of a cockatoo to exactly 640 pixels in width and 480 pixels in height, use:</p>
+<div class="codehilite"><pre><span></span>gm mogrify -resize 640x480! cockatoo.miff
+</pre></div>
+
+
+<p>Back to Contents  </p>
+<h2 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h2>
+<p>Options are processed in command line order. Any option you specify on the command line remains in effect for the set of images that follows, until the set is terminated by the appearance of any option or -noop.</p>
+<p>For a more detailed description of each option, see Options, above. GraphicsMagick(1). </p>
+<blockquote>
+<p>-affine <matrix></p>
+</blockquote>
+<p>drawing transform matrix</p>
+<blockquote>
+<p>-antialias</p>
+</blockquote>
+<p>remove pixel aliasing</p>
+<blockquote>
+<p>-asc-cdl <spec></p>
+</blockquote>
+<p>apply ASC CDL color transform</p>
+<blockquote>
+<p>-authenticate <string></p>
+</blockquote>
+<p>decrypt image with this password</p>
+<blockquote>
+<p>-auto-orient</p>
+</blockquote>
+<p>orient (rotate) image so it is upright</p>
+<blockquote>
+<p>-background <color></p>
+</blockquote>
+<p>the background color</p>
+<blockquote>
+<p>-black-threshold red[,green][,blue][,opacity]</p>
+</blockquote>
+<p>pixels below the threshold become black</p>
+<blockquote>
+<p>-blue-primary <x>,<y></p>
+</blockquote>
+<p>blue chromaticity primary point</p>
+<blockquote>
+<p>-blur <radius>{x<sigma>}</p>
+</blockquote>
+<p>blur the image with a Gaussian operator</p>
+<blockquote>
+<p>-border <width>x<height></p>
+</blockquote>
+<p>surround the image with a border of color</p>
+<blockquote>
+<p>-bordercolor <color></p>
+</blockquote>
+<p>the border color</p>
+<blockquote>
+<p>-channel <type></p>
+</blockquote>
+<p>the type of channel</p>
+<blockquote>
+<p>-charcoal <factor></p>
+</blockquote>
+<p>simulate a charcoal drawing</p>
+<blockquote>
+<p>-colorize <value></p>
+</blockquote>
+<p>colorize the image with the pen color</p>
+<blockquote>
+<p>-colors <value></p>
+</blockquote>
+<p>preferred number of colors in the image</p>
+<blockquote>
+<p>-colorspace <value></p>
+</blockquote>
+<p>the type of colorspace</p>
+<blockquote>
+<p>-comment <string></p>
+</blockquote>
+<p>annotate an image with a comment</p>
+<blockquote>
+<p>-compose <operator></p>
+</blockquote>
+<p>the type of image composition</p>
+<blockquote>
+<p>-compress <type></p>
+</blockquote>
+<p>the type of image compression</p>
+<blockquote>
+<p>-contrast</p>
+</blockquote>
+<p>enhance or reduce the image contrast</p>
+<blockquote>
+<p>-convolve <kernel></p>
+</blockquote>
+<p>convolve image with the specified convolution kernel</p>
+<blockquote>
+<p>-create-directories</p>
+</blockquote>
+<p>create output directory if required</p>
+<blockquote>
+<p>-crop <width>x<height>{+-}<x>{+-}<y>{%}</p>
+</blockquote>
+<p>preferred size and location of the cropped image</p>
+<blockquote>
+<p>-cycle <amount></p>
+</blockquote>
+<p>displace image colormap by amount</p>
+<blockquote>
+<p>-debug <events></p>
+</blockquote>
+<p>enable debug printout</p>
+<blockquote>
+<p>-define <key>{=<value>},...</p>
+</blockquote>
+<p>add coder/decoder specific options</p>
+<blockquote>
+<p>-delay &lt;1/100ths of a second&gt;</p>
+</blockquote>
+<p>display the next image after pausing</p>
+<blockquote>
+<p>-density <width>x<height></p>
+</blockquote>
+<p>horizontal and vertical resolution in pixels of the image</p>
+<blockquote>
+<p>-depth <value></p>
+</blockquote>
+<p>depth of the image</p>
+<blockquote>
+<p>-despeckle</p>
+</blockquote>
+<p>reduce the speckles within an image</p>
+<blockquote>
+<p>-display <host:display[.screen]></p>
+</blockquote>
+<p>specifies the X server to contact</p>
+<blockquote>
+<p>-dispose <method></p>
+</blockquote>
+<p>GIF disposal method</p>
+<blockquote>
+<p>-dither</p>
+</blockquote>
+<p>apply Floyd/Steinberg error diffusion to the image</p>
+<blockquote>
+<p>-draw <string></p>
+</blockquote>
+<p>annotate an image with one or more graphic primitives</p>
+<blockquote>
+<p>-edge <radius></p>
+</blockquote>
+<p>detect edges within an image</p>
+<blockquote>
+<p>-emboss <radius></p>
+</blockquote>
+<p>emboss an image</p>
+<blockquote>
+<p>-encoding <type></p>
+</blockquote>
+<p>specify the text encoding</p>
+<blockquote>
+<p>-endian <type></p>
+</blockquote>
+<p>specify endianness (MSB, LSB, or Native) of image</p>
+<blockquote>
+<p>-enhance</p>
+</blockquote>
+<p>apply a digital filter to enhance a noisy image</p>
+<blockquote>
+<p>-equalize</p>
+</blockquote>
+<p>perform histogram equalization to the image</p>
+<blockquote>
+<p>-extent <width>x<height>{+-}<x>{+-}<y></p>
+</blockquote>
+<p>composite image on background color canvas image</p>
+<blockquote>
+<p>-fill <color></p>
+</blockquote>
+<p>color to use when filling a graphic primitive</p>
+<blockquote>
+<p>-filter <type></p>
+</blockquote>
+<p>use this type of filter when resizing an image</p>
+<blockquote>
+<p>-flip</p>
+</blockquote>
+<p>create a "mirror image"</p>
+<blockquote>
+<p>-flop</p>
+</blockquote>
+<p>create a "mirror image"</p>
+<blockquote>
+<p>-font <name></p>
+</blockquote>
+<p>use this font when annotating the image with text</p>
+<blockquote>
+<p>-format <type></p>
+</blockquote>
+<p>the image format type</p>
+<blockquote>
+<p>-frame <width>x<height>+<outer bevel width>+<inner bevel width></p>
+</blockquote>
+<p>surround the image with an ornamental border</p>
+<blockquote>
+<p>-fuzz <distance>{%}</p>
+</blockquote>
+<p>colors within this Euclidean distance are considered equal</p>
+<blockquote>
+<p>-gamma <value></p>
+</blockquote>
+<p>level of gamma correction</p>
+<blockquote>
+<p>-gaussian <radius>{x<sigma>}</p>
+</blockquote>
+<p>blur the image with a Gaussian operator</p>
+<blockquote>
+<p>-geometry <width>x<height>{+-}<x>{+-}<y>{%}{@}{!}{^}{&lt;}{&gt;}</p>
+</blockquote>
+<p>Specify dimension, offset, and resize options.</p>
+<blockquote>
+<p>-gravity <type></p>
+</blockquote>
+<p>direction primitive gravitates to when annotating the image.</p>
+<blockquote>
+<p>-green-primary <x>,<y></p>
+</blockquote>
+<p>green chromaticity primary point</p>
+<blockquote>
+<p>-hald-clut <clut></p>
+</blockquote>
+<p>apply a Hald CLUT to the image</p>
+<blockquote>
+<p>-help</p>
+</blockquote>
+<p>print usage instructions</p>
+<blockquote>
+<p>-implode <factor></p>
+</blockquote>
+<p>implode image pixels about the center</p>
+<blockquote>
+<p>-interlace <type></p>
+</blockquote>
+<p>the type of interlacing scheme</p>
+<blockquote>
+<p>-label <name></p>
+</blockquote>
+<p>assign a label to an image</p>
+<blockquote>
+<p>-lat <width>x<height>{+-}<offset>{%}</p>
+</blockquote>
+<p>perform local adaptive thresholding</p>
+<blockquote>
+<p>-level <black_point>{,<gamma>}{,<white_point>}{%}</p>
+</blockquote>
+<p>adjust the level of image contrast</p>
+<blockquote>
+<p>-limit <type> <value></p>
+</blockquote>
+<p>Disk, File, Map, Memory, Pixels, Width, Height or Threads resource limit</p>
+<blockquote>
+<p>-linewidth</p>
+</blockquote>
+<p>the line width for subsequent draw operations</p>
+<blockquote>
+<p>-list <type></p>
+</blockquote>
+<p>the type of list</p>
+<blockquote>
+<p>-log <string></p>
+</blockquote>
+<p>Specify format for debug log</p>
+<blockquote>
+<p>-loop <iterations></p>
+</blockquote>
+<p>add Netscape loop extension to your GIF animation</p>
+<blockquote>
+<p>-magnify</p>
+</blockquote>
+<p>magnify the image</p>
+<blockquote>
+<p>-map <filename></p>
+</blockquote>
+<p>choose a particular set of colors from this image</p>
+<blockquote>
+<p>-mask <filename></p>
+</blockquote>
+<p>Specify a clipping mask</p>
+<blockquote>
+<p>-matte</p>
+</blockquote>
+<p>store matte channel if the image has one</p>
+<blockquote>
+<p>-mattecolor <color></p>
+</blockquote>
+<p>specify the color to be used with the -frame option</p>
+<blockquote>
+<p>-median <radius></p>
+</blockquote>
+<p>apply a median filter to the image</p>
+<blockquote>
+<p>-minify <factor></p>
+</blockquote>
+<p>minify the image</p>
+<blockquote>
+<p>-modulate brightness[,saturation[,hue]]</p>
+</blockquote>
+<p>vary the brightness, saturation, and hue of an image</p>
+<blockquote>
+<p>-monitor</p>
+</blockquote>
+<p>show progress indication</p>
+<blockquote>
+<p>-monochrome</p>
+</blockquote>
+<p>transform the image to black and white</p>
+<blockquote>
+<p>-motion-blur <radius>{x<sigma>}{+angle}</p>
+</blockquote>
+<p>Simulate motion blur</p>
+<blockquote>
+<p>-negate</p>
+</blockquote>
+<p>replace every pixel with its complementary color</p>
+<blockquote>
+<p>-noise <radius|type></p>
+</blockquote>
+<p>add or reduce noise in an image</p>
+<blockquote>
+<p>-noop</p>
+</blockquote>
+<p>NOOP (no option)</p>
+<blockquote>
+<p>-normalize</p>
+</blockquote>
+<p>transform image to span the full range of color values</p>
+<blockquote>
+<p>-opaque <color></p>
+</blockquote>
+<p>change this color to the pen color within the image</p>
+<blockquote>
+<p>-operator channel operator rvalue[%]</p>
+</blockquote>
+<p>apply a mathematical, bitwise, or value operator to an image channel</p>
+<blockquote>
+<p>-ordered-dither <channeltype> <NxN></p>
+</blockquote>
+<p>ordered dither the image</p>
+<blockquote>
+<p>-output-directory <directory></p>
+</blockquote>
+<p>output files to directory</p>
+<blockquote>
+<p>-orient <orientation></p>
+</blockquote>
+<p>Set the image orientation attribute</p>
+<blockquote>
+<p>-page <width>x<height>{+-}<x>{+-}<y>{%}{!}{&lt;}{&gt;}</p>
+</blockquote>
+<p>size and location of an image canvas</p>
+<blockquote>
+<p>-paint <radius></p>
+</blockquote>
+<p>simulate an oil painting</p>
+<blockquote>
+<p>-pen <color></p>
+</blockquote>
+<p>(This option has been replaced by the -fill option)</p>
+<blockquote>
+<p>-pointsize <value></p>
+</blockquote>
+<p>pointsize of the PostScript, X11, or TrueType font</p>
+<blockquote>
+<p>-profile <filename></p>
+</blockquote>
+<p>add ICM, IPTC, or generic profile to image</p>
+<blockquote>
+<p>-preserve-timestamp</p>
+</blockquote>
+<p>preserve the original timestamps of the file</p>
+<blockquote>
+<p>-quality <value></p>
+</blockquote>
+<p>JPEG/MIFF/PNG/TIFF compression level</p>
+<blockquote>
+<p>-raise <width>x<height></p>
+</blockquote>
+<p>lighten or darken image edges</p>
+<blockquote>
+<p>-random-threshold <channeltype> <LOWxHIGH></p>
+</blockquote>
+<p>random threshold the image</p>
+<blockquote>
+<p>-recolor <matrix></p>
+</blockquote>
+<p>apply a color translation matrix to image channels</p>
+<blockquote>
+<p>-red-primary <x>,<y></p>
+</blockquote>
+<p>red chromaticity primary point</p>
+<blockquote>
+<p>-region <width>x<height>{+-}<x>{+-}<y></p>
+</blockquote>
+<p>apply options to a portion of the image</p>
+<blockquote>
+<p>-render</p>
+</blockquote>
+<p>render vector operations</p>
+<blockquote>
+<p>-repage <width>x<height>+xoff+yoff[!]</p>
+</blockquote>
+<p>Adjust image page offsets</p>
+<blockquote>
+<p>-resample <horizontal>x<vertical></p>
+</blockquote>
+<p>Resample image to specified horizontal and vertical resolution</p>
+<blockquote>
+<p>-resize <width>x<height>{%}{@}{!}{&lt;}{&gt;}</p>
+</blockquote>
+<p>resize an image</p>
+<blockquote>
+<p>-roll {+-}<x>{+-}<y></p>
+</blockquote>
+<p>roll an image vertically or horizontally</p>
+<blockquote>
+<p>-rotate <degrees>{&lt;}{&gt;}</p>
+</blockquote>
+<p>rotate the image</p>
+<blockquote>
+<p>-sample <geometry></p>
+</blockquote>
+<p>scale image using pixel sampling</p>
+<blockquote>
+<p>-sampling-factor <horizontal_factor>x<vertical_factor></p>
+</blockquote>
+<p>chroma subsampling factors</p>
+<blockquote>
+<p>-scale <geometry></p>
+</blockquote>
+<p>scale the image.</p>
+<blockquote>
+<p>-scene <value></p>
+</blockquote>
+<p>set scene number</p>
+<blockquote>
+<p>-set <attribute> <value></p>
+</blockquote>
+<p>set an image attribute</p>
+<blockquote>
+<p>+set <attribute></p>
+</blockquote>
+<p>unset an image attribute</p>
+<blockquote>
+<p>-segment <cluster threshold>x<smoothing threshold></p>
+</blockquote>
+<p>segment an image</p>
+<blockquote>
+<p>-shade <azimuth>x<elevation></p>
+</blockquote>
+<p>shade the image using a distant light source</p>
+<blockquote>
+<p>-sharpen <radius>{x<sigma>}</p>
+</blockquote>
+<p>sharpen the image</p>
+<blockquote>
+<p>-shave <width>x<height>{%}</p>
+</blockquote>
+<p>shave pixels from the image edges</p>
+<blockquote>
+<p>-shear <x degrees>x<y degrees></p>
+</blockquote>
+<p>shear the image along the X or Y axis</p>
+<blockquote>
+<p>-size <width>x<height>{+offset}</p>
+</blockquote>
+<p>width and height of the image</p>
+<blockquote>
+<p>-solarize <factor></p>
+</blockquote>
+<p>negate all pixels above the threshold level</p>
+<blockquote>
+<p>-spread <amount></p>
+</blockquote>
+<p>displace image pixels by a random amount</p>
+<blockquote>
+<p>-strip</p>
+</blockquote>
+<p>remove all profiles and text attributes from the image</p>
+<blockquote>
+<p>-stroke <color></p>
+</blockquote>
+<p>color to use when stroking a graphic primitive</p>
+<blockquote>
+<p>-strokewidth <value></p>
+</blockquote>
+<p>set the stroke width</p>
+<blockquote>
+<p>-swirl <degrees></p>
+</blockquote>
+<p>swirl image pixels about the center</p>
+<blockquote>
+<p>-texture <filename></p>
+</blockquote>
+<p>name of texture to tile onto the image background</p>
+<blockquote>
+<p>-threshold <value>{%}</p>
+</blockquote>
+<p>threshold the image</p>
+<blockquote>
+<p>-thumbnail <width>x<height>{%}{@}{!}{&lt;}{&gt;}</p>
+</blockquote>
+<p>resize an image (quickly)</p>
+<blockquote>
+<p>-tile <filename></p>
+</blockquote>
+<p>tile image when filling a graphic primitive</p>
+<blockquote>
+<p>-transform</p>
+</blockquote>
+<p>transform the image</p>
+<blockquote>
+<p>-transparent <color></p>
+</blockquote>
+<p>make this color transparent within the image</p>
+<blockquote>
+<p>-treedepth <value></p>
+</blockquote>
+<p>tree depth for the color reduction algorithm</p>
+<blockquote>
+<p>-trim</p>
+</blockquote>
+<p>trim an image</p>
+<blockquote>
+<p>-type <type></p>
+</blockquote>
+<p>the image type</p>
+<blockquote>
+<p>-units <type></p>
+</blockquote>
+<p>the units of image resolution</p>
+<blockquote>
+<p>-unsharp <radius>{x<sigma>}{+<amount>}{+<threshold>}</p>
+</blockquote>
+<p>sharpen the image with an unsharp mask operator</p>
+<blockquote>
+<p>-verbose</p>
+</blockquote>
+<p>print detailed information about the image</p>
+<blockquote>
+<p>-version</p>
+</blockquote>
+<p>print GraphicsMagick version string</p>
+<blockquote>
+<p>-view <string></p>
+</blockquote>
+<p>FlashPix viewing parameters</p>
+<blockquote>
+<p>-virtual-pixel <method></p>
+</blockquote>
+<p>specify contents of "virtual pixels"</p>
+<blockquote>
+<p>-wave <amplitude>x<wavelength></p>
+</blockquote>
+<p>alter an image along a sine wave</p>
+<blockquote>
+<p>-white-point <x>,<y></p>
+</blockquote>
+<p>chromaticity white point</p>
+<blockquote>
+<p>-white-threshold red[,green][,blue][,opacity]</p>
+</blockquote>
+<p>pixels above the threshold become white
+For a more detailed description of each option, see Options, above. GraphicsMagick(1). </p>
+<p>Back to Contents  </p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../import/" title="导入" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                导入
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../montage/" title="蒙太奇" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前进
+                </span>
+                蒙太奇
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            版权 &copy; 2017 - 2018 wohugb.github.io
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="http://wohugb.github.io" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://github.com/wohugb" class="md-footer-social__link fa fa-github-alt"></a>
+    
+      <a href="https://twitter.com/wohugb" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/wohugb" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application.6cdc17f0.js"></script>
+      
+        
+        
+          
+          <script src="../../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              <script src="../../../assets/javascripts/lunr/lunr.zh.js"></script>
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"0.17.2",url:{base:"../../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
