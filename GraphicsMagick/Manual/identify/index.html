@@ -731,8 +731,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../conjure/" title="魔术" class="md-nav__link">
-      魔术
+    <a href="../conjure/" title="脚本" class="md-nav__link">
+      脚本
     </a>
   </li>
 
@@ -794,29 +794,36 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#name" title="NAME" class="md-nav__link">
-    NAME
+  <a href="#_1" title="命名" class="md-nav__link">
+    命名
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#contents" title="Contents" class="md-nav__link">
-    Contents
+  <a href="#_2" title="内容" class="md-nav__link">
+    内容
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#synopsis" title="Synopsis" class="md-nav__link">
-    Synopsis
+  <a href="#_3" title="概要" class="md-nav__link">
+    概要
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#description" title="Description" class="md-nav__link">
-    Description
+  <a href="#_4" title="描述" class="md-nav__link">
+    描述
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="选项" class="md-nav__link">
+    选项
   </a>
   
 </li>
@@ -848,8 +855,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../mogrify/" title="mogrify" class="md-nav__link">
-      mogrify
+    <a href="../mogrify/" title="锐化" class="md-nav__link">
+      锐化
     </a>
   </li>
 
@@ -933,29 +940,36 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#name" title="NAME" class="md-nav__link">
-    NAME
+  <a href="#_1" title="命名" class="md-nav__link">
+    命名
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#contents" title="Contents" class="md-nav__link">
-    Contents
+  <a href="#_2" title="内容" class="md-nav__link">
+    内容
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#synopsis" title="Synopsis" class="md-nav__link">
-    Synopsis
+  <a href="#_3" title="概要" class="md-nav__link">
+    概要
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#description" title="Description" class="md-nav__link">
-    Description
+  <a href="#_4" title="描述" class="md-nav__link">
+    描述
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="选项" class="md-nav__link">
+    选项
   </a>
   
 </li>
@@ -976,17 +990,21 @@
                 
                 
                 <h1 id="gm-identify">gm identify<a class="headerlink" href="#gm-identify" title="Permanent link">&para;</a></h1>
-<h2 id="name">NAME<a class="headerlink" href="#name" title="Permanent link">&para;</a></h2>
+<h2 id="_1">命名<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>identify - describe an image or image sequence.</p>
-<h2 id="contents">Contents<a class="headerlink" href="#contents" title="Permanent link">&para;</a></h2>
-<p>Synopsis
-Description
-Options</p>
-<h2 id="synopsis">Synopsis<a class="headerlink" href="#synopsis" title="Permanent link">&para;</a></h2>
-<p>gm identify file [ file ... ] </p>
-<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
+<h2 id="_2">内容<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Synopsis</li>
+<li>Description</li>
+<li>Options</li>
+</ul>
+<h2 id="_3">概要<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span>gm identify file <span class="o">[</span> file ... <span class="o">]</span>
+</pre></div>
+
+<h2 id="_4">描述<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>Identify describes the format and characteristics of one or more image files as internally supported by the software. It will also report if an image is incomplete or corrupt. The information displayed includes the scene number, the file name, the width and height of the image, whether the image is colormapped or not, the number of colors in the image, the number of bytes in the image, the format of the image (JPEG, PNM, etc.), and finally the number of seconds in both user time and elapsed time it took to read and process the image. If -verbose or +ping are provided as an option, the pixel read rate is also displayed. An example line output from identify follows:</p>
-<div class="codehilite"><pre><span></span>images/aquarium.miff 640x480 PseudoClass 256c
+<div class="codehilite"><pre><span></span>images/aquarium.miff 640x480 PseudoClass 256c 
        308135b MIFF 0.000u 0:01
 </pre></div>
 
@@ -1007,74 +1025,10 @@ Options</p>
 
 
 <p>For some formats, additional format-specific information about the file will be written if the -debug coder or -debug all option is used.</p>
-<p>Back to Contents  </p>
-<blockquote>
-<p>Identify options</p>
-</blockquote>
+<h2 id="_5">选项<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <p>Options are processed in command line order. Any option you specify on the command line remains in effect for the set of images immediately following, until the set is terminated by the appearance of any option or -noop.</p>
 <p>For a more detailed description of each option, see Options, above. GraphicsMagick(1). </p>
-<blockquote>
-<p>-authenticate <string></p>
-</blockquote>
-<p>decrypt image with this password</p>
-<blockquote>
-<p>-debug <events></p>
-</blockquote>
-<p>enable debug printout</p>
-<blockquote>
-<p>-define <key>{=<value>},...</p>
-</blockquote>
-<p>add coder/decoder specific options</p>
-<blockquote>
-<p>-density <width>x<height></p>
-</blockquote>
-<p>horizontal and vertical resolution in pixels of the image</p>
-<blockquote>
-<p>-depth <value></p>
-</blockquote>
-<p>depth of the image</p>
-<blockquote>
-<p>-format <string></p>
-</blockquote>
-<p>output formatted image characteristics</p>
-<blockquote>
-<p>-help</p>
-</blockquote>
-<p>print usage instructions</p>
-<blockquote>
-<p>-interlace <type></p>
-</blockquote>
-<p>the type of interlacing scheme</p>
-<blockquote>
-<p>-limit <type> <value></p>
-</blockquote>
-<p>Disk, File, Map, Memory, Pixels, Width, Height or Threads resource limit</p>
-<blockquote>
-<p>-log <string></p>
-</blockquote>
-<p>Specify format for debug log</p>
-<blockquote>
-<p>-ping</p>
-</blockquote>
-<p>efficiently determine image characteristics</p>
-<blockquote>
-<p>-sampling-factor <horizontal_factor>x<vertical_factor></p>
-</blockquote>
-<p>chroma subsampling factors</p>
-<blockquote>
-<p>-size <width>x<height>{+offset}</p>
-</blockquote>
-<p>width and height of the image</p>
-<blockquote>
-<p>-verbose</p>
-</blockquote>
-<p>print detailed information about the image</p>
-<blockquote>
-<p>-version</p>
-</blockquote>
-<p>print GraphicsMagick version string
-For a more detailed description of each option, see Options, above. GraphicsMagick(1). </p>
-<p>Back to Contents  </p>
+<details class="info"><summary>-authenticate <code>&lt;string&gt;</code></summary><p>decrypt image with this password</p></details><details class="info"><summary>-debug <code>&lt;events&gt;</code></summary><p>enable debug printout</p></details><details class="info"><summary>-define <code>&lt;key&gt;</code>{=<code>&lt;value&gt;</code>},...</summary><p>add coder/decoder specific options</p></details><details class="info"><summary>-density <code>&lt;width&gt;</code>x<code>&lt;height&gt;</code></summary><p>horizontal and vertical resolution in pixels of the image</p></details><details class="info"><summary>-depth <code>&lt;value&gt;</code></summary><p>depth of the image</p></details><details class="info"><summary>-format <code>&lt;string&gt;</code></summary><p>output formatted image characteristics</p></details><details class="info"><summary>-help</summary><p>print usage instructions</p></details><details class="info"><summary>-interlace <code>&lt;type&gt;</code></summary><p>the type of interlacing scheme</p></details><details class="info"><summary>-limit <code>&lt;type??? info "</code><value>`</summary><p>Disk, File, Map, Memory, Pixels, Width, Height or Threads resource limit</p></details><details class="info"><summary>-log <code>&lt;string&gt;</code></summary><p>Specify format for debug log</p></details><details class="info"><summary>-ping</summary><p>efficiently determine image characteristics</p></details><details class="info"><summary>-sampling-factor <code>&lt;horizontal_factor&gt;</code>x<code>&lt;vertical_factor&gt;</code></summary><p>chroma subsampling factors</p></details><details class="info"><summary>-size <code>&lt;width&gt;</code>x<code>&lt;height&gt;</code>{+offset}</summary><p>width and height of the image</p></details><details class="info"><summary>-verbose</summary><p>print detailed information about the image</p></details><details class="info"><summary>-version</summary><p>print GraphicsMagick version string</p></details><p>For a more detailed description of each option, see Options, above. GraphicsMagick(1). </p>
                 
                   
                 

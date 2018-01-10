@@ -36,7 +36,7 @@
     
     
       
-        <title>魔术 - GM</title>
+        <title>脚本 - GM</title>
       
     
     
@@ -98,7 +98,7 @@
                 GM
               </span>
               <span class="md-header-nav__topic">
-                魔术
+                脚本
               </span>
             
           
@@ -740,11 +740,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        魔术
+        脚本
       </label>
     
-    <a href="./" title="魔术" class="md-nav__link md-nav__link--active">
-      魔术
+    <a href="./" title="脚本" class="md-nav__link md-nav__link--active">
+      脚本
     </a>
     
       
@@ -758,43 +758,43 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#name" title="NAME" class="md-nav__link">
-    NAME
+  <a href="#_2" title="命名" class="md-nav__link">
+    命名
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#contents" title="Contents" class="md-nav__link">
-    Contents
+  <a href="#_3" title="内容" class="md-nav__link">
+    内容
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#synopsis" title="Synopsis" class="md-nav__link">
-    Synopsis
+  <a href="#_4" title="概要" class="md-nav__link">
+    概要
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#description" title="Description" class="md-nav__link">
-    Description
+  <a href="#_5" title="描述" class="md-nav__link">
+    描述
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#options" title="Options" class="md-nav__link">
-    Options
+  <a href="#_6" title="选项" class="md-nav__link">
+    选项
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#magick-scripting-language" title="Magick Scripting Language" class="md-nav__link">
-    Magick Scripting Language
+  <a href="#_7" title="魔法脚本语言" class="md-nav__link">
+    魔法脚本语言
   </a>
   
 </li>
@@ -862,8 +862,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../mogrify/" title="mogrify" class="md-nav__link">
-      mogrify
+    <a href="../mogrify/" title="锐化" class="md-nav__link">
+      锐化
     </a>
   </li>
 
@@ -947,43 +947,43 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#name" title="NAME" class="md-nav__link">
-    NAME
+  <a href="#_2" title="命名" class="md-nav__link">
+    命名
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#contents" title="Contents" class="md-nav__link">
-    Contents
+  <a href="#_3" title="内容" class="md-nav__link">
+    内容
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#synopsis" title="Synopsis" class="md-nav__link">
-    Synopsis
+  <a href="#_4" title="概要" class="md-nav__link">
+    概要
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#description" title="Description" class="md-nav__link">
-    Description
+  <a href="#_5" title="描述" class="md-nav__link">
+    描述
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#options" title="Options" class="md-nav__link">
-    Options
+  <a href="#_6" title="选项" class="md-nav__link">
+    选项
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#magick-scripting-language" title="Magick Scripting Language" class="md-nav__link">
-    Magick Scripting Language
+  <a href="#_7" title="魔法脚本语言" class="md-nav__link">
+    魔法脚本语言
   </a>
   
 </li>
@@ -1003,218 +1003,191 @@
               
                 
                 
-                <h1 id="gm-conjure">gm conjure<a class="headerlink" href="#gm-conjure" title="Permanent link">&para;</a></h1>
-<h2 id="name">NAME<a class="headerlink" href="#name" title="Permanent link">&para;</a></h2>
+                <h1 id="_1">脚本语言<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">命名<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>conjure - process a Magick Scripting Language (MSL) script</p>
-<h2 id="contents">Contents<a class="headerlink" href="#contents" title="Permanent link">&para;</a></h2>
+<h2 id="_3">内容<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>Synopsis
 Description
 Options
 Magick Scripting Language</p>
-<h2 id="synopsis">Synopsis<a class="headerlink" href="#synopsis" title="Permanent link">&para;</a></h2>
+<h2 id="_4">概要<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <p>gm conjure [ options ] script.msl [ [ options ] script.msl ] </p>
-<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
+<h2 id="_5">描述<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <p>The Magick scripting language (MSL) will primarily benefit those that want to accomplish custom image processing tasks but do not wish to program, or those that do not have access to a Perl interpreter or a compiler. The interpreter is called conjure and here is an example script:</p>
-<div class="codehilite"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
-<span class="nt">&lt;image</span> <span class="na">size=</span><span class="s">&quot;400x400&quot;</span> <span class="nt">&gt;</span>
-  <span class="nt">&lt;read</span> <span class="na">filename=</span><span class="s">&quot;image.gif&quot;</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;get</span> <span class="na">width=</span><span class="s">&quot;base-width&quot;</span> <span class="na">height=</span><span class="s">&quot;base-height&quot;</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;resize</span> <span class="na">geometry=</span><span class="s">&quot;%[dimensions]&quot;</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;get</span> <span class="na">width=</span><span class="s">&quot;width&quot;</span> <span class="na">height=</span><span class="s">&quot;height&quot;</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;print</span> <span class="na">output=</span>
-    <span class="s">&quot;Image sized from %[base-width]x%[base-height]</span>
-<span class="s">     to %[width]x%[height].\n&quot;</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;write</span> <span class="na">filename=</span><span class="s">&quot;image.png&quot;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;/image&gt;</span>
+<div class="codehilite"><pre><span></span>    <span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+    <span class="nt">&lt;image</span> <span class="na">size=</span><span class="s">&quot;400x400&quot;</span> <span class="nt">&gt;</span>
+      <span class="nt">&lt;read</span> <span class="na">filename=</span><span class="s">&quot;image.gif&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;get</span> <span class="na">width=</span><span class="s">&quot;base-width&quot;</span> <span class="na">height=</span><span class="s">&quot;base-height&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;resize</span> <span class="na">geometry=</span><span class="s">&quot;%[dimensions]&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;get</span> <span class="na">width=</span><span class="s">&quot;width&quot;</span> <span class="na">height=</span><span class="s">&quot;height&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;print</span> <span class="na">output=</span>
+        <span class="s">&quot;Image sized from %[base-width]x%[base-height]</span>
+<span class="s">         to %[width]x%[height].\n&quot;</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;write</span> <span class="na">filename=</span><span class="s">&quot;image.png&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/image&gt;</span>
 </pre></div>
-
 
 <p>invoked with</p>
-<div class="codehilite"><pre><span></span>gm conjure -dimensions 400x400 incantation.msl
+<div class="codehilite"><pre><span></span>    gm conjure -dimensions 400x400 incantation.msl
 </pre></div>
 
-
 <p>All operations will closely follow the key/value pairs defined in PerlMagick, unless otherwise noted.</p>
-<p>Back to Contents  </p>
-<h2 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h2>
+<h2 id="_6">选项<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <p>Options are processed in command line order. Any option you specify on the command line remains in effect until it is explicitly changed by specifying the option again with a different effect, or if it is changed by a statement in the scripting language.</p>
 <p>You can define your own keyword/value pairs on the command line. The script can then use this information when setting values by including %[keyword] in the string. For example, if you included "-dimensions 400x400" on the command line, as illustrated above, then any string containing "%[dimensions]" would have 400x400 substituted. The "%[string]" can be used either an entire string, such as geometry="%[dimensions]" or as a part of a string such as filename="%[basename].png".</p>
 <p>The keyword can be any string except for the following reserved strings (in any upper, lower, or mixed case variant): debug, help, and verbose, whose usage is described below.</p>
 <p>The value can be any string. If either the keyword or the value contains white space or any symbols that have special meanings to your shell such as "#", "|", or "%", enclose the string in quotation marks or use "\" to escape the white space and special symbols.</p>
 <p>Keywords and values are case dependent. "Key", "key", and "KEY" would be three different keywords.</p>
 <p>For a more detailed description of each option, see Options, above. GraphicsMagick(1). </p>
-<blockquote>
-<p>-debug <events></p>
-</blockquote>
-<p>enable debug printout</p>
-<blockquote>
-<p>-define <key>{=<value>},...</p>
-</blockquote>
-<p>add coder/decoder specific options</p>
-<blockquote>
-<p>-help</p>
-</blockquote>
-<p>print usage instructions</p>
-<blockquote>
-<p>-log <string></p>
-</blockquote>
-<p>Specify format for debug log</p>
-<blockquote>
-<p>-verbose</p>
-</blockquote>
-<p>print detailed information about the image</p>
-<blockquote>
-<p>-version</p>
-</blockquote>
-<p>print GraphicsMagick version string
-Back to Contents  </p>
-<h2 id="magick-scripting-language">Magick Scripting Language<a class="headerlink" href="#magick-scripting-language" title="Permanent link">&para;</a></h2>
+<details class="info"><summary>-debug <code>&lt;events&gt;</code></summary><p>enable debug printout</p></details><details class="info"><summary>-define <code>&lt;key&gt;{=&lt;value&gt;},...</code></summary><p>add coder/decoder specific options</p></details><details class="info"><summary>-help</summary><p>print usage instructions</p></details><details class="info"><summary>-log <code>&lt;string&gt;</code></summary><p>Specify format for debug log</p></details><details class="info"><summary>-verbose</summary><p>print detailed information about the image</p></details><details class="info"><summary>-version</summary><p>print GraphicsMagick version string</p></details><h2 id="_7">魔法脚本语言<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <p>The Magick Scripting Language (MSL) presently defines the following elements and their attributes:</p>
-<p><image>
+<div class="codehilite"><pre><span></span><span class="nt">&lt;image&gt;</span>
 background, color, id, size
-Define a new image object. </image> destroys it. Because of this, if you wish to reference multiple "subimages" (aka pages or layers), you can embed one image element inside of another. For example:
-    <image>
-    <read filename="input.png" />
-    <get width="base-width" height="base-height" />
-    <image height="base-height" width="base-width">
-    <image />
-    <write filename="output.mng" />
-    </image>
-    <image size="400x400" />
-<group>
-Define a new group of image objects. By default, images are only valid for the life of their <image>element.
-    <image>   -- creates the image
+Define a new image object. <span class="nt">&lt;/image&gt;</span> destroys it. Because of this, if you wish to reference multiple &quot;subimages&quot; (aka pages or layers), you can embed one image element inside of another. For example:
+    <span class="nt">&lt;image&gt;</span>
+    <span class="nt">&lt;read</span> <span class="na">filename=</span><span class="s">&quot;input.png&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;get</span> <span class="na">width=</span><span class="s">&quot;base-width&quot;</span> <span class="na">height=</span><span class="s">&quot;base-height&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;image</span> <span class="na">height=</span><span class="s">&quot;base-height&quot;</span> <span class="na">width=</span><span class="s">&quot;base-width&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;image</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;write</span> <span class="na">filename=</span><span class="s">&quot;output.mng&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/image&gt;</span>
+    <span class="nt">&lt;image</span> <span class="na">size=</span><span class="s">&quot;400x400&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;group&gt;</span>
+Define a new group of image objects. By default, images are only valid for the life of their <span class="nt">&lt;image&gt;</span>element.
+    <span class="nt">&lt;image&gt;</span>   -- creates the image
     .....     -- do stuff with it
-    </image>  -- dispose of the image
+    <span class="nt">&lt;/image&gt;</span>  -- dispose of the image
 However, in a group, all images in that group will stay around for the life of the group:
-    <group>                           -- start a group
-        <image>                       -- create an image
+    <span class="nt">&lt;group&gt;</span>                           -- start a group
+        <span class="nt">&lt;image&gt;</span>                       -- create an image
         ....                          -- do stuff
-        </image>                      -- NOOP
-        <image>                       -- create another image
+        <span class="nt">&lt;/image&gt;</span>                      -- NOOP
+        <span class="nt">&lt;image&gt;</span>                       -- create another image
         ....                          -- do more stuff
-        </image>                      -- NOOP
-        <write filename="image.mng" />  -- output
-    </group>                          -- dispose of both images
-<read>
+        <span class="nt">&lt;/image&gt;</span>                      -- NOOP
+        <span class="nt">&lt;write</span> <span class="na">filename=</span><span class="s">&quot;image.mng&quot;</span> <span class="nt">/&gt;</span>  -- output
+    <span class="nt">&lt;/group&gt;</span>                          -- dispose of both images
+<span class="nt">&lt;read&gt;</span>
 filename
 Read a new image from a disk file.
-    <read filename="image.gif" />
+    <span class="nt">&lt;read</span> <span class="na">filename=</span><span class="s">&quot;image.gif&quot;</span> <span class="nt">/&gt;</span>
 To read two images use
-    <read filename="image.gif" />
-    <read filename="image.png />
-<write>
-filename
-Write the image(s) to disk, either as a single multiple-image file or multiple ones if necessary.
-     <write filename=image.tiff" />
-<get>
-Get any attribute recognized by PerlMagick's GetAttribute() and stores it as an image attribute for later use. Currently only width and height are supported.
-    <get width="base-width" height="base-height" />
-    <print output="Image size is %[base-width]x%[base-height].\n" />
-<set>
-background, bordercolor, clip-mask, colorspace, density, magick, mattecolor, opacity. Set an attribute recognized by PerlMagick's GetAttribute().
-<profile>
+    <span class="nt">&lt;read</span> <span class="na">filename=</span><span class="s">&quot;image.gif&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;read</span> <span class="na">filename=</span><span class="s">&quot;image.png /&gt;</span>
+<span class="s">&lt;write&gt;</span>
+<span class="s">filename</span>
+<span class="s">Write the image(s) to disk, either as a single multiple-image file or multiple ones if necessary.</span>
+<span class="s">     &lt;write filename=image.tiff&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;get&gt;</span>
+Get any attribute recognized by PerlMagick&#39;s GetAttribute() and stores it as an image attribute for later use. Currently only width and height are supported.
+    <span class="nt">&lt;get</span> <span class="na">width=</span><span class="s">&quot;base-width&quot;</span> <span class="na">height=</span><span class="s">&quot;base-height&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;print</span> <span class="na">output=</span><span class="s">&quot;Image size is %[base-width]x%[base-height].\n&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;set&gt;</span>
+background, bordercolor, clip-mask, colorspace, density, magick, mattecolor, opacity. Set an attribute recognized by PerlMagick&#39;s GetAttribute().
+<span class="nt">&lt;profile&gt;</span>
 [profilename]
 Read one or more IPTC, ICC or generic profiles from file and assign to image
-    <profile iptc="profile.iptc" generic="generic.dat" />
-To remove a specified profile use "!" as the filename eg
-    <profile icm="!" iptc="profile.iptc" />
-<border>
+    <span class="nt">&lt;profile</span> <span class="na">iptc=</span><span class="s">&quot;profile.iptc&quot;</span> <span class="na">generic=</span><span class="s">&quot;generic.dat&quot;</span> <span class="nt">/&gt;</span>
+To remove a specified profile use &quot;!&quot; as the filename eg
+    <span class="nt">&lt;profile</span> <span class="na">icm=</span><span class="s">&quot;!&quot;</span> <span class="na">iptc=</span><span class="s">&quot;profile.iptc&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;border&gt;</span>
 fill, geometry, height, width
-<blur>
+<span class="nt">&lt;blur&gt;</span>
 radius, sigma
-<charcoal>
+<span class="nt">&lt;charcoal&gt;</span>
 radius, sigma
-<chop>
+<span class="nt">&lt;chop&gt;</span>
 geometry, height, width, x, y
-<crop>
+<span class="nt">&lt;crop&gt;</span>
 geometry, height, width, x, y
-<composite>
+<span class="nt">&lt;composite&gt;</span>
 compose, geometry, gravity, image, x, y
-    &lt;?xml version="1.0" encoding="UTF-8"?&gt;
-    <group>
-        <image id="image_01">
-            <read filename="cloud3.gif"/>
-            <resize geometry="250x90"/>
-        </image>
-        <image id="image_02">
-            <read filename="cloud4.gif"/>
-            <resize geometry="190x100"/>
-        </image>
-        <image>
-            <read filename="background.jpg"/>
-            <composite image="image_01" geometry="+740+470"/>
-            <composite image="image_02" geometry="+390+415"/>
-        </image>
-        <write filename="result.png"/>
-    </group>
-<despeckle>
-<emboss>
+    <span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+    <span class="nt">&lt;group&gt;</span>
+        <span class="nt">&lt;image</span> <span class="na">id=</span><span class="s">&quot;image_01&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;read</span> <span class="na">filename=</span><span class="s">&quot;cloud3.gif&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;resize</span> <span class="na">geometry=</span><span class="s">&quot;250x90&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/image&gt;</span>
+        <span class="nt">&lt;image</span> <span class="na">id=</span><span class="s">&quot;image_02&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;read</span> <span class="na">filename=</span><span class="s">&quot;cloud4.gif&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;resize</span> <span class="na">geometry=</span><span class="s">&quot;190x100&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/image&gt;</span>
+        <span class="nt">&lt;image&gt;</span>
+            <span class="nt">&lt;read</span> <span class="na">filename=</span><span class="s">&quot;background.jpg&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;composite</span> <span class="na">image=</span><span class="s">&quot;image_01&quot;</span> <span class="na">geometry=</span><span class="s">&quot;+740+470&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;composite</span> <span class="na">image=</span><span class="s">&quot;image_02&quot;</span> <span class="na">geometry=</span><span class="s">&quot;+390+415&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/image&gt;</span>
+        <span class="nt">&lt;write</span> <span class="na">filename=</span><span class="s">&quot;result.png&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/group&gt;</span>
+<span class="nt">&lt;despeckle&gt;</span>
+<span class="nt">&lt;emboss&gt;</span>
 radius, sigma
-<enhance>
-<equalize>
-<edge>
+<span class="nt">&lt;enhance&gt;</span>
+<span class="nt">&lt;equalize&gt;</span>
+<span class="nt">&lt;edge&gt;</span>
 radius
-<flip>
-<flop>
-<frame>
+<span class="nt">&lt;flip&gt;</span>
+<span class="nt">&lt;flop&gt;</span>
+<span class="nt">&lt;frame&gt;</span>
 fill, geometry, height, width, x, y, inner, outer
-<flatten>
-<get>
+<span class="nt">&lt;flatten&gt;</span>
+<span class="nt">&lt;get&gt;</span>
 height, width
-<gamma>
+<span class="nt">&lt;gamma&gt;</span>
 red, green, blue
-<image>
+<span class="nt">&lt;image&gt;</span>
 background, color, id, size
-<implode>
+<span class="nt">&lt;implode&gt;</span>
 amount
-<magnify>
-<minify>
-<medianfilter>
+<span class="nt">&lt;magnify&gt;</span>
+<span class="nt">&lt;minify&gt;</span>
+<span class="nt">&lt;medianfilter&gt;</span>
 radius
-<normalize>
-<oilpaint>
+<span class="nt">&lt;normalize&gt;</span>
+<span class="nt">&lt;oilpaint&gt;</span>
 radius
-<print>
+<span class="nt">&lt;print&gt;</span>
 output
-<profile>
+<span class="nt">&lt;profile&gt;</span>
 [profilename]
-<read>
-<resize>
+<span class="nt">&lt;read&gt;</span>
+<span class="nt">&lt;resize&gt;</span>
 blur, filter, geometry, height, width
-<roll>
+<span class="nt">&lt;roll&gt;</span>
 geometry, x, y
-<rotate>
+<span class="nt">&lt;rotate&gt;</span>
 degrees
-<reducenoise>
+<span class="nt">&lt;reducenoise&gt;</span>
 radius
-<sample>
+<span class="nt">&lt;sample&gt;</span>
 geometry, height, width
-<scale>
+<span class="nt">&lt;scale&gt;</span>
 geometry, height, width
-<sharpen>
+<span class="nt">&lt;sharpen&gt;</span>
 radius, sigma
-<shave>
+<span class="nt">&lt;shave&gt;</span>
 geometry, height, width
-<shear>
+<span class="nt">&lt;shear&gt;</span>
 x, y
-<solarize>
+<span class="nt">&lt;solarize&gt;</span>
 threshold
-<spread>
+<span class="nt">&lt;spread&gt;</span>
 radius
-<stegano>
+<span class="nt">&lt;stegano&gt;</span>
 image
-<stereo>
+<span class="nt">&lt;stereo&gt;</span>
 image
-<swirl>
+<span class="nt">&lt;swirl&gt;</span>
 degrees
-<texture>
+<span class="nt">&lt;texture&gt;</span>
 image
-<threshold>
+<span class="nt">&lt;threshold&gt;</span>
 threshold
-<transparent>
+<span class="nt">&lt;transparent&gt;</span>
 color
-<trim></p>
+<span class="nt">&lt;trim&gt;</span>
+</pre></div>
                 
                   
                 

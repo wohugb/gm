@@ -734,43 +734,43 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#name" title="NAME" class="md-nav__link">
-    NAME
+  <a href="#_2" title="命名" class="md-nav__link">
+    命名
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#contents" title="Contents" class="md-nav__link">
-    Contents
+  <a href="#_3" title="菜单" class="md-nav__link">
+    菜单
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#synopsis" title="Synopsis" class="md-nav__link">
-    Synopsis
+  <a href="#_4" title="概要" class="md-nav__link">
+    概要
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#description" title="Description" class="md-nav__link">
-    Description
+  <a href="#_5" title="描述" class="md-nav__link">
+    描述
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#examples" title="Examples" class="md-nav__link">
-    Examples
+  <a href="#_6" title="示例" class="md-nav__link">
+    示例
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#options" title="Options" class="md-nav__link">
-    Options
+  <a href="#_7" title="选项" class="md-nav__link">
+    选项
   </a>
   
 </li>
@@ -802,8 +802,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../conjure/" title="魔术" class="md-nav__link">
-      魔术
+    <a href="../conjure/" title="脚本" class="md-nav__link">
+      脚本
     </a>
   </li>
 
@@ -862,8 +862,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../mogrify/" title="mogrify" class="md-nav__link">
-      mogrify
+    <a href="../mogrify/" title="锐化" class="md-nav__link">
+      锐化
     </a>
   </li>
 
@@ -947,43 +947,43 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#name" title="NAME" class="md-nav__link">
-    NAME
+  <a href="#_2" title="命名" class="md-nav__link">
+    命名
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#contents" title="Contents" class="md-nav__link">
-    Contents
+  <a href="#_3" title="菜单" class="md-nav__link">
+    菜单
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#synopsis" title="Synopsis" class="md-nav__link">
-    Synopsis
+  <a href="#_4" title="概要" class="md-nav__link">
+    概要
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#description" title="Description" class="md-nav__link">
-    Description
+  <a href="#_5" title="描述" class="md-nav__link">
+    描述
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#examples" title="Examples" class="md-nav__link">
-    Examples
+  <a href="#_6" title="示例" class="md-nav__link">
+    示例
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#options" title="Options" class="md-nav__link">
-    Options
+  <a href="#_7" title="选项" class="md-nav__link">
+    选项
   </a>
   
 </li>
@@ -1003,132 +1003,36 @@
               
                 
                 
-                <h1 id="gm-compare">gm compare<a class="headerlink" href="#gm-compare" title="Permanent link">&para;</a></h1>
-<h2 id="name">NAME<a class="headerlink" href="#name" title="Permanent link">&para;</a></h2>
-<p>compare - compare two images.</p>
-<h2 id="contents">Contents<a class="headerlink" href="#contents" title="Permanent link">&para;</a></h2>
-<p>Synopsis
-Description
-Examples
-Options</p>
-<h2 id="synopsis">Synopsis<a class="headerlink" href="#synopsis" title="Permanent link">&para;</a></h2>
-<p>gm compare [ options ... ] reference-image [ options ... ] compare-image [ options ... ]</p>
-<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
+                <h1 id="_1">比较<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">命名<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>compare - 比较两张图.</p>
+<h2 id="_3">菜单<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>概要</li>
+<li>描述</li>
+<li>示例</li>
+<li>选项</li>
+</ul>
+<h2 id="_4">概要<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span>gm compare <span class="o">[</span> options ... <span class="o">]</span> reference-image <span class="o">[</span> options ... <span class="o">]</span> compare-image <span class="o">[</span> options ... <span class="o">]</span>
+</pre></div>
+
+<h2 id="_5">描述<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <p>compare compares two similar images using a specified statistical method (see -metric) and/or by writing a difference image (-file), with the altered pixels annotated using a specified method (see -highlight-style) and color (see -highlight-color).</p>
 <p>Reference-image is the original image and compare-image is the (possibly) altered version, which should have the same dimensions as reference-image.</p>
-<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
+<h2 id="_6">示例<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <p>To compare two images using Mean Square Error (MSE) statistical analysis use:</p>
-<div class="codehilite"><pre><span></span>compare -metric mse original.miff compare.miff
+<div class="codehilite"><pre><span></span>    compare -metric mse original.miff compare.miff
 </pre></div>
-
 
 <p>To create an annotated difference image use:</p>
-<div class="codehilite"><pre><span></span>compare -highlight-style assign -highlight-color purple -file diff.miff original.miff compare.miff
+<div class="codehilite"><pre><span></span>    compare -highlight-style assign -highlight-color purple -file diff.miff original.miff compare.miff
 </pre></div>
 
-
-<p>Back to Contents  </p>
-<h2 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h2>
+<h2 id="_7">选项<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <p>Options are processed in command line order. Any option you specify on the command line remains in effect only for the image that follows. All options are reset to their default values after each image is read.</p>
 <p>For a more detailed description of each option, see Options, above. GraphicsMagick(1). </p>
-<blockquote>
-<p>-authenticate <string></p>
-</blockquote>
-<p>decrypt image with this password</p>
-<blockquote>
-<p>-colorspace <value></p>
-</blockquote>
-<p>the type of colorspace</p>
-<blockquote>
-<p>-debug <events></p>
-</blockquote>
-<p>enable debug printout</p>
-<blockquote>
-<p>-define <key>{=<value>},...</p>
-</blockquote>
-<p>add coder/decoder specific options</p>
-<blockquote>
-<p>-density <width>x<height></p>
-</blockquote>
-<p>horizontal and vertical resolution in pixels of the image</p>
-<blockquote>
-<p>-depth <value></p>
-</blockquote>
-<p>depth of the image</p>
-<blockquote>
-<p>-display <host:display[.screen]></p>
-</blockquote>
-<p>specifies the X server to contact</p>
-<blockquote>
-<p>-endian <type></p>
-</blockquote>
-<p>specify endianness (MSB, LSB, or Native) of image</p>
-<blockquote>
-<p>-file <filename></p>
-</blockquote>
-<p>write annotated difference image to file</p>
-<blockquote>
-<p>-help</p>
-</blockquote>
-<p>print usage instructions</p>
-<blockquote>
-<p>-highlight-color <color></p>
-</blockquote>
-<p>pixel annotation color</p>
-<blockquote>
-<p>-highlight-style <style></p>
-</blockquote>
-<p>pixel annotation style</p>
-<blockquote>
-<p>-interlace <type></p>
-</blockquote>
-<p>the type of interlacing scheme</p>
-<blockquote>
-<p>-limit <type> <value></p>
-</blockquote>
-<p>Disk, File, Map, Memory, Pixels, Width, Height or Threads resource limit</p>
-<blockquote>
-<p>-log <string></p>
-</blockquote>
-<p>Specify format for debug log</p>
-<blockquote>
-<p>-matte</p>
-</blockquote>
-<p>store matte channel if the image has one</p>
-<blockquote>
-<p>-maximum-error <limit></p>
-</blockquote>
-<p>specifies the maximum amount of total image error</p>
-<blockquote>
-<p>-metric <metric></p>
-</blockquote>
-<p>comparison metric (MAE, MSE, PAE, PSNR, RMSE)</p>
-<blockquote>
-<p>-monitor</p>
-</blockquote>
-<p>show progress indication</p>
-<blockquote>
-<p>-sampling-factor <horizontal_factor>x<vertical_factor></p>
-</blockquote>
-<p>chroma subsampling factors</p>
-<blockquote>
-<p>-size <width>x<height>{+offset}</p>
-</blockquote>
-<p>width and height of the image</p>
-<blockquote>
-<p>-type <type></p>
-</blockquote>
-<p>the image type</p>
-<blockquote>
-<p>-verbose</p>
-</blockquote>
-<p>print detailed information about the image</p>
-<blockquote>
-<p>-version</p>
-</blockquote>
-<p>print GraphicsMagick version string
-For a more detailed description of each option, see Options, above. GraphicsMagick(1). </p>
-<p>Back to Contents  </p>
+<details class="info"><summary>-authenticate <code>&lt;string&gt;</code></summary><p>使用密码解密图片</p></details><details class="info"><summary>-colorspace <code>&lt;value&gt;</code></summary><p>色隙类型</p></details><details class="info"><summary>-debug <code>&lt;events&gt;</code></summary><p>启用调试打印输出</p></details><details class="info"><summary>-define <code>&lt;key&gt;</code>{=<code>&lt;value&gt;</code>},...</summary><p>add coder/decoder specific options</p></details><details class="info"><summary>-density <code>&lt;width&gt;</code>x<code>&lt;height&gt;</code></summary><p>horizontal and vertical resolution in pixels of the image</p></details><details class="info"><summary>-depth <code>&lt;value&gt;</code></summary><p>图像深度</p></details><details class="info"><summary>-display <code>&lt;host:display[.screen]&gt;</code></summary><p>specifies the X server to contact</p></details><details class="info"><summary>-endian <code>&lt;type&gt;</code></summary><p>specify endianness (MSB, LSB, or Native) of image</p></details><details class="info"><summary>-file <code>&lt;filename&gt;</code></summary><p>write annotated difference image to file</p></details><details class="info"><summary>-help</summary><p>print usage instructions</p></details><details class="info"><summary>-highlight-color <code>&lt;color&gt;</code></summary><p>pixel annotation color</p></details><details class="info"><summary>-highlight-style <code>&lt;style&gt;</code></summary><p>pixel annotation style</p></details><details class="info"><summary>-interlace <code>&lt;type&gt;</code></summary><p>the type of interlacing scheme</p></details><details class="info"><summary>-limit <code>&lt;type&gt;</code> <code>&lt;value&gt;</code></summary><p>Disk, File, Map, Memory, Pixels, Width, Height or Threads resource limit</p></details><details class="info"><summary>-log <code>&lt;string&gt;</code></summary><p>Specify format for debug log</p></details><details class="info"><summary>-matte</summary><p>store matte channel if the image has one</p></details><details class="info"><summary>-maximum-error <code>&lt;limit&gt;</code></summary><p>specifies the maximum amount of total image error</p></details><details class="info"><summary>-metric <code>&lt;metric&gt;</code></summary><p>比较规 (MAE, MSE, PAE, PSNR, RMSE)</p></details><details class="info"><summary>-monitor</summary><p>显示进度提示</p></details><details class="info"><summary>-sampling-factor <code>&lt;horizontal_factor&gt;</code>x<code>&lt;vertical_factor&gt;</code></summary><p>chroma subsampling factors</p></details><details class="info"><summary>-size <code>&lt;width&gt;</code>x<code>&lt;height&gt;</code>{+offset}</summary><p>图像的宽度和高度</p></details><details class="info"><summary>-type <code>&lt;type&gt;</code></summary><p>图像类型</p></details><details class="info"><summary>-verbose</summary><p>打印图片详情</p></details><details class="info"><summary>-version</summary><p>打印 GraphicsMagick 版本字符</p></details><p>查看选项详情, 查看 GraphicsMagick(1) 选项. </p>
                 
                   
                 

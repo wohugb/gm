@@ -734,8 +734,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../GraphicsMagick/Manual/conjure/" title="魔术" class="md-nav__link">
-      魔术
+    <a href="../GraphicsMagick/Manual/conjure/" title="脚本" class="md-nav__link">
+      脚本
     </a>
   </li>
 
@@ -794,8 +794,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../GraphicsMagick/Manual/mogrify/" title="mogrify" class="md-nav__link">
-      mogrify
+    <a href="../GraphicsMagick/Manual/mogrify/" title="锐化" class="md-nav__link">
+      锐化
     </a>
   </li>
 
@@ -887,13 +887,13 @@
                 
                 
                 <h1 id="_1">流<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<details class="note" open="open"><summary>输入流</summary><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">readStream</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">createReadStream</span><span class="p">(</span><span class="s1">&#39;/path/to/my/img.jpg&#39;</span><span class="p">);</span>
+<details class="info" open="open"><summary>输入流</summary><div class="codehilite"><pre><span></span><span class="kd">var</span> <span class="nx">readStream</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">createReadStream</span><span class="p">(</span><span class="s1">&#39;/path/to/my/img.jpg&#39;</span><span class="p">);</span>
 <span class="nx">gm</span><span class="p">(</span><span class="nx">readStream</span><span class="p">,</span> <span class="s1">&#39;img.jpg&#39;</span><span class="p">)</span>
 <span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;/path/to/reformat.png&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">err</span><span class="p">)</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;done&#39;</span><span class="p">);</span>
 <span class="p">});</span>
 </pre></div>
-</details><details class="note" open="open"><summary>输入远程流</summary><div class="codehilite"><pre><span></span><span class="c1">// </span>
+</details><details class="info" open="open"><summary>输入远程流</summary><div class="codehilite"><pre><span></span><span class="c1">// </span>
 
 <span class="kd">var</span> <span class="nx">request</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;request&#39;</span><span class="p">);</span>
 <span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="s2">&quot;www.abc.com/pic.jpg&quot;</span>
@@ -903,7 +903,7 @@
   <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">err</span><span class="p">)</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;done&#39;</span><span class="p">);</span>
 <span class="p">});</span>
 </pre></div>
-</details><details class="note" open="open"><summary>输出可读流</summary><div class="codehilite"><pre><span></span><span class="c1">// can also stream output to a ReadableStream</span>
+</details><details class="info" open="open"><summary>输出可读流</summary><div class="codehilite"><pre><span></span><span class="c1">// can also stream output to a ReadableStream</span>
 <span class="c1">// (can be piped to a local file or remote server)</span>
 <span class="nx">gm</span><span class="p">(</span><span class="s1">&#39;/path/to/my/img.jpg&#39;</span><span class="p">)</span>
 <span class="p">.</span><span class="nx">resize</span><span class="p">(</span><span class="s1">&#39;200&#39;</span><span class="p">,</span> <span class="s1">&#39;200&#39;</span><span class="p">)</span>
@@ -920,7 +920,7 @@
 <span class="p">.</span><span class="nx">stream</span><span class="p">()</span>
 <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">writeStream</span><span class="p">);</span>
 </pre></div>
-</details><details class="note" open="open"><summary>通过格式或文件名gm将提供相应格式的数据</summary><div class="codehilite"><pre><span></span><span class="c1">// pass a format or filename to stream() and</span>
+</details><details class="info" open="open"><summary>通过格式或文件名gm将提供相应格式的数据</summary><div class="codehilite"><pre><span></span><span class="c1">// pass a format or filename to stream() and</span>
 <span class="c1">// gm will provide image data in that format</span>
 <span class="nx">gm</span><span class="p">(</span><span class="s1">&#39;/path/to/my/img.jpg&#39;</span><span class="p">)</span>
 <span class="p">.</span><span class="nx">stream</span><span class="p">(</span><span class="s1">&#39;png&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">stdout</span><span class="p">,</span> <span class="nx">stderr</span><span class="p">)</span> <span class="p">{</span>
@@ -934,7 +934,7 @@
 <span class="p">.</span><span class="nx">stream</span><span class="p">(</span><span class="s1">&#39;png&#39;</span><span class="p">)</span>
 <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">writeStream</span><span class="p">);</span>
 </pre></div>
-</details><details class="note" open="open"><summary>combine the two for true streaming image processing</summary><div class="codehilite"><pre><span></span><span class="c1">// combine the two for true streaming image processing</span>
+</details><details class="info" open="open"><summary>combine the two for true streaming image processing</summary><div class="codehilite"><pre><span></span><span class="c1">// combine the two for true streaming image processing</span>
 <span class="kd">var</span> <span class="nx">readStream</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">createReadStream</span><span class="p">(</span><span class="s1">&#39;/path/to/my/img.jpg&#39;</span><span class="p">);</span>
 <span class="nx">gm</span><span class="p">(</span><span class="nx">readStream</span><span class="p">)</span>
 <span class="p">.</span><span class="nx">resize</span><span class="p">(</span><span class="s1">&#39;200&#39;</span><span class="p">,</span> <span class="s1">&#39;200&#39;</span><span class="p">)</span>
@@ -943,7 +943,7 @@
   <span class="nx">stdout</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">writeStream</span><span class="p">);</span>
 <span class="p">});</span>
 </pre></div>
-</details><details class="note" open="open"><summary>GOTCHA</summary><div class="codehilite"><pre><span></span><span class="c1">// GOTCHA:</span>
+</details><details class="info" open="open"><summary>GOTCHA</summary><div class="codehilite"><pre><span></span><span class="c1">// GOTCHA:</span>
 <span class="c1">// when working with input streams and any &#39;identify&#39;</span>
 <span class="c1">// operation (size, format, etc), you must pass &quot;{bufferStream: true}&quot; if</span>
 <span class="c1">// you also need to convert (write() or stream()) the image afterwards</span>
