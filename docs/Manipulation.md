@@ -2,17 +2,17 @@
 
 ## A
 
-??? note "adjoin"
+??? info "adjoin"
     ```js
     gm("img.png").adjoin()
     ```
 
-??? note "affine"
+??? info "affine"
     ```js
     gm("img.png").affine(matrix)
     ```
 
-??? note "antialias"
+??? info "antialias"
     所有图片默认是 anti-aliased by GraphicsMagick. To disable it pass false.
     ```js
     gm("img.png").antialias(false)
@@ -51,13 +51,13 @@
       gm("img.png").append("another.jpg", "third.gif", true)
     ```
 
-??? note "authenticate"
+??? info "authenticate"
 
     ```js
       gm("img.png").authenticate(password)
     ```
 
-??? note "autoOrient"
+??? info "autoOrient"
     Auto-orients the image according to its EXIF data.
     GraphicsMagick doesn't actually have the -auto-orient option but we emulate this by first reading the EXIF data and rotate/flip from there.
 
@@ -65,205 +65,205 @@
       gm("img.jpg").autoOrient()
     ```
 
-??? note "average"
+??? info "average"
     ```js
     gm("img.png").average()
     ```
 
 ## B
 
-??? note "backdrop"
+??? info "backdrop"
     ```js
     gm("img.png").backdrop()
     ```
 
-??? note "bitdepth"
+??? info "bitdepth"
     Specifies the number of bits of color to preserve in the image. See the docs for more detail.
     ```js
     gm("img.png").bitdepth(bits)
     ```
 
-??? note "blackThreshold"
+??? info "blackThreshold"
     pixels below `threshold` become black.
     ```js
     gm("img.png").blackThreshold(red [,green] [,blue] [,opacity])
     ```
 
-??? note "bluePrimary"
+??? info "bluePrimary"
     ```js
     gm("img.png").bluePrimary(x, x)
     ```
 
-??? note "blur"
+??? info "blur"
     Accepts a radius and optional sigma (standard deviation).
     ```js
     gm("img.png").blur(radius [, sigma])
     ```
 
-??? note "border"
+??? info "border"
     ```js
     gm("img.png").border(width, height)
     ```
 
-??? note "borderColor"
+??? info "borderColor"
     ```js
     gm("img.png").borderColor(color)
     ```
 
-??? note "box"
+??? info "box"
     ```js
     gm("img.png").box(color)
     ```
 
 ## C
 
-??? note "channel"
+??? info "channel"
     type
       Red, Green, Blue, Opacity, Matte, Cyan, Magenta, Yellow, Black, or Gray
     ```js
     gm("img.png").channel(type)
     ```
 
-??? note "charcoal"
+??? info "charcoal"
     Simulates a charcoal drawing. Accepts a factor.
     ```js
     gm("img.png").charcoal(factor)
     ```
 
-??? note "chop"
+??? info "chop"
     Removes pixels from the interior of an image.
     ```js
     gm("img.png").chop(width, height, x, y)
     ```
 
-??? note "clip"
+??? info "clip"
     ```js
     gm("img.png").clip()
     ```
-??? note "coalesce"
+??? info "coalesce"
     ```js
     gm("img.png").coalesce()
     ```
 
-??? note "colorize"
+??? info "colorize"
     Colorize the image with optionally separate red, green, and blue values.
     ```js
     gm("img.png").colorize(red [, green [, blue]])
     ```
-??? note "colorMap"
+??? info "colorMap"
     type
       shared or private
     ```js
     gm("img.png").colorMap(type)
     ```
 
-??? note "colors"
+??? info "colors"
     Sets the preferred number of colors for the image (color reduction).
     ```js
     gm("img.png").colors(int)
     ```
 
-??? note "colorspace"
+??? info "colorspace"
     Specifies the type of colorspace. See the GraphicsMagick docs for val details.
     ```js
     gm("img.png").colorspace(val)
     ```
 
-??? note "compose"
+??? info "compose"
     ```js
     gm("img.png").compose(operator)
     ```
 
-??? note "compress"
+??? info "compress"
     type
     None, BZip, Fax, Group4, JPEG, Lossless, LZW, RLE, Zip, or LZMA
     ```js
     gm("img.png").compress(type)
     ```
-??? note "comment"
+??? info "comment"
     Annotates an image. See the docs for more info.
     ```js
     gm("img.png").comment(text|format)
     ```
 
-??? note "contrast"
+??? info "contrast"
     Increases or reduces the image contrast. Accepts a multiplier.
     ```js
     gm("img.png").contrast([+-]multiplier)
     ```
 
-??? note "convolve"
+??? info "convolve"
     ```js
     gm("img.png").convolve(kernel)
     ```
-??? note "createDirectories"
+??? info "createDirectories"
     ```js
     gm("img.png").createDirectories()
     ```
 
-??? note "crop"
+??? info "crop"
     Crops the image to the given width and height at the given x and y position.
     ```js
     gm("img.png").crop(width, height, x, y)
     ```
 
-??? note "cycle"
+??? info "cycle"
     Displace the image colormap by amount. amount is the number of positions each colormap entry is shifted.
     ```js
     gm("img.png").cycle(amount)
     ```
 ## D
 
-??? note "deconstruct"
+??? info "deconstruct"
     ```js
     gm("img.png").deconstruct()
     ```
 
-??? note "define"
+??? info "define"
     ```js
     gm("img.png").define()
     ```
 
-??? note "delay"
+??? info "delay"
     `amount` is in hundreths of a second.
     ```js
     gm("img.png").delay(amout)
     ```
 
-??? note "density"
+??? info "density"
     This option specifies the image resolution to store while encoding a raster image or the canvas resolution while rendering (reading) vector formats into an image.
     ```js
     gm("img.png").density(width, height)
     ```
 
-??? note "despeckle"
+??? info "despeckle"
     Reduces the speckles within the image.
     ```js
     gm("img.png").despeckle()
     ```
 
-??? note "displace"
+??? info "displace"
     Shift image pixels as defined by a displacement map.
     ```js
     gm("img.png").displace(horizontal, vertical)
     ```
 
-??? note "display"
+??? info "display"
     ```js
     gm("img.png").display(value)
     ```
 
-??? note "dispose"
+??? info "dispose"
     ```js
     gm("img.png").dispose(method)
     ```
 
-??? note "dissolve"
+??? info "dissolve"
     ```js
     gm("img.png").dissolve(method)
     ```
 
-??? note "dither"
+??? info "dither"
     Applies Floyd/Steinberg error diffusion to the image. Pass false to disable dithering.
     Note: either .colors() or .monochrome() must be used for this to take effect.
     ```js
@@ -272,44 +272,44 @@
 
 ## E
 
-??? note "edge"
+??? info "edge"
     Emphasizes edges in an image. Takes an optional radius of the emphasis to apply.
     ```js
     gm("img.png").edge([radius])
     ```
 
-??? note "emboss"
+??? info "emboss"
     Embosses the image. Takes an optional radius.
     ```js
     gm("img.png").emboss([radius])
     ```
 
-??? note "encoding"
+??? info "encoding"
     type
     AdobeCustom, AdobeExpert, AdobeStandard, AppleRoman, BIG5, GB2312, Latin 2, None, SJIScode, Symbol, Unicode, Wansung
     gm("img.png").encoding(type)
     ```
 
-??? note "endian"
+??? info "endian"
     type
     MSB, LSB, or Native
     ```js
     gm("img.png").endian(type)
     ```
 
-??? note "enhance"
+??? info "enhance"
     Enhances the image.
     ```js
     gm("img.png").enhance()
     ```
 
-??? note "equalize"
+??? info "equalize"
     Performs histogram equalization to the image.
     ```js
     gm("img.png").equalize()
     ```
 
-??? note "extent"
+??? info "extent"
     composite image on background color canvas image.
     ```js
     gm("img.png").extent([width, height, options])
@@ -317,73 +317,73 @@
 
 ## F
 
-??? note "file"
+??? info "file"
     ```js
     gm("img.png").file(filename)
     ```
 
-??? note "filter"
+??? info "filter"
     Specifies the filter to use when resizing. see link for available types.
     ```js
     gm("img.png").filter(type)
     ```
 
-??? note "flatten"
+??? info "flatten"
     ```js
     gm("img.png").flatten()
     ```
 
-??? note "flip"
+??? info "flip"
     Creates a mirror image (vertically).
     ```js
     gm("img.png").flip()
     ```
 
-??? note "flop"
+??? info "flop"
     Creates a mirror image (horizontally).
     ```js
     gm("img.png").flop()
     ```
 
-??? note "foreground"
+??? info "foreground"
     ```js
     gm("img.png").foreground(color)
     ```
 
-??? note "frame"
+??? info "frame"
     ```js
     gm("img.png").frame(width, height, outerBevelWidth, innerBevelWidth)
     ```
 
-??? note "fuzz"
+??? info "fuzz"
     ```js
     gm("img.png").fuzz(distance [,percent])
     ```
 
 ## G
 
-??? note "gamma"
+??? info "gamma"
     Adjusts the level of gamma correction.
     ```js
     gm("img.png").gamma(r, g, b)
     ```
 
-??? note "gaussian"
+??? info "gaussian"
     ```js
     gm("img.png").gaussian(radius [,sigma])
     ```
 
-??? note "geometry"
+??? info "geometry"
     ```js
     gm("img.png").geometry(width, height [,arg])
     ```
 
-??? note "greenPrimary"
+??? info "greenPrimary"
     ```js
     gm("img.png").greenPrimary(x, y)
     ```
 
-??? note "gravity"
+??? info "gravity"
     The direction the primitive gravitates to when annotating the image. Defaults to NorthWest.
     direction
     NorthWest|North|NorthEast|West|Center|East|SouthWest|South|SouthEast
@@ -393,37 +393,37 @@
 
 ## H
 
-??? note "highlightColor"
+??? info "highlightColor"
     ```js
     gm("img.png").highlightColor(color)
     ```
 
-??? note "highlightStyle"
+??? info "highlightStyle"
     ```js
     gm("img.png").highlightStyle(color)
     ```
 
 ## I
 
-??? note "iconGeometry"
+??? info "iconGeometry"
     ```js
     gm("img.png").iconGeometry(geometry)
     ```
 
-??? note "implode"
+??? info "implode"
     Implodes the image pixels around the center. Takes an optional factor.
     ```js
     gm("img.png").implode([factor])
     ```
 
-??? note "intent"
+??? info "intent"
     type
     Absolute, Perceptual, Relative, or Saturation
     ```js
     gm("img.png").intent(type)
     ```
 
-??? note "interlace"
+??? info "interlace"
     Specifies the type of interlacing scheme. Defaults to None.
 
     type
@@ -434,23 +434,23 @@
 
 ## L
 
-??? note "label"
+??? info "label"
     Assigns a label to an image.
     ```js
     gm("img.png").label(name)
     ```
 
-??? note "lat"
+??? info "lat"
     ```js
     gm("img.png").lat(width, height, offset [,percent])
     ```
 
-??? note "level"
+??? info "level"
     ```js
     gm("img.png").level(blackPoint, gamma, whitePoint [,percent])
     ```
 
-??? note "limit"
+??? info "limit"
     Sets resource limits.
 
     type
@@ -461,26 +461,26 @@
     gm("img.png").limit(type, val)
     ```
 
-??? note "list"
+??? info "list"
     type
     Color, Delegate, Format, Magic, Module, Resource, or Type
     ```js
       gm("img.png").list(type)
     ```
 
-??? note "log"
+??? info "log"
     Specify format for debug log. 详情请参阅文档。
     ```js
     gm("img.png").log(format)
     ```
 
-??? note "loop"
+??? info "loop"
     详情请参阅文档。
     ```js
     gm("img.png").loop(iterations)
     ```
 
-??? note "lower"
+??? info "lower"
     Creates a pseudo 3D lowering effect of the images edges.
     ```js
     gm("img.png").lower(width, height)
@@ -488,101 +488,101 @@
 
 ## M
 
-??? note "magnify"
+??? info "magnify"
     Magnifies the image factor times.
     ```js
     gm("img.png").magnify(factor)
     ```
 
-??? note "map"
+??? info "map"
     详情请参阅文档。
     ```js
     gm("img.png").map(filename)
     ```
 
-??? note "mask"
+??? info "mask"
     详情请参阅文档。
     ```js
     gm("img.png").mask(filename)
     ```
 
-??? note "matte"
+??? info "matte"
     详情请参阅文档。
     ```js
     gm("img.png").matte()
     ```
 
-??? note "matteColor"
+??? info "matteColor"
     详情请参阅文档。
     ```js
     gm("img.png").matteColor(color)
     ```
 
-??? note "maximumError"
+??? info "maximumError"
     详情请参阅文档。
     ```js
     gm("img.png").maximumError(limit)
     ```
 
-??? note "median"
+??? info "median"
     Applies a median filter to the image. The optional param radius adjusts the weight of the effect.
     ```js
     gm("img.png").median([radius])
     ```
 
-??? note "minify"
+??? info "minify"
     Minifies the image factor times.
     ```js
     gm("img.png").minify(factor)
     ```
 
-??? note "mode"
+??? info "mode"
     详情请参阅文档。
     ```js
     gm("img.png").mode(value)
     ```
 
-??? note "modulate"
+??? info "modulate"
     Varies the brightness, saturation, and hue of the image.
     ```js
     gm("img.png").modulate(b [, s [, h]])
     ```
 
-??? note "monitor"
+??? info "monitor"
     详情请参阅文档。
     ```js
     gm("img.png").monitor()
     ```
 
-??? note "monochrome"
+??? info "monochrome"
     Transforms the image to black and white.
     ```js
     gm("img.png").monochrome()
     ```
 
-??? note "morph"
+??? info "morph"
     Morphs two images together.
 
 
-??? note "otherImg"
+??? info "otherImg"
     the path to another img
 
-??? note "outName"
+??? info "outName"
     the path where the image will be saved
 
-??? note "callback"
+??? info "callback"
     A function to be executed when morphing is complete. callback will be passed the standard args that .write() receives.
     ```js
     gm("img.png").morph(otherImg, outName, callback)
     ```
 
-??? note "mosaic"
+??? info "mosaic"
     详情请参阅文档。
     ```js
     gm("img.png").mosaic()
     ```
 
-??? note "motionBlur"
+??? info "motionBlur"
     详情请参阅文档。
     ```js
     gm("img.png").motionBlur(radius [, sigma, angle])
@@ -590,19 +590,19 @@
 
 ## N
 
-??? note "name"
+??? info "name"
     详情请参阅文档。
     ```js
     gm("img.png").name()
     ```
 
-??? note "negative"
+??? info "negative"
     Replaces every pixel with its complementary color.
     ```js
     gm("img.png").negative()
     ```
 
-??? note "noise"
+??? info "noise"
     Add or reduce noise in the image.
     adius|type
     To add noise pass one of the following:
@@ -617,13 +617,13 @@
     gm("img.png").noise(radius|type)
     ```
 
-??? note "noop"
+??? info "noop"
     详情请参阅文档。
     ```js
     gm("img.png").noop()
     ```
 
-??? note "normalize"
+??? info "normalize"
     详情请参阅文档。
     ```js
     gm("img.png").normalize()
@@ -631,25 +631,25 @@
 
 ## O
 
-??? note "opaque"
+??? info "opaque"
     详情请参阅文档。
     ```js
     gm("img.png").opaque(color)
     ```
 
-??? note "operator"
+??? info "operator"
     详情请参阅文档。
     ```js
     gm("img.png").operator(channel, operator, rvalue [,percent])
     ```
 
-??? note "orderedDither"
+??? info "orderedDither"
     详情请参阅文档。
     ```js
     gm("img.png").orderedDither(channelType, NxN)
     ```
 
-??? note "outputDirectory"
+??? info "outputDirectory"
     详情请参阅文档。
     ```js
     gm("img.png").outputDirectory(channelType, NxN)
@@ -657,74 +657,74 @@
 
 ## P
 
-??? note "page"
+??? info "page"
     详情请参阅文档。
     ```js
     gm("img.png").page(width, height [,arg])
     ```
 
-??? note "pause"
+??? info "pause"
     详情请参阅文档。
     ```js
     gm("img.png").pause(seconds)
     ```
 
-??? note "pen"
+??? info "pen"
     详情请参阅文档。
     ```js
     gm("img.png").pen(color)
     ```
 
-??? note "ping"
+??? info "ping"
     详情请参阅文档。
     ```js
     gm("img.png").ping()
     ```
 
-??? note "pointSize"
+??? info "pointSize"
     详情请参阅文档。
     ```js
     gm("img.png").pointSize(value)
     ```
 
-??? note "noProfile"
+??? info "noProfile"
     Removes EXIF, ICM, etc profile data.
     ```js
     gm("img.png").noProfile()
     ```
 
-??? note "preview"
+??? info "preview"
     type
     See the docs for valid types.
     ```js
     gm("img.png").preview(type)
     ```
 
-??? note "paint"
+??? info "paint"
     Simulates an oil painting.
     ```js
     gm("img.png").paint(radius)
     ```
 
-??? note "process"
+??? info "process"
     详情请参阅文档。
     ```js
     gm("img.png").process(command)
     ```
 
-??? note "profile"
+??? info "profile"
     详情请参阅文档。
     ```js
     gm("img.png").profile(filename)
     ```
 
-??? note "progress"
+??? info "progress"
     详情请参阅文档。
     ```js
     gm("img.png").progress()
     ```
 
-??? note "randomThreshold"
+??? info "randomThreshold"
     详情请参阅文档。
     ```js
     gm("img.png").randomThreshold(channelType, LOWxHIGH)
@@ -732,7 +732,7 @@
 
 ## Q
 
-??? note "quality"
+??? info "quality"
     Adjusts the jpeg|miff|png|tiff compression level. val ranges from 0 to 100 (best).
     ```js
     gm("img.png").quality(val)
@@ -740,44 +740,44 @@
 
 ## R
 
-??? note "raise"
+??? info "raise"
     Creates a pseudo 3D raising effect of the images edges.
     ```js
     gm("img.png").raise(width, height)
     ```
 
-??? note "recolor"
+??? info "recolor"
     详情请参阅文档。
     ```js
     gm("img.png").recolor(matrix)
     ```
 
-??? note "redPrimary"
+??? info "redPrimary"
     详情请参阅文档。
     ```js
     gm("img.png").redPrimary(x, y)
     ```
 
-??? note "region"
+??? info "region"
     Specifies that all following methods only apply to the area specified by width, height, x, y.
     ```js
     gm("img.png").region(width, height, x, y).sepia()
     ```
     In this case, the sepia effect would only be applied within the area specified by width, height, x, y.
 
-??? note "remote"
+??? info "remote"
     详情请参阅文档。
     ```js
     gm("img.png").remote()
     ```
 
-??? note "render"
+??? info "render"
     详情请参阅文档。
     ```js
     gm("img.png").render()
     ```
 
-??? note "repage"
+??? info "repage"
     详情请参阅文档。
     ```js
     gm("img.png").repage(width, height, xoff, yoff, arg)
@@ -785,32 +785,32 @@
 
 ## S
 
-??? note "sample"
+??? info "sample"
     详情请参阅文档。
     ```js
     gm("img.png").sample(geometry)
     ```
 
-??? note "samplingFactor"
+??? info "samplingFactor"
     详情请参阅文档。
     ```js
     gm("img.png").samplingFactor(horizontalFactor, verticalFactor)
     ```
 
-??? note "rawSize"
+??? info "rawSize"
     详情请参阅文档。
     ```js
     gm("img.png").rawSize(width, height, offset)
     ```
 
-??? note "resample"
+??? info "resample"
     Resamples the image to specified horizontal and vertical resolution.
 
     ```js
         gm("img.png").resample(horizontal, vertical)
     ```
 
-??? note "resize"
+??? info "resize"
 
     调整图像的大小.
 
@@ -829,13 +829,13 @@
 
     To override the image's proportions and force a resize to 40x50: gm("img.png").resize(40, 50, "!")
 
-??? note "roll"
+??? info "roll"
     Rolls an image vertically or horizontally.
     ```js
     gm("img.png").roll(horizontalInt, verticalInt)
     ```
 
-??? note "rotate"
+??? info "rotate"
     Rotates the image by degrees and fills the background with color.
     ```js
     gm("img.png").rotate(color, degrees)
@@ -843,60 +843,60 @@
 
 ## S
 
-??? note "scene"
+??? info "scene"
     详情请参阅文档。
     ```js
     gm("img.png").scene(value)
     ```
 
-??? note "scenes"
+??? info "scenes"
     详情请参阅文档。
     ```js
     gm("img.png").scenes(start, end)
     ```
 
-??? note "scale"
+??? info "scale"
     Scales the image.
     ```js
     gm("img.png").scale(width, height)
     ```
 
-??? note "screen"
+??? info "screen"
     详情请参阅文档。
     
     ```js
     gm("img.png").screen()
     ```
 
-??? note "segment"
+??? info "segment"
     详情请参阅文档。
     
     ```js
     gm("img.png").segment(clusterThreshold, smoothingThreshold)
     ```
 
-??? note "selectFrame"
+??? info "selectFrame"
     Helpful if we process a large .gif so we don't load in memory each frame.
     
     ```js
     gm("img.png").selectFrame(0)
     ```
 
-??? note "sepia"
+??? info "sepia"
     A convenience method to apply a sepia effect to the image.
 
     ```js
     gm("img.png").sepia()
     ```
 
-??? note "set"
+??? info "set"
     详情请参阅文档。
 
     ```js
     gm("img.png").set(attribute, value)
     ```
 
-??? note "setFormat"
+??? info "setFormat"
     Overriddes the output image format.
 
     Helpful if we are outputting an image with no extention but need to change formats.
@@ -905,91 +905,91 @@
     gm("img.png").setFormat(format)
     ```
 
-??? note "shade"
+??? info "shade"
     详情请参阅文档。
 
     ```js
     gm("img.png").shade(azimuth, elevation)
     ```
 
-??? note "shadow"
+??? info "shadow"
     详情请参阅文档。
 
     ```js
     gm("img.png").shadow(radius, sigma)
     ```
 
-??? note "sharedMemory"
+??? info "sharedMemory"
     详情请参阅文档。
 
     ```js
     gm("img.png").sharedMemory()
     ```
 
-??? note "shave"
+??? info "shave"
     详情请参阅文档。
 
     ```js
     gm("img.png").shave(width, height, percent)
     ```
 
-??? note "sharpen"
+??? info "sharpen"
     Sharpens the image.
 
     ```js
     gm("img.png").sharpen(radius [, sigma])
     ```
 
-??? note "shear"
+??? info "shear"
     详情请参阅文档。
 
     ```js
     gm("img.png").shear(xDegrees, yDegrees)
     ```
 
-??? note "silent"
+??? info "silent"
     详情请参阅文档。
 
     ```js
     gm("img.png").silent()
     ```
 
-??? note "snaps"
+??? info "snaps"
     详情请参阅文档。
 
     ```js
     gm("img.png").snaps(value)
     ```
 
-??? note "solarize"
+??? info "solarize"
     Negates all pixels above threshold percent.
 
     ```js
     gm("img.png").solarize(threshold)
     ```
 
-??? note "spread"
+??? info "spread"
     Desplaces pixels by a random amount.
 
     ```js
     gm("img.png").spread(amount)
     ```
 
-??? note "stegano"
+??? info "stegano"
     详情请参阅文档。
 
     ```js
     gm("img.png").stegano(offset)
     ```
 
-??? note "stereo"
+??? info "stereo"
     详情请参阅文档。
 
     ```js
     gm("img.png").stereo()
     ```
 
-??? note "strip"
+??? info "strip"
     Strips the image of any profiles or comments.
 
     Similar to noProfile() but removes both profile and comment data. only works with imageMagick.
@@ -998,7 +998,7 @@
     gm("img.png").strip()
     ```
 
-??? note "swirl"
+??? info "swirl"
     Swirls pixels arount the center of the image. degrees specifies the tightness of the swirl.
 
     ```js
@@ -1007,28 +1007,28 @@
 
 ## T
 
-??? note "textFont"
+??? info "textFont"
     详情请参阅文档。
 
     ```js
     gm("img.png").textFont(font)
     ```
 
-??? note "texture"
+??? info "texture"
     详情请参阅文档。
 
     ```js
     gm("img.png").texture(font)
     ```
 
-??? note "threshold"
+??? info "threshold"
     详情请参阅文档。
 
     ```js
     gm("img.png").threshold(value [, percent])
     ```
 
-??? note "thumb"
+??? info "thumb"
     Creates a thumbnail based on minimum sizes.
 
     width
@@ -1043,49 +1043,49 @@
     called after the thumbnail is written. receives the same args that .write(err, stdout, stderr, command) receives.
     gm("img.png").thumb(width, height, outName, quality, callback)
 
-??? note "tile"
+??? info "tile"
     详情请参阅文档。
 
     ```js
     gm("img.png").tile(filename)
     ```
 
-??? note "title"
+??? info "title"
     详情请参阅文档。
 
     ```js
     gm("img.png").title(string)
     ```
 
-??? note "transform"
+??? info "transform"
     详情请参阅文档。
 
     ```js
     gm("img.png").transform(color)
     ```
 
-??? note "transparent"
+??? info "transparent"
     详情请参阅文档。
 
     ```js
     gm("img.png").transparent(color)
     ```
 
-??? note "treeDepth"
+??? info "treeDepth"
     详情请参阅文档。
 
     ```js
     gm("img.png").treeDepth(color)
     ```
 
-??? note "trim"
+??? info "trim"
     Trim an image by removing any edges that are exactly the same color as the corner pixels.
 
     ```js
     gm("img.png").trim()
     ```
 
-??? note "type"
+??? info "type"
     Specifies the image type.
 
     type
@@ -1103,28 +1103,28 @@
 
 ## U
 
-??? note "update"
+??? info "update"
     详情请参阅文档。
 
     ```js
     gm("img.png").update(seconds)
     ```
 
-??? note "units"
+??? info "units"
     详情请参阅文档。
 
     ```js
     gm("img.png").units(type)
     ```
 
-??? note "unsharp"
+??? info "unsharp"
     详情请参阅文档。
 
     ```js
     gm("img.png").unsharp(radius [, sigma, amount, threshold])
     ```
 
-??? note "usePixmap"
+??? info "usePixmap"
     详情请参阅文档。
 
     ```js
@@ -1133,21 +1133,21 @@
 
 ## V
 
-??? note "view"
+??? info "view"
     详情请参阅文档。
 
     ```js
     gm("img.png").view()
     ```
 
-??? note "virtualPixel"
+??? info "virtualPixel"
     详情请参阅文档。
 
     ```js
     gm("img.png").virtualPixel(method)
     ```
 
-??? note "visual"
+??? info "visual"
     详情请参阅文档。
 
     ```js
@@ -1156,37 +1156,37 @@
 
 ## W
 
-??? note "watermark"
+??? info "watermark"
     详情请参阅文档。
     ```js
     gm("img.png").watermark(brightness, saturation)
     ```
 
-??? note "wave"
+??? info "wave"
     详情请参阅文档。
     ```js
     gm("img.png").wave(amplitude, wavelength)
     ```
 
-??? note "whitePoint"
+??? info "whitePoint"
     详情请参阅文档。
     ```js
     gm("img.png").whitePoint(x, y)
     ```
 
-??? note "whiteThreshold"
+??? info "whiteThreshold"
     详情请参阅文档。
     ```js
     gm("img.png").whiteThreshold(red, green, blue, opacity)
     ```
 
-??? note "window"
+??? info "window"
     详情请参阅文档。
     ```js
     gm("img.png").window(id)
     ```
 
-??? note "windowGroup"
+??? info "windowGroup"
     详情请参阅文档。
     ```js
     gm("img.png").windowGroup()

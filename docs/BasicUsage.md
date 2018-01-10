@@ -6,7 +6,7 @@ var fs = require('fs')
   , gm = require('gm');
 ```
 
-???+ note "调整和删除EXIF配置文件数据"
+???+ info "调整和删除EXIF配置文件数据"
 
     ```js
     gm('/path/to/my/img.jpg')
@@ -17,7 +17,7 @@ var fs = require('fs')
     });
     ```
 
-???+ note "忽略纵横比"
+???+ info "忽略纵横比"
 
     ```js
     // some files would not be resized appropriately
@@ -38,7 +38,7 @@ var fs = require('fs')
     });
     ```
 
-???+ note "获取图像的大小"
+???+ info "获取图像的大小"
 
     ```js
     gm('/path/to/my/img.jpg')
@@ -48,7 +48,7 @@ var fs = require('fs')
     });
     ```
 
-???+ note "输出所有可用的图像属性"
+???+ info "输出所有可用的图像属性"
 
     ```js
     gm('/path/to/img.png')
@@ -57,7 +57,7 @@ var fs = require('fs')
     });
     ```
 
-???+ note "拉出动画GIF的第一帧，并保存为PNG"
+???+ info "拉出动画GIF的第一帧，并保存为PNG"
 
     ```js
     gm('/path/to/animated.gif[0]')
@@ -66,7 +66,7 @@ var fs = require('fs')
     });
     ```
 
-???+ note "自动定位图像"
+???+ info "自动定位图像"
 
     ```js
     gm('/path/to/img.jpg')
@@ -76,7 +76,7 @@ var fs = require('fs')
     })
     ```
 
-???+ note "疯狂的小镇"
+???+ info "疯狂的小镇"
 
     ```js
     gm('/path/to/my/img.jpg')
@@ -91,7 +91,7 @@ var fs = require('fs')
     })
     ```
 
-???+ note "注释一个图像"
+???+ info "注释一个图像"
 
     ```js
     gm('/path/to/my/img.jpg')
@@ -104,7 +104,7 @@ var fs = require('fs')
     });
     ```
 
-???+ note "创造一个形象"
+???+ info "创造一个形象"
 
     ```js
     gm(200, 400, "#ddff99f3")

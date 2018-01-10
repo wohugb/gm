@@ -1,26 +1,29 @@
 
 # gm identify
 
-## NAME
+## 命名
 
 identify - describe an image or image sequence.
 
-## Contents
+## 内容
 
-Synopsis
-Description
-Options
+* Synopsis
+* Description
+* Options
 
-## Synopsis
+## 概要
 
-gm identify file [ file ... ] 
- 
-## Description
+```sh
+gm identify file [ file ... ]
+```
+
+## 描述
 
 Identify describes the format and characteristics of one or more image files as internally supported by the software. It will also report if an image is incomplete or corrupt. The information displayed includes the scene number, the file name, the width and height of the image, whether the image is colormapped or not, the number of colors in the image, the number of bytes in the image, the format of the image (JPEG, PNM, etc.), and finally the number of seconds in both user time and elapsed time it took to read and process the image. If -verbose or +ping are provided as an option, the pixel read rate is also displayed. An example line output from identify follows:
 
-    images/aquarium.miff 640x480 PseudoClass 256c
+    images/aquarium.miff 640x480 PseudoClass 256c 
            308135b MIFF 0.000u 0:01
+
 If -verbose is set, expect additional output including any image comment: 
  
     Image: images/aquarium.miff
@@ -34,76 +37,73 @@ If -verbose is set, expect additional output including any image comment:
     format: MIFF
     comments:
     Imported from MTV raster image: aquarium.mtv
+
 For some formats, additional format-specific information about the file will be written if the -debug coder or -debug all option is used.
 
-Back to Contents  
-
-> Identify options
+## 选项
 
 Options are processed in command line order. Any option you specify on the command line remains in effect for the set of images immediately following, until the set is terminated by the appearance of any option or -noop.
 
 For a more detailed description of each option, see Options, above. GraphicsMagick(1). 
- 
 
-> -authenticate <string>
+??? info "-authenticate `<string>`"
 
-decrypt image with this password
+    decrypt image with this password
 
-> -debug <events>
+??? info "-debug `<events>`"
 
-enable debug printout
+    enable debug printout
 
-> -define <key>{=<value>},...
+??? info "-define `<key>`{=`<value>`},..."
 
-add coder/decoder specific options
+    add coder/decoder specific options
 
-> -density <width>x<height>
+??? info "-density `<width>`x`<height>`"
 
-horizontal and vertical resolution in pixels of the image
+    horizontal and vertical resolution in pixels of the image
 
-> -depth <value>
+??? info "-depth `<value>`"
 
-depth of the image
+    depth of the image
 
-> -format <string>
+??? info "-format `<string>`"
 
-output formatted image characteristics
+    output formatted image characteristics
 
-> -help
+??? info "-help"
 
-print usage instructions
+    print usage instructions
 
-> -interlace <type>
+??? info "-interlace `<type>`"
 
-the type of interlacing scheme
+    the type of interlacing scheme
 
-> -limit <type> <value>
+??? info "-limit `<type??? info "`<value>`"
 
-Disk, File, Map, Memory, Pixels, Width, Height or Threads resource limit
+    Disk, File, Map, Memory, Pixels, Width, Height or Threads resource limit
 
-> -log <string>
+??? info "-log `<string>`"
 
-Specify format for debug log
+    Specify format for debug log
 
-> -ping
+??? info "-ping"
 
-efficiently determine image characteristics
+    efficiently determine image characteristics
 
-> -sampling-factor <horizontal_factor>x<vertical_factor>
+??? info "-sampling-factor `<horizontal_factor>`x`<vertical_factor>`"
 
-chroma subsampling factors
+    chroma subsampling factors
 
-> -size <width>x<height>{+offset}
+??? info "-size `<width>`x`<height>`{+offset}"
 
-width and height of the image
+    width and height of the image
 
-> -verbose
+??? info "-verbose"
 
-print detailed information about the image
+    print detailed information about the image
 
-> -version
+??? info "-version"
 
-print GraphicsMagick version string
+    print GraphicsMagick version string
+
 For a more detailed description of each option, see Options, above. GraphicsMagick(1). 
- 
-Back to Contents  

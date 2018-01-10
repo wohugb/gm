@@ -1,4 +1,4 @@
-# gm composite
+# 合并
 
 ## 命名
 
@@ -13,7 +13,9 @@ composite - composite images together.
 
 ## 概要
 
+```sh
 gm composite [ options ... ] change-image base-image [ mask-image ] output-image 
+```
 
 ## 描述
 

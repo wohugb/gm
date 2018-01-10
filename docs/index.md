@@ -33,7 +33,7 @@ The links below refer to an older version of gm but everything should still work
 
 ## 方法
 
-??? note "获取器 - getters"
+??? info "获取器 - getters"
     - [size](http://aheckmann.github.com/gm/docs.html#getters) - returns the size (WxH) of the image
     - [orientation](http://aheckmann.github.com/gm/docs.html#getters) - returns the EXIF orientation of the image
     - [format](http://aheckmann.github.com/gm/docs.html#getters) - returns the image format (gif, jpeg, png, etc)
@@ -43,7 +43,7 @@ The links below refer to an older version of gm but everything should still work
     - [filesize](http://aheckmann.github.com/gm/docs.html#getters) - returns image filesize
     - [identify](http://aheckmann.github.com/gm/docs.html#getters) - returns all image data available. Takes an optional format string.
 
-??? note "操作 - manipulation"
+??? info "操作 - manipulation"
     - [adjoin](http://aheckmann.github.com/gm/docs.html#adjoin)
     - [affine](http://aheckmann.github.com/gm/docs.html#affine)
     - [antialias](http://aheckmann.github.com/gm/docs.html#antialias)
@@ -217,7 +217,7 @@ The links below refer to an older version of gm but everything should still work
     - [window](http://aheckmann.github.com/gm/docs.html#window)
     - [windowGroup](http://aheckmann.github.com/gm/docs.html#windowGroup)
 
-??? note "绘画"
+??? info "绘画"
     - [draw](http://aheckmann.github.com/gm/docs.html#draw)
     - [drawArc](http://aheckmann.github.com/gm/docs.html#drawArc)
     - [drawBezier](http://aheckmann.github.com/gm/docs.html#drawBezier)
@@ -236,7 +236,7 @@ The links below refer to an older version of gm but everything should still work
     - [strokeWidth](http://aheckmann.github.com/gm/docs.html#strokeWidth)
     - [setDraw](http://aheckmann.github.com/gm/docs.html#setDraw)
 
-??? note "图像输出"
+??? info "图像输出"
     - **write** - writes the processed image data to the specified filename
     - **stream** - provides a `ReadableStream` with the processed image data
     - **toBuffer** - returns the image as a `Buffer` instead of a stream

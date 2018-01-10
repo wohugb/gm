@@ -1,139 +1,143 @@
 
-# gm compare
+# 比较
 
-## NAME
+## 命名
 
-compare - compare two images.
+compare - 比较两张图.
 
-## Contents
+## 菜单
 
-Synopsis
-Description
-Examples
-Options
+* 概要
+* 描述
+* 示例
+* 选项
 
-## Synopsis
+## 概要
 
+```sh
 gm compare [ options ... ] reference-image [ options ... ] compare-image [ options ... ]
+```
 
-## Description
+## 描述
 
 compare compares two similar images using a specified statistical method (see -metric) and/or by writing a difference image (-file), with the altered pixels annotated using a specified method (see -highlight-style) and color (see -highlight-color).
 
 Reference-image is the original image and compare-image is the (possibly) altered version, which should have the same dimensions as reference-image.
 
-## Examples
+## 示例
 
 To compare two images using Mean Square Error (MSE) statistical analysis use:
 
+```sh
     compare -metric mse original.miff compare.miff
+```
+
 To create an annotated difference image use:
 
+```sh
     compare -highlight-style assign -highlight-color purple -file diff.miff original.miff compare.miff
-Back to Contents  
+```
 
-## Options
+## 选项
 
 Options are processed in command line order. Any option you specify on the command line remains in effect only for the image that follows. All options are reset to their default values after each image is read.
 
 For a more detailed description of each option, see Options, above. GraphicsMagick(1). 
- 
 
-> -authenticate <string>
+??? info "-authenticate `<string>`"
 
-decrypt image with this password
+    使用密码解密图片
 
-> -colorspace <value>
+??? info "-colorspace `<value>`"
 
-the type of colorspace
+    色隙类型
 
-> -debug <events>
+??? info "-debug `<events>`"
 
-enable debug printout
+    启用调试打印输出
 
-> -define <key>{=<value>},...
+??? info "-define `<key>`{=`<value>`},..."
 
-add coder/decoder specific options
+    add coder/decoder specific options
 
-> -density <width>x<height>
+??? info "-density `<width>`x`<height>`"
 
-horizontal and vertical resolution in pixels of the image
+    horizontal and vertical resolution in pixels of the image
 
-> -depth <value>
+??? info "-depth `<value>`"
 
-depth of the image
+    图像深度
 
-> -display <host:display[.screen]>
+??? info "-display `<host:display[.screen]>`"
 
-specifies the X server to contact
+    specifies the X server to contact
 
-> -endian <type>
+??? info "-endian `<type>`"
 
-specify endianness (MSB, LSB, or Native) of image
+    specify endianness (MSB, LSB, or Native) of image
 
-> -file <filename>
+??? info "-file `<filename>`"
 
-write annotated difference image to file
+    write annotated difference image to file
 
-> -help
+??? info "-help"
 
-print usage instructions
+    print usage instructions
 
-> -highlight-color <color>
+??? info "-highlight-color `<color>`"
 
-pixel annotation color
+    pixel annotation color
 
-> -highlight-style <style>
+??? info "-highlight-style `<style>`"
 
-pixel annotation style
+    pixel annotation style
 
-> -interlace <type>
+??? info "-interlace `<type>`"
 
-the type of interlacing scheme
+    the type of interlacing scheme
 
-> -limit <type> <value>
+??? info "-limit `<type>` `<value>`"
 
-Disk, File, Map, Memory, Pixels, Width, Height or Threads resource limit
+    Disk, File, Map, Memory, Pixels, Width, Height or Threads resource limit
 
-> -log <string>
+??? info "-log `<string>`"
 
-Specify format for debug log
+    Specify format for debug log
 
-> -matte
+??? info "-matte"
 
-store matte channel if the image has one
+    store matte channel if the image has one
 
-> -maximum-error <limit>
+??? info "-maximum-error `<limit>`"
 
-specifies the maximum amount of total image error
+    specifies the maximum amount of total image error
 
-> -metric <metric>
+??? info "-metric `<metric>`"
 
-comparison metric (MAE, MSE, PAE, PSNR, RMSE)
+    比较规 (MAE, MSE, PAE, PSNR, RMSE)
 
-> -monitor
+??? info "-monitor"
 
-show progress indication
+    显示进度提示
 
-> -sampling-factor <horizontal_factor>x<vertical_factor>
+??? info "-sampling-factor `<horizontal_factor>`x`<vertical_factor>`"
 
-chroma subsampling factors
+    chroma subsampling factors
 
-> -size <width>x<height>{+offset}
+??? info "-size `<width>`x`<height>`{+offset}"
 
-width and height of the image
+    图像的宽度和高度
 
-> -type <type>
+??? info "-type `<type>`"
 
-the image type
+    图像类型
 
-> -verbose
+??? info "-verbose"
 
-print detailed information about the image
+    打印图片详情
 
-> -version
+??? info "-version"
 
-print GraphicsMagick version string
-For a more detailed description of each option, see Options, above. GraphicsMagick(1). 
- 
-Back to Contents  
+    打印 GraphicsMagick 版本字符
+
+查看选项详情, 查看 GraphicsMagick(1) 选项. 

@@ -2,54 +2,54 @@
 
 查看 [drawing.js](example.md) 文件里的示例.
 
-??? note "画 - draw"
+??? info "画 - draw"
     Annotate an image with one or more graphic primitives (shapes, text, transformations, pixel operations). Used internally for all drawing methods.
     ```js
     gm("img.png").draw(args)
     ```
 
-??? note "弧角 - drawArc"
+??? info "弧角 - drawArc"
     Inscribe an elliptical arc within a rectangle. Requires a start and end point as well as the degrees of rotation.
     ```js
     gm("img.png").drawArc(x0, y0, x1, y1, r0, r1)
     ```
 
-??? note "贝塞尔曲线 - drawBezier"
+??? info "贝塞尔曲线 - drawBezier"
     ```js
     gm("img.png").drawBezier([x0, y0], ... [xn, yn])
     ```
 
-??? note "圆 - drawCircle"
+??? info "圆 - drawCircle"
     ```js
     gm("img.png").drawCircle(x0, y0, x1, y1)
     ```
 
-??? note "椭圆形 - drawEllipse"
+??? info "椭圆形 - drawEllipse"
     ```js
     gm("img.png").drawEllipse(x0, y0, r0, ry, r0, r1)
     ```
 
-??? note "线 - drawLine"
+??? info "线 - drawLine"
     ```js
     gm("img.png").drawLine(x0, y0, x1, y1)
     ```
 
-??? note "点 - drawPoint"
+??? info "点 - drawPoint"
     ```js
     gm("img.png").drawPoint(x, y)
     ```
 
-??? note "多边形 - drawPolygon"
+??? info "多边形 - drawPolygon"
     ```js
     gm("img.png").drawPolygon([x0, y0] ... [xn, yn])
     ```
 
-??? note "多段线 - drawPolyline"
+??? info "多段线 - drawPolyline"
     ```js
     gm("img.png").drawPolyline([x0, y0] ... [xn, yn])
     ```
 
-??? note "矩形 - drawRectangle"
+??? info "矩形 - drawRectangle"
     wc and hc are optional and add roundness to the corners.
     ```js
     gm("img.png").drawRectangle(x0, y0, x1, y1 [, wc, hc])
@@ -61,35 +61,35 @@
     gm("img.png").drawText(x, y, text [, gravity])
     ```
 
-??? note "填充颜色 - fill"
+??? info "填充颜色 - fill"
     Specifies the color to use when filling a drawn shape.
     ```js
     gm("img.png").fill(color)
     ```
 
-??? note "字体 - font"
+??? info "字体 - font"
     ```js
     gm("img.png").font(name)
     ```
 
-??? note "字体大小 - fontSize"
+??? info "字体大小 - fontSize"
     ```js
     gm("img.png").fontSize(size)
     ```
 
-??? note "划 - stroke"
+??? info "划 - stroke"
     Specifies the color to use when stroking a drawn shape.
     ```js
     gm("img.png").stroke(color [, width])
     ```
 
-??? note "设置边的宽度 - strokeWidth"
+??? info "设置边的宽度 - strokeWidth"
     Specifies the stroke width to use when stroking a drawn shape.
     ```js
     gm("img.png").strokeWidth(width)
     ```
 
-??? note "设置属性 - setDraw"
+??? info "设置属性 - setDraw"
     Sets drawing properties. property can be either "color" or "matte".
     ```js
     gm("img.png").setDraw(property, x, y, method)

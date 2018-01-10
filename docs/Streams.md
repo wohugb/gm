@@ -1,6 +1,6 @@
 # 流
 
-???+ note "输入流"
+???+ info "输入流"
 
     ```js
     var readStream = fs.createReadStream('/path/to/my/img.jpg');
@@ -11,7 +11,7 @@
 
     ```
 
-???+ note "输入远程流"
+???+ info "输入远程流"
 
     ```js
     // 
@@ -26,7 +26,7 @@
 
     ```
 
-???+ note "输出可读流"
+???+ info "输出可读流"
 
     ```js
     // can also stream output to a ReadableStream
@@ -47,7 +47,7 @@
     .pipe(writeStream);
     ```
 
-???+ note "通过格式或文件名gm将提供相应格式的数据"
+???+ info "通过格式或文件名gm将提供相应格式的数据"
 
     ```js
     // pass a format or filename to stream() and
@@ -65,7 +65,7 @@
     .pipe(writeStream);
     ```
 
-???+ note "combine the two for true streaming image processing"
+???+ info "combine the two for true streaming image processing"
 
     ```js
     // combine the two for true streaming image processing
@@ -78,7 +78,7 @@
     });
     ```
 
-???+ note "GOTCHA"
+???+ info "GOTCHA"
 
     ```js
     // GOTCHA:

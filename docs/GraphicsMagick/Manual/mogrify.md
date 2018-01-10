@@ -1,34 +1,33 @@
 
-# gm mogrify
+# 压缩锐化
 
-## NAME
+## 命名
 
 mogrify - mogrify an image
 
-## Contents
+## 内容
 
 Synopsis
 Description
 Examples
 Options
 
-## Synopsis
+## 概要
 
 gm mogrify [ options ... ] file ... 
  
-## Description
+## 描述
 
 Mogrify transforms an image or a sequence of images. These transforms include image scaling, image rotation, color reduction, and others. Each transmogrified image overwrites the corresponding original image, unless an option such as -format causes the output filename to be different from the input filename. 
  
 The graphics formats supported by mogrify are listed in GraphicsMagick(1).
 
-Back to Contents  
-
-## Examples
+## 示例
 
 To convert all the TIFF files in a particular directory to JPEG, use:
 
     gm mogrify -format jpeg *.tiff
+
 To convert a directory full of JPEG images to thumbnails, use:
 
     gm mogrify -size 120x120 *.jpg -resize 120x120 +profile "*"
@@ -37,574 +36,573 @@ In this example, '-size 120x120' gives a hint to the JPEG decoder that the image
 To scale an image of a cockatoo to exactly 640 pixels in width and 480 pixels in height, use:
 
     gm mogrify -resize 640x480! cockatoo.miff
-Back to Contents  
 
-## Options
+## 选项
 
 Options are processed in command line order. Any option you specify on the command line remains in effect for the set of images that follows, until the set is terminated by the appearance of any option or -noop.
 
 For a more detailed description of each option, see Options, above. GraphicsMagick(1). 
  
 
-> -affine <matrix>
+??? info "-affine `<matrix>`"
 
-drawing transform matrix
+    drawing transform matrix
 
-> -antialias
+??? info "-antialias"
 
-remove pixel aliasing
+    remove pixel aliasing
 
-> -asc-cdl <spec>
+??? info "-asc-cdl `<spec>`"
 
-apply ASC CDL color transform
+    apply ASC CDL color transform
 
-> -authenticate <string>
+??? info "-authenticate `<string>`"
 
-decrypt image with this password
+    decrypt image with this password
 
-> -auto-orient
+??? info "-auto-orient"
 
-orient (rotate) image so it is upright
+    orient (rotate) image so it is upright
 
-> -background <color>
+??? info "-background `<color>`"
 
-the background color
+    the background color
 
-> -black-threshold red[,green][,blue][,opacity]
+??? info "-black-threshold red[,green][,blue][,opacity]"
 
-pixels below the threshold become black
+    pixels below the threshold become black
 
-> -blue-primary <x>,<y>
+??? info "-blue-primary `<x>`,`<y>`"
 
-blue chromaticity primary point
+    blue chromaticity primary point
 
-> -blur <radius>{x<sigma>}
+??? info "-blur `<radius>`{x`<sigma>`}"
 
-blur the image with a Gaussian operator
+    blur the image with a Gaussian operator
 
-> -border <width>x<height>
+??? info "-border `<width>`x`<height>`"
 
-surround the image with a border of color
+    surround the image with a border of color
 
-> -bordercolor <color>
+??? info "-bordercolor `<color>`"
 
-the border color
+    the border color
 
-> -channel <type>
+??? info "-channel `<type>`"
 
-the type of channel
+    the type of channel
 
-> -charcoal <factor>
+??? info "-charcoal `<factor>`"
 
-simulate a charcoal drawing
+    simulate a charcoal drawing
 
-> -colorize <value>
+??? info "-colorize `<value>`"
 
-colorize the image with the pen color
+    colorize the image with the pen color
 
-> -colors <value>
+??? info "-colors `<value>`"
 
-preferred number of colors in the image
+    preferred number of colors in the image
 
-> -colorspace <value>
+??? info "-colorspace `<value>`"
 
-the type of colorspace
+    the type of colorspace
 
-> -comment <string>
+??? info "-comment `<string>`"
 
-annotate an image with a comment
+    annotate an image with a comment
 
-> -compose <operator>
+??? info "-compose `<operator>`"
 
-the type of image composition
+    the type of image composition
 
-> -compress <type>
+??? info "-compress `<type>`"
 
-the type of image compression
+    the type of image compression
 
-> -contrast
+??? info "-contrast"
 
-enhance or reduce the image contrast
+    enhance or reduce the image contrast
 
-> -convolve <kernel>
+??? info "-convolve `<kernel>`"
 
-convolve image with the specified convolution kernel
+    convolve image with the specified convolution kernel
 
-> -create-directories
+??? info "-create-directories"
 
-create output directory if required
+    create output directory if required
 
-> -crop <width>x<height>{+-}<x>{+-}<y>{%}
+??? info "-crop `<width>`x`<height>`{+-}`<x>`{+-}`<y>`{%}"
 
-preferred size and location of the cropped image
+    preferred size and location of the cropped image
 
-> -cycle <amount>
+??? info "-cycle `<amount>`"
 
-displace image colormap by amount
+    displace image colormap by amount
 
-> -debug <events>
+??? info "-debug `<events>`"
 
-enable debug printout
+    enable debug printout
 
-> -define <key>{=<value>},...
+??? info "-define `<key>`{=`<value>`},..."
 
-add coder/decoder specific options
+    add coder/decoder specific options
 
-> -delay <1/100ths of a second>
+??? info "-delay `<1/100ths of a second>`"
 
-display the next image after pausing
+    display the next image after pausing
 
-> -density <width>x<height>
+??? info "-density `<width>`x`<height>`"
 
-horizontal and vertical resolution in pixels of the image
+    horizontal and vertical resolution in pixels of the image
 
-> -depth <value>
+??? info "-depth `<value>`"
 
-depth of the image
+    depth of the image
 
-> -despeckle
+??? info "-despeckle"
 
-reduce the speckles within an image
+    reduce the speckles within an image
 
-> -display <host:display[.screen]>
+??? info "-display `<host:display[.screen]>`"
 
-specifies the X server to contact
+    specifies the X server to contact
 
-> -dispose <method>
+??? info "-dispose `<method>`"
 
-GIF disposal method
+    GIF disposal method
 
-> -dither
+??? info "-dither"
 
-apply Floyd/Steinberg error diffusion to the image
+    apply Floyd/Steinberg error diffusion to the image
 
-> -draw <string>
+??? info "-draw `<string>`"
 
-annotate an image with one or more graphic primitives
+    annotate an image with one or more graphic primitives
 
-> -edge <radius>
+??? info "-edge `<radius>`"
 
-detect edges within an image
+    detect edges within an image
 
-> -emboss <radius>
+??? info "-emboss `<radius>`"
 
-emboss an image
+    emboss an image
 
-> -encoding <type>
+??? info "-encoding `<type>`"
 
-specify the text encoding
+    specify the text encoding
 
-> -endian <type>
+??? info "-endian `<type>`"
 
-specify endianness (MSB, LSB, or Native) of image
+    specify endianness (MSB, LSB, or Native) of image
 
-> -enhance
+??? info "-enhance"
 
-apply a digital filter to enhance a noisy image
+    apply a digital filter to enhance a noisy image
 
-> -equalize
+??? info "-equalize"
 
-perform histogram equalization to the image
+    perform histogram equalization to the image
 
-> -extent <width>x<height>{+-}<x>{+-}<y>
+??? info "-extent `<width>`x`<height>`{+-}`<x>`{+-}`<y>`"
 
-composite image on background color canvas image
+    composite image on background color canvas image
 
-> -fill <color>
+??? info "-fill `<color>`"
 
-color to use when filling a graphic primitive
+    color to use when filling a graphic primitive
 
-> -filter <type>
+??? info "-filter `<type>`"
 
-use this type of filter when resizing an image
+    use this type of filter when resizing an image
 
-> -flip
+??? info "-flip"
 
-create a "mirror image"
+    create a "mirror image"
 
-> -flop
+??? info "-flop"
 
-create a "mirror image"
+    create a "mirror image"
 
-> -font <name>
+??? info "-font `<name>`"
 
-use this font when annotating the image with text
+    use this font when annotating the image with text
 
-> -format <type>
+??? info "-format `<type>`"
 
-the image format type
+    the image format type
 
-> -frame <width>x<height>+<outer bevel width>+<inner bevel width>
+??? info "-frame `<width>`x`<height>`+`<outer bevel width>`+`<inner bevel width>`"
 
-surround the image with an ornamental border
+    surround the image with an ornamental border
 
-> -fuzz <distance>{%}
+??? info "-fuzz `<distance>`{%}"
 
-colors within this Euclidean distance are considered equal
+    colors within this Euclidean distance are considered equal
 
-> -gamma <value>
+??? info "-gamma `<value>`"
 
-level of gamma correction
+    level of gamma correction
 
-> -gaussian <radius>{x<sigma>}
+??? info "-gaussian `<radius>`{x`<sigma>`}"
 
-blur the image with a Gaussian operator
+    blur the image with a Gaussian operator
 
-> -geometry <width>x<height>{+-}<x>{+-}<y>{%}{@}{!}{^}{<}{>}
+??? info "-geometry `<width>`x`<height>`{+-}`<x>`{+-}`<y>`{%}{@}{!}{^}{`<}{>`}"
 
-Specify dimension, offset, and resize options.
+    Specify dimension, offset, and resize options.
 
-> -gravity <type>
+??? info "-gravity `<type>`"
 
-direction primitive gravitates to when annotating the image.
+    direction primitive gravitates to when annotating the image.
 
-> -green-primary <x>,<y>
+??? info "-green-primary `<x>`,`<y>`"
 
-green chromaticity primary point
+    green chromaticity primary point
 
-> -hald-clut <clut>
+??? info "-hald-clut `<clut>`"
 
-apply a Hald CLUT to the image
+    apply a Hald CLUT to the image
 
-> -help
+??? info "-help"
 
-print usage instructions
+    print usage instructions
 
-> -implode <factor>
+??? info "-implode `<factor>`"
 
-implode image pixels about the center
+    implode image pixels about the center
 
-> -interlace <type>
+??? info "-interlace `<type>`"
 
-the type of interlacing scheme
+    the type of interlacing scheme
 
-> -label <name>
+??? info "-label `<name>`"
 
-assign a label to an image
+    assign a label to an image
 
-> -lat <width>x<height>{+-}<offset>{%}
+??? info "-lat `<width>`x`<height>`{+-}`<offset>`{%}"
 
-perform local adaptive thresholding
+    perform local adaptive thresholding
 
-> -level <black_point>{,<gamma>}{,<white_point>}{%}
+??? info "-level `<black_point>`{,`<gamma>`}{,`<white_point>`}{%}"
 
-adjust the level of image contrast
+    adjust the level of image contrast
 
-> -limit <type> <value>
+??? info "-limit `<type??? info "`<value>`"
 
-Disk, File, Map, Memory, Pixels, Width, Height or Threads resource limit
+    Disk, File, Map, Memory, Pixels, Width, Height or Threads resource limit
 
-> -linewidth
+??? info "-linewidth"
 
-the line width for subsequent draw operations
+    the line width for subsequent draw operations
 
-> -list <type>
+??? info "-list `<type>`"
 
-the type of list
+    the type of list
 
-> -log <string>
+??? info "-log `<string>`"
 
-Specify format for debug log
+    Specify format for debug log
 
-> -loop <iterations>
+??? info "-loop `<iterations>`"
 
-add Netscape loop extension to your GIF animation
+    add Netscape loop extension to your GIF animation
 
-> -magnify
+??? info "-magnify"
 
-magnify the image
+    magnify the image
 
-> -map <filename>
+??? info "-map `<filename>`"
 
-choose a particular set of colors from this image
+    choose a particular set of colors from this image
 
-> -mask <filename>
+??? info "-mask `<filename>`"
 
-Specify a clipping mask
+    Specify a clipping mask
 
-> -matte
+??? info "-matte"
 
-store matte channel if the image has one
+    store matte channel if the image has one
 
-> -mattecolor <color>
+??? info "-mattecolor `<color>`"
 
-specify the color to be used with the -frame option
+    specify the color to be used with the -frame option
 
-> -median <radius>
+??? info "-median `<radius>`"
 
-apply a median filter to the image
+    apply a median filter to the image
 
-> -minify <factor>
+??? info "-minify `<factor>`"
 
-minify the image
+    minify the image
 
-> -modulate brightness[,saturation[,hue]]
+??? info "-modulate brightness[,saturation[,hue]]"
 
-vary the brightness, saturation, and hue of an image
+    vary the brightness, saturation, and hue of an image
 
-> -monitor
+??? info "-monitor"
 
-show progress indication
+    show progress indication
 
-> -monochrome
+??? info "-monochrome"
 
-transform the image to black and white
+    transform the image to black and white
 
-> -motion-blur <radius>{x<sigma>}{+angle}
+??? info "-motion-blur `<radius>`{x`<sigma>`}{+angle}"
 
-Simulate motion blur
+    Simulate motion blur
 
-> -negate
+??? info "-negate"
 
-replace every pixel with its complementary color
+    replace every pixel with its complementary color
 
-> -noise <radius|type>
+??? info "-noise `<radius|type>`"
 
-add or reduce noise in an image
+    add or reduce noise in an image
 
-> -noop
+??? info "-noop"
 
-NOOP (no option)
+    NOOP (no option)
 
-> -normalize
+??? info "-normalize"
 
-transform image to span the full range of color values
+    transform image to span the full range of color values
 
-> -opaque <color>
+??? info "-opaque `<color>`"
 
-change this color to the pen color within the image
+    change this color to the pen color within the image
 
-> -operator channel operator rvalue[%]
+??? info "-operator channel operator rvalue[%]"
 
-apply a mathematical, bitwise, or value operator to an image channel
+    apply a mathematical, bitwise, or value operator to an image channel
 
-> -ordered-dither <channeltype> <NxN>
+??? info "-ordered-dither `<channeltype??? info \"`<NxN>`"
 
-ordered dither the image
+    ordered dither the image
 
-> -output-directory <directory>
+??? info "-output-directory `<directory>`"
 
-output files to directory
+    output files to directory
 
-> -orient <orientation>
+??? info "-orient `<orientation>`"
 
-Set the image orientation attribute
+    Set the image orientation attribute
 
-> -page <width>x<height>{+-}<x>{+-}<y>{%}{!}{<}{>}
+??? info "-page `<width>`x`<height>`{+-}`<x>`{+-}`<y>`{%}{!}{`<}{>`}"
 
-size and location of an image canvas
+    size and location of an image canvas
 
-> -paint <radius>
+??? info "-paint `<radius>`"
 
-simulate an oil painting
+    simulate an oil painting
 
-> -pen <color>
+??? info "-pen `<color>`"
 
-(This option has been replaced by the -fill option)
+    (This option has been replaced by the -fill option)
 
-> -pointsize <value>
+??? info "-pointsize `<value>`"
 
-pointsize of the PostScript, X11, or TrueType font
+    pointsize of the PostScript, X11, or TrueType font
 
-> -profile <filename>
+??? info "-profile `<filename>`"
 
-add ICM, IPTC, or generic profile to image
+    add ICM, IPTC, or generic profile to image
 
-> -preserve-timestamp
+??? info "-preserve-timestamp"
 
-preserve the original timestamps of the file
+    preserve the original timestamps of the file
 
-> -quality <value>
+??? info "-quality `<value>`"
 
-JPEG/MIFF/PNG/TIFF compression level
+    JPEG/MIFF/PNG/TIFF compression level
 
-> -raise <width>x<height>
+??? info "-raise `<width>`x`<height>`"
 
-lighten or darken image edges
+    lighten or darken image edges
 
-> -random-threshold <channeltype> <LOWxHIGH>
+??? info "-random-threshold `<channeltype??? info "`<LOWxHIGH>`"
 
-random threshold the image
+    random threshold the image
 
-> -recolor <matrix>
+??? info "-recolor `<matrix>`"
 
-apply a color translation matrix to image channels
+    apply a color translation matrix to image channels
 
-> -red-primary <x>,<y>
+??? info "-red-primary `<x>`,`<y>`"
 
-red chromaticity primary point
+    red chromaticity primary point
 
-> -region <width>x<height>{+-}<x>{+-}<y>
+??? info "-region `<width>`x`<height>`{+-}`<x>`{+-}`<y>`"
 
-apply options to a portion of the image
+    apply options to a portion of the image
 
-> -render
+??? info "-render"
 
-render vector operations
+    render vector operations
 
-> -repage <width>x<height>+xoff+yoff[!]
+??? info "-repage `<width>`x`<height>`+xoff+yoff[!]"
 
-Adjust image page offsets
+    Adjust image page offsets
 
-> -resample <horizontal>x<vertical>
+??? info "-resample `<horizontal>`x`<vertical>`"
 
-Resample image to specified horizontal and vertical resolution
+    Resample image to specified horizontal and vertical resolution
 
-> -resize <width>x<height>{%}{@}{!}{<}{>}
+??? info "-resize `<width>`x`<height>`{%}{@}{!}{`<}{>`}"
 
-resize an image
+    resize an image
 
-> -roll {+-}<x>{+-}<y>
+??? info "-roll {+-}`<x>`{+-}`<y>`"
 
-roll an image vertically or horizontally
+    roll an image vertically or horizontally
 
-> -rotate <degrees>{<}{>}
+??? info "-rotate `<degrees>`{`<}{>`}"
 
-rotate the image
+    rotate the image
 
-> -sample <geometry>
+??? info "-sample `<geometry>`"
 
-scale image using pixel sampling
+    scale image using pixel sampling
 
-> -sampling-factor <horizontal_factor>x<vertical_factor>
+??? info "-sampling-factor `<horizontal_factor>`x`<vertical_factor>`"
 
-chroma subsampling factors
+    chroma subsampling factors
 
-> -scale <geometry>
+??? info "-scale `<geometry>`"
 
-scale the image.
+    scale the image.
 
-> -scene <value>
+??? info "-scene `<value>`"
 
-set scene number
+    set scene number
 
-> -set <attribute> <value>
+??? info "-set `<attribute??? info "`<value>`"
 
-set an image attribute
+    set an image attribute
 
-> +set <attribute>
+??? info "+set `<attribute>`"
 
-unset an image attribute
+    unset an image attribute
 
-> -segment <cluster threshold>x<smoothing threshold>
+??? info "-segment `<cluster threshold>`x`<smoothing threshold>`"
 
-segment an image
+    segment an image
 
-> -shade <azimuth>x<elevation>
+??? info "-shade `<azimuth>`x`<elevation>`"
 
-shade the image using a distant light source
+    shade the image using a distant light source
 
-> -sharpen <radius>{x<sigma>}
+??? info "-sharpen `<radius>`{x`<sigma>`}"
 
-sharpen the image
+    sharpen the image
 
-> -shave <width>x<height>{%}
+??? info "-shave `<width>`x`<height>`{%}"
 
-shave pixels from the image edges
+    shave pixels from the image edges
 
-> -shear <x degrees>x<y degrees>
+??? info "-shear `<x degrees>`x`<y degrees>`"
 
-shear the image along the X or Y axis
+    shear the image along the X or Y axis
 
-> -size <width>x<height>{+offset}
+??? info "-size `<width>`x`<height>`{+offset}"
 
-width and height of the image
+    width and height of the image
 
-> -solarize <factor>
+??? info "-solarize `<factor>`"
 
-negate all pixels above the threshold level
+    negate all pixels above the threshold level
 
-> -spread <amount>
+??? info "-spread `<amount>`"
 
-displace image pixels by a random amount
+    displace image pixels by a random amount
 
-> -strip
+??? info "-strip"
 
-remove all profiles and text attributes from the image
+    remove all profiles and text attributes from the image
 
-> -stroke <color>
+??? info "-stroke `<color>`"
 
-color to use when stroking a graphic primitive
+    color to use when stroking a graphic primitive
 
-> -strokewidth <value>
+??? info "-strokewidth `<value>`"
 
-set the stroke width
+    set the stroke width
 
-> -swirl <degrees>
+??? info "-swirl `<degrees>`"
 
-swirl image pixels about the center
+    swirl image pixels about the center
 
-> -texture <filename>
+??? info "-texture `<filename>`"
 
-name of texture to tile onto the image background
+    name of texture to tile onto the image background
 
-> -threshold <value>{%}
+??? info "-threshold `<value>`{%}"
 
-threshold the image
+    threshold the image
 
-> -thumbnail <width>x<height>{%}{@}{!}{<}{>}
+??? info "-thumbnail `<width>`x`<height>`{%}{@}{!}{`<}{>`}"
 
-resize an image (quickly)
+    resize an image (quickly)
 
-> -tile <filename>
+??? info "-tile `<filename>`"
 
-tile image when filling a graphic primitive
+    tile image when filling a graphic primitive
 
-> -transform
+??? info "-transform"
 
-transform the image
+    transform the image
 
-> -transparent <color>
+??? info "-transparent `<color>`"
 
-make this color transparent within the image
+    make this color transparent within the image
 
-> -treedepth <value>
+??? info "-treedepth `<value>`"
 
-tree depth for the color reduction algorithm
+    tree depth for the color reduction algorithm
 
-> -trim
+??? info "-trim"
 
-trim an image
+    trim an image
 
-> -type <type>
+??? info "-type `<type>`"
 
-the image type
+    the image type
 
-> -units <type>
+??? info "-units `<type>`"
 
-the units of image resolution
+    the units of image resolution
 
-> -unsharp <radius>{x<sigma>}{+<amount>}{+<threshold>}
+??? info "-unsharp `<radius>`{x`<sigma>`}{+`<amount>`}{+`<threshold>`}"
 
-sharpen the image with an unsharp mask operator
+    sharpen the image with an unsharp mask operator
 
-> -verbose
+??? info "-verbose"
 
-print detailed information about the image
+    print detailed information about the image
 
-> -version
+??? info "-version"
 
-print GraphicsMagick version string
+    print GraphicsMagick version string
 
-> -view <string>
+??? info "-view `<string>`"
 
-FlashPix viewing parameters
+    FlashPix viewing parameters
 
-> -virtual-pixel <method>
+??? info "-virtual-pixel `<method>`"
 
-specify contents of "virtual pixels"
+    specify contents of "virtual pixels"
 
-> -wave <amplitude>x<wavelength>
+??? info "-wave `<amplitude>`x`<wavelength>`"
 
-alter an image along a sine wave
+    alter an image along a sine wave
 
-> -white-point <x>,<y>
+??? info "-white-point `<x>`,`<y>`"
 
-chromaticity white point
+    chromaticity white point
 
-> -white-threshold red[,green][,blue][,opacity]
+??? info "-white-threshold red[,green][,blue][,opacity]"
 
-pixels above the threshold become white
+    pixels above the threshold become white
+
 For a more detailed description of each option, see Options, above. GraphicsMagick(1). 
  
-Back to Contents  

@@ -1,232 +1,230 @@
 
-# gm import
+# 导入
 
-## NAME
+## 命名
 
 import - capture some or all of an X server screen and save the image to a file.
 
-## Contents
+## 内容
 
-Description
-Examples
-Options
+* 描述
+* 示例
+* 选项
 
-## Synopsis
+## 概要
 
 gm import [ options ... ] file
 
-## Description
+## 描述
 
 Import reads an image from any visible window on an X server and outputs it as an image file. You can capture a single window, the entire screen, or any rectangular portion of the screen. Use display for redisplay, printing, editing, formatting, archiving, image processing, etc. of the captured image.
 
 The target window can be specified by id, name, or may be selected by clicking the mouse in the desired window. If you press a button and then drag, a rectangle will form which expands and contracts as the mouse moves. To save the portion of the screen defined by the rectangle, just release the button. The keyboard bell is rung once at the beginning of the screen capture and twice when it completes.
 
-Back to Contents  
-
-## Examples
+## 示例
 
 To select an X window or an area of the screen with the mouse and save it in the MIFF image format to a file entitled window.miff, use:
 
     gm import window.miff
+
 To select an X window or an area of the screen with the mouse and save it in the Encapsulated PostScript format to include in another document, use:
 
     gm import figure.eps
+
 To capture the entire X server screen in the JPEG image format in a file entitled root.jpeg, without using the mouse, use:
 
     gm import -window root root.jpeg
+
 To capture the 512x256 area at the upper right corner of the X server screen in the PNG image format in a well-compressed file entitled corner.png, without using the mouse, use:
 
-    gm import -window root -crop 512x256-0+0 -quality 90
-           corner.png
-Back to Contents  
+    gm import -window root -crop 512x256-0+0 -quality 90 corner.png
 
-## Options
+## 选项
 
 Options are processed in command line order. Any option you specify on the command line remains in effect until it is explicitly changed by specifying the option again with a different effect.
 
 Import options can appear on the command line or in your X resources file. See X(1). Options on the command line supersede values specified in your X resources file.
 
 For a more detailed description of each option, see Options, above. GraphicsMagick(1). 
- 
 
-> -bordercolor <color>
+??? info "-bordercolor `<color>`"
 
-the border color
+    the border color
 
-> -colors <value>
+??? info "-colors `<value>`"
 
-preferred number of colors in the image
+    preferred number of colors in the image
 
-> -colorspace <value>
+??? info "-colorspace `<value>`"
 
-the type of colorspace
+    the type of colorspace
 
-> -comment <string>
+??? info "-comment `<string>`"
 
-annotate an image with a comment
+    annotate an image with a comment
 
-> -crop <width>x<height>{+-}<x>{+-}<y>{%}
+??? info "-crop `<width>`x`<height>`{+-}`<x>`{+-}`<y>`{%}"
 
-preferred size and location of the cropped image
+    preferred size and location of the cropped image
 
-> -debug <events>
+??? info "-debug `<events>`"
 
-enable debug printout
+    启动调试输出
 
-> -define <key>{=<value>},...
+??? info "-define `<key>`{=`<value>`},..."
 
-add coder/decoder specific options
+    add coder/decoder specific options
 
-> -delay <1/100ths of a second>
+??? info "-delay `<1/100ths of a second>`"
 
-display the next image after pausing
+    display the next image after pausing
 
-> -density <width>x<height>
+??? info "-density `<width>`x`<height>`"
 
-horizontal and vertical resolution in pixels of the image
+    horizontal and vertical resolution in pixels of the image
 
-> -depth <value>
+??? info "-depth `<value>`"
 
-depth of the image
+    图像深度
 
-> -descend
+??? info "-descend"
 
-obtain image by descending window hierarchy
+    obtain image by descending window hierarchy
 
-> -display <host:display[.screen]>
+??? info "-display `<host:display[.screen]>`"
 
-specifies the X server to contact
+    specifies the X server to contact
 
-> -dispose <method>
+??? info "-dispose `<method>`"
 
-GIF disposal method
+    GIF disposal method
 
-> -dither
+??? info "-dither"
 
-apply Floyd/Steinberg error diffusion to the image
+    apply Floyd/Steinberg error diffusion to the image
 
-> -encoding <type>
+??? info "-encoding `<type>`"
 
-specify the text encoding
+    specify the text encoding
 
-> -endian <type>
+??? info "-endian `<type>`"
 
-specify endianness (MSB, LSB, or Native) of image
+    specify endianness (MSB, LSB, or Native) of image
 
-> -frame
+??? info "-frame"
 
-include the X window frame in the imported image
+    include the X window frame in the imported image
 
-> -geometry <width>x<height>{+-}<x>{+-}<y>{%}{@}{!}{^}{<}{>}
+??? info "-geometry `<width>`x`<height>`{+-}`<x>`{+-}`<y>`{%}{@}{!}{^}{`<}{>`}"
 
-Specify dimension, offset, and resize options.
+    Specify dimension, offset, and resize options.
 
-> -help
+??? info "-help"
 
-print usage instructions
+    print usage instructions
 
-> -interlace <type>
+??? info "-interlace `<type>`"
 
-the type of interlacing scheme
+    the type of interlacing scheme
 
-> -label <name>
+??? info "-label `<name>`"
 
-assign a label to an image
+    assign a label to an image
 
-> -limit <type> <value>
+??? info "-limit `<type??? info "`<value>`"
 
-Disk, File, Map, Memory, Pixels, Width, Height or Threads resource limit
+    Disk, File, Map, Memory, Pixels, Width, Height or Threads resource limit
 
-> -log <string>
+??? info "-log `<string>`"
 
-Specify format for debug log
+    Specify format for debug log
 
-> -monitor
+??? info "-monitor"
 
-show progress indication
+    show progress indication
 
-> -monochrome
+??? info "-monochrome"
 
-transform the image to black and white
+    transform the image to black and white
 
-> -negate
+??? info "-negate"
 
-replace every pixel with its complementary color
+    replace every pixel with its complementary color
 
-> -page <width>x<height>{+-}<x>{+-}<y>{%}{!}{<}{>}
+??? info "-page `<width>`x`<height>`{+-}`<x>`{+-}`<y>`{%}{!}{`<}{>`}"
 
-size and location of an image canvas
+    size and location of an image canvas
 
-> -pause <seconds>
+??? info "-pause `<seconds>`"
 
-pause between snapshots [import]
+    pause between snapshots [import]
 
-> -ping
+??? info "-ping"
 
-efficiently determine image characteristics
+    efficiently determine image characteristics
 
-> -pointsize <value>
+??? info "-pointsize `<value>`"
 
-pointsize of the PostScript, X11, or TrueType font
+    pointsize of the PostScript, X11, or TrueType font
 
-> -quality <value>
+??? info "-quality `<value>`"
 
-JPEG/MIFF/PNG/TIFF compression level
+    JPEG/MIFF/PNG/TIFF compression level
 
-> -resize <width>x<height>{%}{@}{!}{<}{>}
+??? info "-resize `<width>`x`<height>`{%}{@}{!}{`<}{>`}"
 
-resize an image
+    resize an image
 
-> -rotate <degrees>{<}{>}
+??? info "-rotate `<degrees>`{`<}{>`}"
 
-rotate the image
+    rotate the image
 
-> -sampling-factor <horizontal_factor>x<vertical_factor>
+??? info "-sampling-factor `<horizontal_factor>`x`<vertical_factor>`"
 
-chroma subsampling factors
+    chroma subsampling factors
 
-> -scene <value>
+??? info "-scene `<value>`"
 
-set scene number
+    set scene number
 
-> -screen
+??? info "-screen"
 
-specify the screen to capture
+    specify the screen to capture
 
-> -set <attribute> <value>
+??? info "-set `<attribute??? info "`<value>`"
 
-set an image attribute
+    set an image attribute
 
-> +set <attribute>
+??? info "+set `<attribute>`"
 
-unset an image attribute
+    unset an image attribute
 
-> -silent
+??? info "-silent"
 
-operate silently
+    operate silently
 
-> -snaps <value>
+??? info "-snaps `<value>`"
 
-number of screen snapshots
+    number of screen snapshots
 
-> -thumbnail <width>x<height>{%}{@}{!}{<}{>}
+??? info "-thumbnail `<width>`x`<height>`{%}{@}{!}{`<}{>`}"
 
-resize an image (quickly)
+    resize an image (quickly)
 
-> -transparent <color>
+??? info "-transparent `<color>`"
 
-make this color transparent within the image
+    make this color transparent within the image
 
-> -trim
+??? info "-trim"
 
-trim an image
+    trim an image
 
-> -verbose
+??? info "-verbose"
 
-print detailed information about the image
+    print detailed information about the image
 
-> -version
+??? info "-version"
 
-print GraphicsMagick version string
-For a more detailed description of each option, see Options, above. GraphicsMagick(1). 
- 
+    print GraphicsMagick version string
+
+For a more detailed description of each option, see Options, above. GraphicsMagick(1).

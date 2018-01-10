@@ -1,26 +1,26 @@
 
-# gm version
+# 版本
 
-## NAME
+## 命名
 
 version - display software version, feature, and build information
 
-## Contents
+## 内容
 
 Synopsis
 Description
 Examples
 Options
 
-## Synopsis
+## 概念
 
 gm version
 
-## Description
+## 描述
 
 version displays the software release version, build quantum (pixel sample) depth, web site URL, copyright notice, enabled features support, configuration parameters, and final build options used to build the software. The available information depends on how the software was configured and the host system.
 
-## Examples
+## 示例
 
 To display the version information:
 
@@ -30,8 +30,8 @@ To display the version information:
   See http://www.GraphicsMagick.org/www/Copyright.html for details.
   Feature Support:
     Native Thread Safe       yes
-    Large Files (> 32 bit)   yes
-    Large Memory (> 32 bit)  yes
+    Large Files (??? info "32 bit)   yes
+    Large Memory (??? info "32 bit)  yes
     BZIP                     yes
     DPS                      no
     FlashPix                 no
@@ -63,10 +63,8 @@ To display the version information:
     CXXFLAGS = ...
     LDFLAGS  = ...
     LIBS     = ...
-Back to Contents  
 
-## Options
+## 选项
 
 The version command does not currently support any options.
 
-Back to Contents  

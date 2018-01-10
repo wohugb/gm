@@ -1,24 +1,25 @@
 
-# gm conjure
+# 脚本语言
 
-## NAME
+## 命名
 
 conjure - process a Magick Scripting Language (MSL) script
-## Contents
+## 内容
 
 Synopsis
 Description
 Options
 Magick Scripting Language
 
-## Synopsis
+## 概要
 
 gm conjure [ options ] script.msl [ [ options ] script.msl ] 
  
-## Description
+## 描述
 
 The Magick scripting language (MSL) will primarily benefit those that want to accomplish custom image processing tasks but do not wish to program, or those that do not have access to a Perl interpreter or a compiler. The interpreter is called conjure and here is an example script:
 
+```xml
     <?xml version="1.0" encoding="UTF-8"?>
     <image size="400x400" >
       <read filename="image.gif" />
@@ -30,14 +31,17 @@ The Magick scripting language (MSL) will primarily benefit those that want to ac
          to %[width]x%[height].\n" />
       <write filename="image.png" />
     </image>
+```
+
 invoked with
 
+```sh
     gm conjure -dimensions 400x400 incantation.msl
+```
+
 All operations will closely follow the key/value pairs defined in PerlMagick, unless otherwise noted.
 
-Back to Contents  
-
-## Options
+## 选项
 
 Options are processed in command line order. Any option you specify on the command line remains in effect until it is explicitly changed by specifying the option again with a different effect, or if it is changed by a statement in the scripting language.
 
@@ -50,37 +54,36 @@ The value can be any string. If either the keyword or the value contains white s
 Keywords and values are case dependent. "Key", "key", and "KEY" would be three different keywords.
 
 For a more detailed description of each option, see Options, above. GraphicsMagick(1). 
- 
 
-> -debug <events>
+??? info "-debug `<events>`"
 
-enable debug printout
+    enable debug printout
 
-> -define <key>{=<value>},...
+??? info "-define `<key>{=<value>},...`"
 
-add coder/decoder specific options
+    add coder/decoder specific options
 
-> -help
+??? info "-help"
 
-print usage instructions
+    print usage instructions
 
-> -log <string>
+??? info "-log `<string>`"
 
-Specify format for debug log
+    Specify format for debug log
 
-> -verbose
+??? info "-verbose"
 
-print detailed information about the image
+    print detailed information about the image
 
-> -version
+??? info "-version"
 
-print GraphicsMagick version string
-Back to Contents  
+    print GraphicsMagick version string
 
-## Magick Scripting Language
+## 魔法脚本语言
 
 The Magick Scripting Language (MSL) presently defines the following elements and their attributes:
 
+```MSL
 <image>
 background, color, id, size
 Define a new image object. </image> destroys it. Because of this, if you wish to reference multiple "subimages" (aka pages or layers), you can embed one image element inside of another. For example:
@@ -226,3 +229,4 @@ threshold
 <transparent>
 color
 <trim>
+```

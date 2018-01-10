@@ -1,41 +1,52 @@
 
-# gm benchmark
+# 基准测试
 
-## NAME
+## 命名
 
 benchmark - benchmark the execution of a gm command
 
-## Contents
+## 内容
 
-Synopsis
-Description
-Examples
-Options
+- 概要
+- 描述
+- 示例
+- 选项
 
-## Synopsis
+## 概要
 
+```sh
 gm benchmark [ options ... ] command
+```
 
-## Description
+## 描述
 
 benchmark executes an arbitrary gm utility command (e.g. convert) for one or more loops, and/or a specified execution time, and reports many execution metrics. For builds using OpenMP, a mode is provided to execute the benchmark with an increasing number of threads and provide a report of speedup and multi-thread execution efficiency. If benchmark is used to execute a command without any additional benchmark options, then the command is run once.
 
-## Examples
+## 示例
 
 To obtain benchmark information for a single execution of a command:
 
-  % gm benchmark convert input.ppm -gaussian 0x1 output.ppm
-  Results: 32 threads 1 iter 6.20s user 0.41s total 2.439 iter/s 0.161 iter/cpu
+```sh
+    % gm benchmark convert input.ppm -gaussian 0x1 output.ppm
+    Results: 32 threads 1 iter 6.20s user 0.41s total 2.439 iter/s 0.161 iter/cpu
+```
 To obtain benchmark information from 100 iterations of the command:
 
-  % gm benchmark -iterations 100 convert input.ppm -gaussian 0x1 output.ppm
-  Results: 32 threads 100 iter 625.40s user 31.74s total 3.151 iter/s 0.160 iter/cpu
+```sh
+    % gm benchmark -iterations 100 convert input.ppm -gaussian 0x1 output.ppm
+    Results: 32 threads 100 iter 625.40s user 31.74s total 3.151 iter/s 0.160 iter/cpu
+```
+
 To obtain benchmark information by iterating the command until a specified amount of time (in seconds) has been consumed:
 
-  % gm benchmark -duration 30 convert input.ppm -gaussian 0x1 output.ppm
-  Results: 32 threads 91 iter 587.33s user 30.30s total 3.003 iter/s 0.155 iter/cpu
+```sh
+    % gm benchmark -duration 30 convert input.ppm -gaussian 0x1 output.ppm
+    Results: 32 threads 91 iter 587.33s user 30.30s total 3.003 iter/s 0.155 iter/cpu
+```
+
 To obtain a full performance report with an increasing number of threads (1-32 threads, stepping the number of threads by four each time):
 
+```sh
   % gm benchmark -duration 3 -stepthreads 4 convert input.ppm -gaussian 0x2 output.ppm
   Results: 1 threads 1 iter 8.84s user 8.84s total 0.113 iter/s 0.113 iter/cpu 1.00 speedup 1.000 karp-flatt
   Results: 4 threads 2 iter 18.37s user 4.89s total 0.409 iter/s 0.109 iter/cpu 3.62 speedup 0.035 karp-flatt
@@ -46,50 +57,49 @@ To obtain a full performance report with an increasing number of threads (1-32 t
   Results: 24 threads 4 iter 60.66s user 3.39s total 1.180 iter/s 0.066 iter/cpu 10.43 speedup 0.057 karp-flatt
   Results: 28 threads 4 iter 73.10s user 3.35s total 1.194 iter/s 0.055 iter/cpu 10.56 speedup 0.061 karp-flatt
   Results: 32 threads 4 iter 82.10s user 3.09s total 1.294 iter/s 0.049 iter/cpu 11.44 speedup 0.058 karp-flatt
+```
+
 Here is the interpretation of the output:
 
-threads - number of threads used.
-iter - number of command iterations executed.
-user - total user time consumed.
-total - total elapsed time consumed.
-iter/s - number of command iterations per second.
-iter/cpu - amount of CPU time consumed per iteration.
-speedup - speedup compared with one thread.
-karp-flatt - Karp-Flatt measure of speedup efficiency.
+* `threads` - number of threads used.
+* `iter` - number of command iterations executed.
+* `user` - total user time consumed.
+* `total` - total elapsed time consumed.
+* `iter/s` - number of command iterations per second.
+* `iter/cpu` - amount of CPU time consumed per iteration.
+* `speedup` - speedup compared with one thread.
+* `karp-flatt` - Karp-Flatt measure of speedup efficiency.
+
 Please note that the reported "speedup" is based on the execution time of just one thread. A preliminary warm-up pass is used before timing the first loop in order to ensure that the CPU is brought out of power-saving modes and that system caches are warmed up. Most modern CPUs provide a "turbo" mode where the CPU clock speed is increased (e.g. by a factor of two) when only one or two cores are active. If the CPU grows excessively hot (due to insufficient cooling), then it may dial back its clock rates as a form of thermal management. These factors result in an under-reporting of speedup compared to if "turbo" mode was disabled and the CPU does not need to worry about thermal management. The powertop utility available under Linux and Solaris provides a way to observe CPU core clock rates while a benchmark is running.
 
-Back to Contents  
-
-## Options
+## 选项
 
 Options are processed from left to right and must appear before any argument.
 
+??? info "-duration duration"
 
-> -duration duration
+    duration to run benchmark
 
-duration to run benchmark
+    Specify the number of seconds to run the benchmark. The command is executed repeatedly until the specified amount of time has elapsed.
 
-Specify the number of seconds to run the benchmark. The command is executed repeatedly until the specified amount of time has elapsed.
+??? info "-help"
 
-> -help
+    Prints benchmark command help.
 
-Prints benchmark command help.
+??? info "-iterations loops"
 
-> -iterations loops
+    number of command iterations
 
-number of command iterations
+    Specify the number of iterations to run the benchmark. The command is executed repeatedly until the specified number of iterations has been reached.
 
-Specify the number of iterations to run the benchmark. The command is executed repeatedly until the specified number of iterations has been reached.
+??? info "-rawcsv"
 
-> -rawcsv
+    Print results in CSV format
 
-Print results in CSV format
+    Print results in a comma-separated value (CSV) format which is easy to parse for plotting or importing into a spreadsheet or database. The values reported are threads, iterations, user_time, and elapsed_time.
 
-Print results in a comma-separated value (CSV) format which is easy to parse for plotting or importing into a spreadsheet or database. The values reported are threads, iterations, user_time, and elapsed_time.
+??? info "-stepthreads step"
 
-> -stepthreads step
+    execute a per-thread benchmark ramp
 
-execute a per-thread benchmark ramp
-
-Execute a per-thread benchmark ramp, incrementing the number of threads at each step by the specified value. The maximum number of threads is taken from the standard OMP_NUM_THREADS environment variable.
-Back to Contents  
+    Execute a per-thread benchmark ramp, incrementing the number of threads at each step by the specified value. The maximum number of threads is taken from the standard OMP_NUM_THREADS environment variable.

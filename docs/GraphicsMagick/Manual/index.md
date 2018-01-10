@@ -73,175 +73,175 @@ The GraphicsMagick utilities recognize the following image formats:
 
 |Name	|Mode	|Description|
 |-|-|-|
-*3FR |r--	|Hasselblad Photo RAW|
-*8BIM |rw-	|Photoshop resource format|
-*8BIMTEXT|rw-	|Photoshop resource text format
-*8BIMWTEXT|rw-	|Photoshop resource wide text format
-*APP1|rw-	|Raw application information
-*APP1JPEG|rw-	|Raw JPEG binary data
-*ART|r--	|PF1: 1st Publisher
-*ARW|r--	|Sony Alpha DSLR RAW
-*AVS|rw+	|AVS X image
-*BIE|rw-	|Joint Bi-level Image experts Group interchange format
-*BMP|rw+	|Microsoft Windows bitmap image
-*BMP2|-w-	|Microsoft Windows bitmap image v2
-*BMP3|-w-	|Microsoft Windows bitmap image v3
-*CACHE|---	|Magick Persistent Cache image format
-*CALS|rw-	|Continuous Acquisition and Life-cycleSupport Type 1 image
-*CAPTION|r--	|Caption (requires separate size info)
-*CIN|rw-	|Kodak Cineon Format
-*CMYK|rw-	|Raw cyan, magenta, yellow, and black samples (8 or 16 bits, depending on the image depth)
-*CMYKA|rw-	|Raw cyan, magenta, yellow, black, and matte samples (8 or 16 bits, depending on the image depth)
-*CR2|r--	|Canon Photo RAW
-*CRW|r--	|Canon Photo RAW
-*CUR|r--	|Microsoft Cursor Icon
-*CUT|r--	|DR Halo
-*DCM|r--	|Digital Imaging and Communications in Medicine image
-*DCR|r--	|Kodak Photo RAW
-*DCX|rw+	|ZSoft IBM PC multi-page Paintbrush
-*DNG|r--	|Adobe Digital Negative
-*DPS|r--	|Display PostScript Interpreter
-*DPX|rw-	|Digital Moving Picture Exchange
-*EPDF|rw-  |Encapsulated Portable Document Format
-*EPI|w-	|Adobe Encapsulated PostScript Interchange format
-*EPS|rw-	|Adobe Encapsulated PostScript
-*EPS2|-w-	|Adobe Level II Encapsulated PostScript
-*EPS3|-w-	|Adobe Level III Encapsulated PostScript
-*EPSF|rw-	|Adobe Encapsulated PostScript
-*EPSI|rw-	|Adobe Encapsulated PostScript Interchange format
-*EPT|rw-	|Adobe Encapsulated PostScript with MS-DOS TIFF preview
-*EPT2|rw-	|Adobe Level II Encapsulated PostScript with MS-DOS TIFF preview
-*EPT3|rw-	|Adobe Level III Encapsulated PostScript with MS-DOS TIFF preview
-*EXIF|rw-	|Exif digital camera binary data
-*FAX|rw+	|Group 3 FAX (Not TIFF Group3 FAX!)
-*FITS|rw-	|Flexible Image Transport System
-*FRACTAL|r--	|Plasma fractal image
-*FPX|rw-	|FlashPix Format
-*GIF|rw+	|CompuServe graphics interchange format
-*GIF87|rw-	|CompuServe graphics interchange format(version 87a)
-*GRADIENT|r--	|Gradual passing from one shade to another
-*GRAY|rw+	|Raw gray samples (8/16/32 bits,depending on the image depth)
-*HISTOGRAM|-w-	|Histogram of the image
-*HRZ|r--	|HRZ: Slow scan TV
-*HTML|-w-	|Hypertext Markup Language and a client-side image map
-*ICB|rw+	|Truevision Targa image
-*ICC|rw-	|ICC Color Profile
-*ICM|rw-	|ICC Color Profile
-*ICO|r--	|Microsoft icon
-*ICON|r--	|Microsoft icon
-*IDENTITY|r--	|Hald CLUT identity image
-*IMAGE|r--	|GraphicsMagick Embedded Image
-*INFO|-w+	|Image descriptive information and statistics
-*IPTC|rw-	|IPTC Newsphoto
-*IPTCTEXT|rw-	|IPTC Newsphoto text format
-*IPTCWTEXT|rw-	|IPTC Newsphoto wide text format
-*JBG|rw+	|Joint Bi-level Image experts Group interchange format
-*JBIG|rw+	|Joint Bi-level Image experts Group interchange format
-*JNG|rw-	|JPEG Network Graphics
-*JP2|rw-	|JPEG-2000 JP2 File Format Syntax
-*JPC|rw-	|JPEG-2000 Code Stream Syntax
-*JPEG|rw-	|Joint Photographic Experts Group JFIF format
-*JPG|rw-	|Joint Photographic Experts Group JFIF format
-*K25|r--	|Kodak Photo RAW
-*KDC|r--	|Kodak Photo RAW
-*LABEL|r--	|Text image format
-*M2V|rw+	|MPEG-2 Video Stream
-*MAP|rw-	|Colormap intensities and indices
-*MAT|r--	|MATLAB image format
-*MATTE|-w+	|MATTE format
-*MIFF|rw+	|Magick Image File Format
-*MNG|rw+	|Multiple-image Network Graphics
-*MONO|rw-	|Bi-level bitmap in least-significant- -byte-first order
-*MPC|rw+	|Magick Persistent Cache image format
-*MPEG|rw+	|MPEG-1 Video Stream
-*MPG|rw+	|MPEG-1 Video Stream
-*MRW|r--	|Minolta Photo Raw
-*MSL|r--	|Magick Scripting Language
-*MTV|rw+	|MTV Raytracing image format
-*MVG|rw-	|Magick Vector Graphics
-*NEF|r--	|Nikon Electronic Format
-*NULL|r--	|Constant image of uniform color
-*OTB|rw-	|On-the-air bitmap
-*P7|rw+	|Xv thumbnail format
-*PAL|rw-	|16bit/pixel interleaved YUV
-*PALM|rw-	|Palm Pixmap
-*PBM|rw+	|Portable bitmap format (black and white)
-*PCD|rw-	|Photo CD
-*PCDS|rw-	|Photo CD
-*PCL|-w-	|Page Control Language
-*PCT|rw-	|Apple Macintosh QuickDraw/PICT
-*PCX|rw-	|ZSoft IBM PC Paintbrush
-*PDB|rw+	|Palm Database ImageViewer Format
-*PDF|rw+	|Portable Document Format
-*PEF|r--	|Pentax Electronic File
-*PFA|r--	|TrueType font
-*PFB|r--	|TrueType font
-*PGM|rw+	|Portable graymap format (gray scale)
-*PGX|r--	|JPEG-2000 VM Format
-*PICON|rw-	|Personal Icon
-*PICT|rw-	|Apple Macintosh QuickDraw/PICT
-*PIX|r--	|Alias/Wavefront RLE image format
-*PLASMA|r--	|Plasma fractal image
-*PNG|rw-	|Portable Network Graphics
-*PNG24|rw-	|Portable Network Graphics, 24 bit RGB opaque only
-*PNG32|rw-	|Portable Network Graphics, 32 bit RGBA semitransparency OK
-*PNG8|rw-	|Portable Network Graphics, 8-bit indexed, binary transparency only
-*PNM|rw+	|Portable anymap
-*PPM|rw+	|Portable pixmap format (color)
-*PREVIEW|-w-	|Show a preview an image enhancement,effect, or f/x
-*PS|rw+	|Adobe PostScript
-*PS2|-w+	|Adobe Level II PostScript
-*PS3|-w+	|Adobe Level III PostScript
-*PSD|rw-	|Adobe Photoshop bitmap
-*PTIF|rw-	|Pyramid encoded TIFF
-*PWP|r--	|Seattle Film Works
-*RAF|r--	|Fuji Photo RAW
-*RAS|rw+	|SUN Rasterfile
-*RGB|rw+	|Raw red, green, and blue samples
-*RGBA|rw+	|Raw red, green, blue, and matte samples
-*RLA|r--	|Alias/Wavefront image
-*RLE|r--	|Utah Run length encoded image
-*SCT|r--	|Scitex HandShake
-*SFW|r--	|Seattle Film Works
-*SGI|rw+	|Irix RGB image
-*SHTML|-w-	|Hypertext Markup Language and a client-side image map
-*STEGANO|r--	|Steganographic image
-*SUN|rw+	|SUN Rasterfile
-*SVG|rw+	|Scalable Vector Gaphics
-*TEXT|rw+	|Raw text
-*TGA|rw+	|Truevision Targa image
-*TIFF|rw+	|Tagged Image File Format
-*TILE|r--	|Tile image with a texture
-*TIM|r--	|PSX TIM
-*TOPOL|r--	|TOPOL X Image
-*TTF|r--	|TrueType font
-*TXT|rw+	|Raw text
-*UIL|-w-	|X-Motif UIL table
-*UYVY|rw-	|16bit/pixel interleaved YUV
-*VDA|rw+	|Truevision Targa image
-*VICAR|rw-	|VICAR rasterfile format
-*VID|rw+	|Visual Image Directory
-*VIFF|rw+	|Khoros Visualization image
-*VST|rw+	|Truevision Targa image
-*WBMP|rw-	|Wireless Bitmap (level 0) image
-*WMF|r--	|Windows Metafile
-*WPG|r--	|Word Perfect Graphics
-*X|rw-	|X Image
-*X3F|r--	|Foveon X3 (Sigma/Polaroid) RAW
-*XBM|rw-	|X Windows system bitmap (black and white)
-*XC|r--	|Constant image uniform color
-*XCF|r--	|GIMP image
-*XMP|rw-	|Adobe XML metadata
-*XPM|rw-	|X Windows system pixmap (color)
-*XV|rw+	|Khoros Visualization image
-*XWD|rw-	|X Windows system window dump (color)
-*YUV|rw-	|CCIR 601 4:1:1 or 4:2:2 (8-bit only)
+3FR |r--	|Hasselblad Photo RAW|
+8BIM |rw-	|Photoshop resource format|
+8BIMTEXT|rw-	|Photoshop resource text format
+8BIMWTEXT|rw-	|Photoshop resource wide text format
+APP1|rw-	|Raw application information
+APP1JPEG|rw-	|Raw JPEG binary data
+ART|r--	|PF1: 1st Publisher
+ARW|r--	|Sony Alpha DSLR RAW
+AVS|rw+	|AVS X image
+BIE|rw-	|Joint Bi-level Image experts Group interchange format
+BMP|rw+	|Microsoft Windows bitmap image
+BMP2|-w-	|Microsoft Windows bitmap image v2
+BMP3|-w-	|Microsoft Windows bitmap image v3
+CACHE|---	|Magick Persistent Cache image format
+CALS|rw-	|Continuous Acquisition and Life-cycleSupport Type 1 image
+CAPTION|r--	|Caption (requires separate size info)
+CIN|rw-	|Kodak Cineon Format
+CMYK|rw-	|Raw cyan, magenta, yellow, and black samples (8 or 16 bits, depending on the image depth)
+CMYKA|rw-	|Raw cyan, magenta, yellow, black, and matte samples (8 or 16 bits, depending on the image depth)
+CR2|r--	|Canon Photo RAW
+CRW|r--	|Canon Photo RAW
+CUR|r--	|Microsoft Cursor Icon
+CUT|r--	|DR Halo
+DCM|r--	|Digital Imaging and Communications in Medicine image
+DCR|r--	|Kodak Photo RAW
+DCX|rw+	|ZSoft IBM PC multi-page Paintbrush
+DNG|r--	|Adobe Digital Negative
+DPS|r--	|Display PostScript Interpreter
+DPX|rw-	|Digital Moving Picture Exchange
+EPDF|rw-  |Encapsulated Portable Document Format
+EPI|w-	|Adobe Encapsulated PostScript Interchange format
+EPS|rw-	|Adobe Encapsulated PostScript
+EPS2|-w-	|Adobe Level II Encapsulated PostScript
+EPS3|-w-	|Adobe Level III Encapsulated PostScript
+EPSF|rw-	|Adobe Encapsulated PostScript
+EPSI|rw-	|Adobe Encapsulated PostScript Interchange format
+EPT|rw-	|Adobe Encapsulated PostScript with MS-DOS TIFF preview
+EPT2|rw-	|Adobe Level II Encapsulated PostScript with MS-DOS TIFF preview
+EPT3|rw-	|Adobe Level III Encapsulated PostScript with MS-DOS TIFF preview
+EXIF|rw-	|Exif digital camera binary data
+FAX|rw+	|Group 3 FAX (Not TIFF Group3 FAX!)
+FITS|rw-	|Flexible Image Transport System
+FRACTAL|r--	|Plasma fractal image
+FPX|rw-	|FlashPix Format
+GIF|rw+	|CompuServe graphics interchange format
+GIF87|rw-	|CompuServe graphics interchange format(version 87a)
+GRADIENT|r--	|Gradual passing from one shade to another
+GRAY|rw+	|Raw gray samples (8/16/32 bits,depending on the image depth)
+HISTOGRAM|-w-	|Histogram of the image
+HRZ|r--	|HRZ: Slow scan TV
+HTML|-w-	|Hypertext Markup Language and a client-side image map
+ICB|rw+	|Truevision Targa image
+ICC|rw-	|ICC Color Profile
+ICM|rw-	|ICC Color Profile
+ICO|r--	|Microsoft icon
+ICON|r--	|Microsoft icon
+IDENTITY|r--	|Hald CLUT identity image
+IMAGE|r--	|GraphicsMagick Embedded Image
+INFO|-w+	|Image descriptive information and statistics
+IPTC|rw-	|IPTC Newsphoto
+IPTCTEXT|rw-	|IPTC Newsphoto text format
+IPTCWTEXT|rw-	|IPTC Newsphoto wide text format
+JBG|rw+	|Joint Bi-level Image experts Group interchange format
+JBIG|rw+	|Joint Bi-level Image experts Group interchange format
+JNG|rw-	|JPEG Network Graphics
+JP2|rw-	|JPEG-2000 JP2 File Format Syntax
+JPC|rw-	|JPEG-2000 Code Stream Syntax
+JPEG|rw-	|Joint Photographic Experts Group JFIF format
+JPG|rw-	|Joint Photographic Experts Group JFIF format
+K25|r--	|Kodak Photo RAW
+KDC|r--	|Kodak Photo RAW
+LABEL|r--	|Text image format
+M2V|rw+	|MPEG-2 Video Stream
+MAP|rw-	|Colormap intensities and indices
+MAT|r--	|MATLAB image format
+MATTE|-w+	|MATTE format
+MIFF|rw+	|Magick Image File Format
+MNG|rw+	|Multiple-image Network Graphics
+MONO|rw-	|Bi-level bitmap in least-significant- -byte-first order
+MPC|rw+	|Magick Persistent Cache image format
+MPEG|rw+	|MPEG-1 Video Stream
+MPG|rw+	|MPEG-1 Video Stream
+MRW|r--	|Minolta Photo Raw
+MSL|r--	|Magick Scripting Language
+MTV|rw+	|MTV Raytracing image format
+MVG|rw-	|Magick Vector Graphics
+NEF|r--	|Nikon Electronic Format
+NULL|r--	|Constant image of uniform color
+OTB|rw-	|On-the-air bitmap
+P7|rw+	|Xv thumbnail format
+PAL|rw-	|16bit/pixel interleaved YUV
+PALM|rw-	|Palm Pixmap
+PBM|rw+	|Portable bitmap format (black and white)
+PCD|rw-	|Photo CD
+PCDS|rw-	|Photo CD
+PCL|-w-	|Page Control Language
+PCT|rw-	|Apple Macintosh QuickDraw/PICT
+PCX|rw-	|ZSoft IBM PC Paintbrush
+PDB|rw+	|Palm Database ImageViewer Format
+PDF|rw+	|Portable Document Format
+PEF|r--	|Pentax Electronic File
+PFA|r--	|TrueType font
+PFB|r--	|TrueType font
+PGM|rw+	|Portable graymap format (gray scale)
+PGX|r--	|JPEG-2000 VM Format
+PICON|rw-	|Personal Icon
+PICT|rw-	|Apple Macintosh QuickDraw/PICT
+PIX|r--	|Alias/Wavefront RLE image format
+PLASMA|r--	|Plasma fractal image
+PNG|rw-	|Portable Network Graphics
+PNG24|rw-	|Portable Network Graphics, 24 bit RGB opaque only
+PNG32|rw-	|Portable Network Graphics, 32 bit RGBA semitransparency OK
+PNG8|rw-	|Portable Network Graphics, 8-bit indexed, binary transparency only
+PNM|rw+	|Portable anymap
+PPM|rw+	|Portable pixmap format (color)
+PREVIEW|-w-	|Show a preview an image enhancement,effect, or f/x
+PS|rw+	|Adobe PostScript
+PS2|-w+	|Adobe Level II PostScript
+PS3|-w+	|Adobe Level III PostScript
+PSD|rw-	|Adobe Photoshop bitmap
+PTIF|rw-	|Pyramid encoded TIFF
+PWP|r--	|Seattle Film Works
+RAF|r--	|Fuji Photo RAW
+RAS|rw+	|SUN Rasterfile
+RGB|rw+	|Raw red, green, and blue samples
+RGBA|rw+	|Raw red, green, blue, and matte samples
+RLA|r--	|Alias/Wavefront image
+RLE|r--	|Utah Run length encoded image
+SCT|r--	|Scitex HandShake
+SFW|r--	|Seattle Film Works
+SGI|rw+	|Irix RGB image
+SHTML|-w-	|Hypertext Markup Language and a client-side image map
+STEGANO|r--	|Steganographic image
+SUN|rw+	|SUN Rasterfile
+SVG|rw+	|Scalable Vector Gaphics
+TEXT|rw+	|Raw text
+TGA|rw+	|Truevision Targa image
+TIFF|rw+	|Tagged Image File Format
+TILE|r--	|Tile image with a texture
+TIM|r--	|PSX TIM
+TOPOL|r--	|TOPOL X Image
+TTF|r--	|TrueType font
+TXT|rw+	|Raw text
+UIL|-w-	|X-Motif UIL table
+UYVY|rw-	|16bit/pixel interleaved YUV
+VDA|rw+	|Truevision Targa image
+VICAR|rw-	|VICAR rasterfile format
+VID|rw+	|Visual Image Directory
+VIFF|rw+	|Khoros Visualization image
+VST|rw+	|Truevision Targa image
+WBMP|rw-	|Wireless Bitmap (level 0) image
+WMF|r--	|Windows Metafile
+WPG|r--	|Word Perfect Graphics
+X|rw-	|X Image
+X3F|r--	|Foveon X3 (Sigma/Polaroid) RAW
+XBM|rw-	|X Windows system bitmap (black and white)
+XC|r--	|Constant image uniform color
+XCF|r--	|GIMP image
+XMP|rw-	|Adobe XML metadata
+XPM|rw-	|X Windows system pixmap (color)
+XV|rw+	|Khoros Visualization image
+XWD|rw-	|X Windows system window dump (color)
+YUV|rw-	|CCIR 601 4:1:1 or 4:2:2 (8-bit only)
 
-Modes:
+模式:
 
-    r	Read
-    w	Write
-    +	Multi-image
+* `r`	Read
+* `w`	Write
+* `+`	Multi-image
 
 Support for some of these formats require additional programs or libraries. See README in the source package for where to find optional additional software.
 
@@ -253,7 +253,7 @@ Raw images are expected to have one byte per pixel unless gm is compiled in 16-b
 
 ## 文件和格式
 
-By default, the image format is determined by its magic number, i.e., the first few bytes of the file. To specify a particular image format, precede the filename with an image format name and a colon (i.e.ps:image) or specify the image type as the filename suffix (i.e.image.ps). The magic number takes precedence over the filename suffix and the prefix takes precedence over the magic number and the suffix in input files. When a file is read, its magic number is stored in the "image->`magick" string. In output files, the prefix takes precedence over the filename suffix, and the filename suffix takes precedence over the "image->`magick" string. 
+By default, the image format is determined by its magic number, i.e., the first few bytes of the file. To specify a particular image format, precede the filename with an image format name and a colon (i.e.ps:image) or specify the image type as the filename suffix (i.e.image.ps). The magic number takes precedence over the filename suffix and the prefix takes precedence over the magic number and the suffix in input files. When a file is read, its magic number is stored in the "image->magick" string. In output files, the prefix takes precedence over the filename suffix, and the filename suffix takes precedence over the "image->magick" string.
 
 To read the "built-in" formats (GRANITE, H, LOGO, NETSCAPE, PLASMA, and ROSE) use a prefix (including the colon) without a filename or suffix. To read the XC format, follow the colon with a color specification. To read the CAPTION format, follow the colon with a text string or with a filename prefixed with the at symbol (@). 
 
@@ -509,75 +509,96 @@ In this document, angle brackets ("`<>`") enclose variables and curly brackets (
 
     By default, the Over composite operator is used. The following composite operators are available:
 
-        Over
-        In
-        Out
-        Atop
-        Xor
-        Plus
-        Minus
-        Add
-        Subtract
-        Difference
-        Divide
-        Multiply
-        Bumpmap
-        Copy
-        CopyRed
-        CopyGreen
-        CopyBlue
-        CopyOpacity
-        CopyCyan
-        CopyMagenta
-        CopyYellow
-        CopyBlack
+    * Over
+    * In
+    * Out
+    * Atop
+    * Xor
+    * Plus
+    * Minus
+    * Add
+    * Subtract
+    * Difference
+    * Divide
+    * Multiply
+    * Bumpmap
+    * Copy
+    * CopyRed
+    * CopyGreen
+    * CopyBlue
+    * CopyOpacity
+    * CopyCyan
+    * CopyMagenta
+    * CopyYellow
+    * CopyBlack
 
     The behavior of each operator is described below.
 
-    Over
-    The result will be the union of the two image shapes, with opaque areas of change-image obscuring base-image in the region of overlap.
-    In
-    The result is simply change-image cut by the shape of base-image. None of the image data of base-image will be in the result.
-    Out
-    The resulting image is change-image with the shape of base-image cut out.
-    Atop
-    The result is the same shape as base-image, with change-image obscuring base-image where the image shapes overlap. Note this differs from over because the portion of change-image outside base-image's shape does not appear in the result.
-    Xor
-    The result is the image data from both change-image and base-image that is outside the overlap region. The overlap region will be blank.
-    Plus
-    The result is just the sum of the image data. Output values are cropped to MaxRGB (no overflow). This operation is independent of the matte channels.
-    Minus
-    The result of change-image - base-image, with underflow cropped to zero. The matte channel is ignored (set to opaque, full coverage).
-    Add
-    The result of change-image + base-image, with overflow wrapping around (mod MaxRGB+1).
-    Subtract
-    The result of change-image - base-image, with underflow wrapping around (mod MaxRGB+1). The add and subtract operators can be used to perform reversible transformations.
-    Difference
-    The result of abs(change-image - base-image). This is useful for comparing two very similar images.
-    Divide
-    The result of change-image / base-image. This is useful for improving the readability of text on unevenly illuminated photos (by using a gaussian blurred copy of change-image as base-image).
-    Multiply
-    The result of change-image * base-image. This is useful for the creation of drop-shadows.
-    Bumpmap
-    The result base-image shaded by change-image.
-    Copy
-    The resulting image is base-image replaced with change-image. Here the matte information is ignored.
-    CopyRed
-    The resulting image is the red channel in base-image replaced with the red channel in change-image. The other channels are copied untouched.
-    CopyGreen
-    The resulting image is the green channel in base-image replaced with the green channel in change-image. The other channels are copied untouched.
-    CopyBlue
-    The resulting image is the blue channel in base-image replaced with the blue channel in change-image. The other channels are copied untouched.
-    CopyOpacity
-    The resulting image is the opacity channel in base-image replaced with the opacity channel in change-image. The other channels are copied untouched.
-    CopyCyan
-    The resulting image is the cyan channel in base-image replaced with the cyan channel in change-image. The other channels are copied untouched. Use of this operator requires that base-image be in CMYK(A) colorspace.
-    CopyMagenta
-    The resulting image is the magenta channel in base-image replaced with the magenta channel in change-image. The other channels are copied untouched. Use of this operator requires that base-image be in CMYK(A) colorspace.
-    CopyYellow
-    The resulting image is the yellow channel in base-image replaced with the yellow channel in change-image. The other channels are copied untouched. Use of this operator requires that base-image be in CMYK(A) colorspace.
-    CopyBlack
-    The resulting image is the black channel in base-image replaced with the black channel in change-image. The other channels are copied untouched. Use of this operator requires that base-image be in CMYK(A) colorspace. If change-image is not in CMYK space, then the change-image pixel intensities are used.
+    ??? info "Over"
+        The result will be the union of the two image shapes, with opaque areas of change-image obscuring base-image in the region of overlap.
+
+    ??? info "In"
+        The result is simply change-image cut by the shape of base-image. None of the image data of base-image will be in the result.
+
+    ??? info "Out"
+        The resulting image is change-image with the shape of base-image cut out.
+
+    ??? info "Atop"
+        The result is the same shape as base-image, with change-image obscuring base-image where the image shapes overlap. Note this differs from over because the portion of change-image outside base-image's shape does not appear in the result.
+        
+    ??? info "Xor"
+        The result is the image data from both change-image and base-image that is outside the overlap region. The overlap region will be blank.
+        
+    ??? info "Plus"
+        The result is just the sum of the image data. Output values are cropped to MaxRGB (no overflow). This operation is independent of the matte channels.
+        
+    ??? info "Minus"
+        The result of change-image - base-image, with underflow cropped to zero. The matte channel is ignored (set to opaque, full coverage).
+        
+    ??? info "Add"
+        The result of change-image + base-image, with overflow wrapping around (mod MaxRGB+1).
+        
+    ??? info "Subtract"
+        The result of change-image - base-image, with underflow wrapping around (mod MaxRGB+1). The add and subtract operators can be used to perform reversible transformations.
+        
+    ??? info "Difference"
+        The result of abs(change-image - base-image). This is useful for comparing two very similar images.
+        
+    ??? info "Divide"
+        The result of change-image / base-image. This is useful for improving the readability of text on unevenly illuminated photos (by using a gaussian blurred copy of change-image as base-image).
+        
+    ??? info "Multiply"
+        The result of change-image * base-image. This is useful for the creation of drop-shadows.
+        
+    ??? info "Bumpmap"
+        The result base-image shaded by change-image.
+        
+    ??? info "Copy"
+        The resulting image is base-image replaced with change-image. Here the matte information is ignored.
+        
+    ??? info "CopyRed"
+        The resulting image is the red channel in base-image replaced with the red channel in change-image. The other channels are copied untouched.
+        
+    ??? info "CopyGreen"
+        The resulting image is the green channel in base-image replaced with the green channel in change-image. The other channels are copied untouched.
+        
+    ??? info "CopyBlue"
+        The resulting image is the blue channel in base-image replaced with the blue channel in change-image. The other channels are copied untouched.
+        
+    ??? info "CopyOpacity"
+        The resulting image is the opacity channel in base-image replaced with the opacity channel in change-image. The other channels are copied untouched.
+        
+    ??? info "CopyCyan"
+        The resulting image is the cyan channel in base-image replaced with the cyan channel in change-image. The other channels are copied untouched. Use of this operator requires that base-image be in CMYK(A) colorspace.
+        
+    ??? info "CopyMagenta"
+        The resulting image is the magenta channel in base-image replaced with the magenta channel in change-image. The other channels are copied untouched. Use of this operator requires that base-image be in CMYK(A) colorspace.
+        
+    ??? info "CopyYellow"
+        The resulting image is the yellow channel in base-image replaced with the yellow channel in change-image. The other channels are copied untouched. Use of this operator requires that base-image be in CMYK(A) colorspace.
+        
+    ??? info "CopyBlack"
+        The resulting image is the black channel in base-image replaced with the black channel in change-image. The other channels are copied untouched. Use of this operator requires that base-image be in CMYK(A) colorspace. If change-image is not in CMYK space, then the change-image pixel intensities are used.
 
 ??? info "-compress `<type>`"
 
@@ -598,8 +619,9 @@ In this document, angle brackets ("`<>`") enclose variables and curly brackets (
     This option enhances the intensity differences between the lighter and darker elements of the image. Use -contrast to enhance the image or +contrast to reduce the image contrast.
 
     For a more pronounced effect you can repeat the option:
-
+    ```sh
         gm convert rose: -contrast -contrast rose_c2.png
+    ```
 
 ??? info "-convolve `<kernel>`"
 
@@ -636,8 +658,10 @@ In this document, angle brackets ("`<>`") enclose variables and curly brackets (
     enable debug printout
 
     The events parameter specifies which events are to be logged. It can be either None, All, or a comma-separated list consisting of one or more of the following domains: Annotate, Blob, Cache, Coder, Configure, Deprecate, Error, Exception, Locale, Render,Resource, TemporaryFile, Transform, Warning, X11, or User. For example, to log cache and blob events, use
-
+    
+    ```sh
         gm convert -debug "Cache,Blob" rose: rose.png
+    ```
 
     The "User" domain is normally empty, but developers can log "User" events in their private copy of GraphicsMagick.
 
@@ -657,124 +681,178 @@ In this document, angle brackets ("`<>`") enclose variables and curly brackets (
 
 ??? info "-define `<key>`{=`<value>`},..."
 
-    add coder/decoder specific options
+    add *coder/decoder* specific options
 
     This option creates one or more definitions for coders and decoders to use while reading and writing image data. Definitions may be passed to coders and decoders to control options that are specific to certain image formats. If value is missing for a definition, an empty-valued definition of a flag will be created with that name. This is used to control on/off options. Use +define `<key>`,... to remove definitions previously created. Use +define "*" to remove all existing definitions.
 
     The following definitions may be created:
 
-    cineon:colorspace={rgb|cineonlog}
-    Use the cineon:colorspace option when reading a Cineon file to specify the colorspace the Cineon file uses. This overrides the colorspace type implied by the DPX header (if any).
-    dpx:bits-per-sample=`<value>`
-    If the dpx:bits-per-sample key is defined, GraphicsMagick will write DPX images with the specified bits per sample, overriding any existing depth value. If this option is not specified, then the value is based on the existing image depth value from the original image file. The DPX standard supports bits per sample values of 1, 8, 10, 12, and 16. Many DPX readers demand a sample size of 10 bits with type A padding (see below).
-    dpx:colorspace={rgb|cineonlog}
-    Use the dpx:colorspace option when reading a DPX file to specify the colorspace the DPX file uses. This overrides the colorspace type implied by the DPX header (if any).
-    dpx:packing-method={packed|a|b|lsbpad|msbpad}
-    DPX samples are output within 32-bit words. They may be tightly packed end-to-end within the words ("packed"), padded with null bits to the right of the sample ("a" or "lsbpad), or padded with null bits to the left of the sample ("b" or "msbpad"). This option only has an effect for sample sizes of 10 or 12 bits. If samples are not packed, the DPX standard recommends type A padding. Many DPX readers demand a sample size of 10 bits with type A padding.
-    dpx:pixel-endian={lsb|msb}
-    Allows the user to specify the endian order of the pixels when reading or writing the DPX files. Sometimes this is useful if the file is (or must be) written incorrectly so that the file header and the pixels use different endianness.
-    dpx:swap-samples={true|false}
-    GraphicsMagick strives to adhere to the DPX standard but certain aspects of the standard can be quite confusing. As a result, some 10-bit DPX files have Red and Blue interchanged, or Cb and Cr interchanged due to an different interpretation of the standard, or getting the wires crossed. The swap-samples option may be supplied when reading or writing in order to read or write using the necessary sample order.
-    jp2:rate=`<value>`
-    Specify the compression factor to use while writing JPEG-2000 files. The compression factor is the reciprocal of the compression ratio. The valid range is 0.0 to 1.0, with 1.0 indicating lossless compression. If defined, this value overrides the -quality setting. The default quality setting of 75 results in a rate value of 0.06641.
-    jpeg:block-smoothing={true|false}
-    Enables or disables block smoothing when reading a JPEG file (default enabled).
-    jpeg:dct-method=`<value>`
-    Selects the IJG JPEG library DCT implementation to use. The encoding implementations vary in speed and encoding error. The available choices for value are islow, ifast, float, default and fastest. Note that fastest might not necessarily be fastest on your CPU, depending on the choices made when the JPEG library was built and how your CPU behaves.
-    jpeg:fancy-upsampling={true|false}
-    Enables or disables fancy upsampling when reading a JPEG file (default enabled).
-    jpeg:optimize-coding={true|false}
-    Selects if huffman encoding should be used. Huffman encoding is enabled by default, but may be disabled for very large images since it encoding requires that the entire image be buffered in memory. Huffman encoding produces smaller JPEG files at the expense of added compression time and memory consumption.
-    jpeg:preserve-settings
-    If the jpeg:preserve-settings flag is defined, the JPEG encoder will use the same "quality" and "sampling-factor" settings that were found in the input file, if the input was in JPEG format. These settings are also preserved if the input is a JPEG file and the output is a JNG file. If the colorspace of the output file differs from that of the input file, the quality setting is preserved but the sampling-factors are not.
-    pcl:fit-to-page
-    If the pcl:fit-to-page flag is defined, then the printer is requested to scale the image to fit the page size (width and/or height).
-    pdf:use-cropbox={true|false}
-    If the pdf:use-cropbox flag is set to true, then Ghostscript is requested to apply the PDF crop box.
-    pdf:stop-on-error={true|false}
-    If the pdf:stop-on-error flag is set to true, then Ghostscript is requested to stop processing the PDF when the first error is encountered. Otherwise it will attempt to process all requested pages.
-    ps:imagemask
-    If the ps:imagemask flag is defined, the PS3 and EPS3 coders will create Postscript files that render bilevel images with the Postscript imagemask operator instead of the image operator.
-    tiff:alpha={unspecified|associated|unassociated}
-    Specify the TIFF alpha channel type when reading or writing TIFF files, overriding the normal value. The default alpha channel type for new files is unspecified alpha. Existing alpha settings are preserved when converting from one TIFF file to another. When a TIFF file uses associated alpha, the image pixels are pre-multiplied (i.e. altered) with the alpha channel. Files with "associated" alpha appear as if they were alpha composited on a black background when the matte channel is disabled. If the unassociated alpha type is selected, then the alpha channel is saved without altering the pixels. Photoshop recognizes associated alpha as transparency information, if the file is saved with unassociated alpha, the alpha information is loaded as an independent channel. Note that for many years, ImageMagick and GraphicsMagick marked TIFF files as using associated alpha, without properly pre-multiplying the pixels.
-    tiff:fill-order={msb2lsb|lsb2msb}
-    If the tiff:fill-order key is defined, GraphicsMagick will use it to determine the bit fill order used while writing TIFF files. The normal default is "msb2lsb", which matches the native bit order of all modern CPUs. The only exception to this is when Group3 or Group4 FAX compression is requested since FAX machines send data in bit-reversed order and therefore RFC 2301 recommends using reverse order.
-    tiff:group-three-options=`<value>`
-    If the tiff:group-three-options key is defined, GraphicsMagick will use it to set the group3 options tag when writing group3-compressed TIFF. Please see the TIFF specification for the usage of this tag. The default value is 4.
-    tiff:ignore-tags=`<tags>`
-    If the tiff:ignore-tags key is defined, then it is used as a list of comma-delimited integer TIFF tag values to ignore while reading the TIFF file. This is useful in order to be able to read files which which otherwise fail to read due to problems with TIFF tags. Note that some TIFF tags are required in order to be able to read the image data at all.
-    tiff:report-warnings={false|true}
-    If the tiff:report-warnings key is defined and set to true, then TIFF warnings are reported as a warning exception rather than as a coder log message. Such warnings are reported after the image has been read or written. Most TIFF warnings are benign but sometimes they may help deduce problems with the TIFF file, or help detect that the TIFF file requires a special application to read successfully due to the use of proprietary or specialized extensions.
-    tiff:sample-format={unsigned|ieeefp}
-    If the tiff:sample-format key is defined, GraphicsMagick will use it to determine the sample format used while writing TIFF files. The default is "unsigned". Specify "ieeefp" in order to write floating-point TIFF files with float (32-bit) or double (64-bit) values. Use the tiff:bits-per-sample define to determine the type of floating-point value to use.
-    tiff:max-sample-value=`<value>`
-    If the tiff:max-sample-value key is defined, GraphicsMagick will use the assigned value as the maximum floating point value while reading or writing IEEE floating point TIFFs. Otherwise the maximum value is 1.0 or the value obtained from the file's SMaxSampleValue tag (if present). The floating point data is currently not scanned in advance to determine a best maximum sample value so if the range is not 1.0, or the SMaxSampleValue tag is not present, it may be necessary to (intelligently) use this parameter to properly read a file.
-    tiff:min-sample-value=`<value>`
-    If the tiff:min-sample-value key is defined, GraphicsMagick will use the assigned value as the minimum floating point value while reading or writing IEEE floating point TIFFs. Otherwise the minimum value is 0.0 or the value obtained from the file's SMinSampleValue tag (if present).
-    tiff:bits-per-sample=`<value>`
-    If the tiff:bits-per-sample key is defined, GraphicsMagick will write images with the specified bits per sample, overriding any existing depth value. Value may be any in the range of 1 to 32, or 64 when the default 'unsigned' format is written, or 16/32/24/64 if IEEEFP format is written. Please note that the baseline TIFF 6.0 specification only requires readers to handle certain powers of two, and the values to be handled depend on the nature of the image (e.g. colormapped, grayscale, RGB, CMYK).
-    tiff:samples-per-pixel=`<value>`
-    If the tiff:samples-per-pixel key is defined to a value, the TIFF coder will write TIFF images with the defined samples per pixel, overriding any value stored in the image. This option should not normally be used.
-    tiff:rows-per-strip=`<value>`
-    Allows the user to specify the number of rows per TIFF strip. Rounded up to a multiple of 16 when using JPEG compression. Ignored when using tiles.
-    tiff:strip-per-page=true
-    Requests that the image is written in a single TIFF strip. This is normally the default when group3 or group4 compression is requested within reasonable limits. Requesting a single strip for large images may result in failure due to resource consumption in the writer or reader.
-    tiff:tile
-    Enable writing tiled TIFF (rather than stripped) using the default tile size. Tiled TIFF organizes the image as an array of smaller images (tiles) in order to enable random access.
-    tiff:tile-geometry=`<width>`x`<height>`
-    Specify the tile size to use while writing tiled TIFF. Width and height should be a multiple of 16. If the value is not a multiple of 16, then it will be rounded down. Enables tiled TIFF if it has not already been enabled. GraphicsMagick does not use tiled storage internally so tiles need to be converted back and forth from the internal scanline-oriented storage to tile-oriented storage. Testing with typical RGB images shows that useful square tile size values range from 128x128 to 1024x1024. Large images which require using a disk-based pixel cache benefit from large tile sizes while images which fit in memory work well with smaller tile sizes.
-    tiff:tile-width=`<width>`
-    Specify the tile width to use while writing tiled TIFF. The tile height is then defaulted to an appropriate size. Width should be a multiple of 16. If the value is not a multiple of 16, then it will be rounded down. Enables tiled TIFF if it has not already been enabled.
-    tiff:tile-height=`<height>`
-    Specify the tile height to use while writing tiled TIFF. The tile width is then defaulted to an appropriate size. Height should be a multiple of 16. If the value is not a multiple of 16, then it will be rounded down. Enables tiled TIFF if it has not already been enabled.
-    webp:lossless={true|false}
-    Enable lossless encoding.
-    webp:method={0-6}
-    Quality/speed trade-off.
-    webp:image-hint={default,graph,photo,picture}
-    Hint for image type.
-    webp:target-size=`<integer>`
-    Target size in bytes.
-    webp:target-psnr=`<float>`
-    Minimal distortion to try to achieve.
-    webp:segments={1-4}
-    Maximum number of segments to use.
-    webp:sns-strength={0-100}
-    Spatial Noise Shaping.
-    webp:filter-strength={0-100}
-    Filter strength.
-    webp:filter-sharpness={0-7}
-    Filter sharpness.
-    webp:filter-type={0,1}
-    Filtering type. 0 = simple, 1 = strong (only used if filter-strength ??? info "0 or autofilter is enabled).
-    webp:auto-filter={true|false}
-    Auto adjust filter's strength.
-    webp:alpha-compression=`<integer>`
-    Algorithm for encoding the alpha plane (0 = none, 1 = compressed with WebP lossless). Default is 1.
-    webp:alpha-filtering=`<integer>`
-    Predictive filtering method for alpha plane. 0: none, 1: fast, 2: best. Default is 1.
-    webp:alpha-quality={0-100}
-    Between 0 (smallest size) and 100 (lossless). Default is 100.
-    webp:pass=[1..10]
-    Number of entropy-analysis passes.
-    webp:show-compressed={true|false}
-    Export the compressed picture back. In-loop filtering is not applied.
-    webp:preprocessing=[0,1,2]
-    0=none, 1=segment-smooth, 2=pseudo-random dithering
-    webp:partitions=[0-3]
-    log2(number of token partitions) in [0..3]. Default is 0 for easier progressive decoding.
-    webp:partition-limit={0-100}
-    Quality degradation allowed to fit the 512k limit on prediction modes coding (0: no degradation, 100: maximum possible degradation).
-    webp:emulate-jpeg-size={true|false}
-    If true, compression parameters will be remapped to better match the expected output size from JPEG compression. Generally, the output size will be similar but the degradation will be lower.
-    webp:thread-level=`<integer>`
-    If non-zero, try and use multi-threaded encoding.
-    webp:low-memory={true|false}
-    If set, reduce memory usage (but increase CPU use)
+    ??? info "cineon:colorspace={rgb|cineonlog}"
+        Use the cineon:colorspace option when reading a Cineon file to specify the colorspace the Cineon file uses. This overrides the colorspace type implied by the DPX header (if any).
+
+    ??? info "dpx:bits-per-sample=`<value>`"
+        If the dpx:bits-per-sample key is defined, GraphicsMagick will write DPX images with the specified bits per sample, overriding any existing depth value. If this option is not specified, then the value is based on the existing image depth value from the original image file. The DPX standard supports bits per sample values of 1, 8, 10, 12, and 16. Many DPX readers demand a sample size of 10 bits with type A padding (see below).
+
+    ??? info "dpx:colorspace={rgb|cineonlog}"
+        Use the dpx:colorspace option when reading a DPX file to specify the colorspace the DPX file uses. This overrides the colorspace type implied by the DPX header (if any).
+        
+    ??? info "dpx:packing-method={packed|a|b|lsbpad|msbpad}"
+        DPX samples are output within 32-bit words. They may be tightly packed end-to-end within the words ("packed"), padded with null bits to the right of the sample ("a" or "lsbpad), or padded with null bits to the left of the sample ("b" or "msbpad"). This option only has an effect for sample sizes of 10 or 12 bits. If samples are not packed, the DPX standard recommends type A padding. Many DPX readers demand a sample size of 10 bits with type A padding.
+        
+    ??? info "dpx:pixel-endian={lsb|msb}"
+        Allows the user to specify the endian order of the pixels when reading or writing the DPX files. Sometimes this is useful if the file is (or must be) written incorrectly so that the file header and the pixels use different endianness.
+        
+    ??? info "dpx:swap-samples={true|false}"
+        GraphicsMagick strives to adhere to the DPX standard but certain aspects of the standard can be quite confusing. As a result, some 10-bit DPX files have Red and Blue interchanged, or Cb and Cr interchanged due to an different interpretation of the standard, or getting the wires crossed. The swap-samples option may be supplied when reading or writing in order to read or write using the necessary sample order.
+        
+    ??? info "jp2:rate=`<value>`"
+        Specify the compression factor to use while writing JPEG-2000 files. The compression factor is the reciprocal of the compression ratio. The valid range is 0.0 to 1.0, with 1.0 indicating lossless compression. If defined, this value overrides the -quality setting. The default quality setting of 75 results in a rate value of 0.06641.
+        
+    ??? info "jpeg:block-smoothing={true|false}"
+        Enables or disables block smoothing when reading a JPEG file (default enabled).
+        
+    ??? info "jpeg:dct-method=`<value>`"
+        Selects the IJG JPEG library DCT implementation to use. The encoding implementations vary in speed and encoding error. The available choices for value are islow, ifast, float, default and fastest. Note that fastest might not necessarily be fastest on your CPU, depending on the choices made when the JPEG library was built and how your CPU behaves.
+        
+    ??? info "jpeg:fancy-upsampling={true|false}"
+        Enables or disables fancy upsampling when reading a JPEG file (default enabled).
+        
+    ??? info "jpeg:optimize-coding={true|false}"
+        Selects if huffman encoding should be used. Huffman encoding is enabled by default, but may be disabled for very large images since it encoding requires that the entire image be buffered in memory. Huffman encoding produces smaller JPEG files at the expense of added compression time and memory consumption.
+        
+    ??? info "jpeg:preserve-settings"
+        If the jpeg:preserve-settings flag is defined, the JPEG encoder will use the same "quality" and "sampling-factor" settings that were found in the input file, if the input was in JPEG format. These settings are also preserved if the input is a JPEG file and the output is a JNG file. If the colorspace of the output file differs from that of the input file, the quality setting is preserved but the sampling-factors are not.
+        
+    ??? info "pcl:fit-to-page"
+        If the pcl:fit-to-page flag is defined, then the printer is requested to scale the image to fit the page size (width and/or height).
+        
+    ??? info "pdf:use-cropbox={true|false}"
+        If the pdf:use-cropbox flag is set to true, then Ghostscript is requested to apply the PDF crop box.
+        
+    ??? info "pdf:stop-on-error={true|false}"
+        If the pdf:stop-on-error flag is set to true, then Ghostscript is requested to stop processing the PDF when the first error is encountered. Otherwise it will attempt to process all requested pages.
+        
+    ??? info "ps:imagemask"
+        If the ps:imagemask flag is defined, the PS3 and EPS3 coders will create Postscript files that render bilevel images with the Postscript imagemask operator instead of the image operator.
+        
+    ??? info "tiff:alpha={unspecified|associated|unassociated}"
+        Specify the TIFF alpha channel type when reading or writing TIFF files, overriding the normal value. The default alpha channel type for new files is unspecified alpha. Existing alpha settings are preserved when converting from one TIFF file to another. When a TIFF file uses associated alpha, the image pixels are pre-multiplied (i.e. altered) with the alpha channel. Files with "associated" alpha appear as if they were alpha composited on a black background when the matte channel is disabled. If the unassociated alpha type is selected, then the alpha channel is saved without altering the pixels. Photoshop recognizes associated alpha as transparency information, if the file is saved with unassociated alpha, the alpha information is loaded as an independent channel. Note that for many years, ImageMagick and GraphicsMagick marked TIFF files as using associated alpha, without properly pre-multiplying the pixels.
+        
+    ??? info "tiff:fill-order={msb2lsb|lsb2msb}"
+        If the tiff:fill-order key is defined, GraphicsMagick will use it to determine the bit fill order used while writing TIFF files. The normal default is "msb2lsb", which matches the native bit order of all modern CPUs. The only exception to this is when Group3 or Group4 FAX compression is requested since FAX machines send data in bit-reversed order and therefore RFC 2301 recommends using reverse order.
+        
+    ??? info "tiff:group-three-options=`<value>`"
+        If the tiff:group-three-options key is defined, GraphicsMagick will use it to set the group3 options tag when writing group3-compressed TIFF. Please see the TIFF specification for the usage of this tag. The default value is 4.
+        
+    ??? info "tiff:ignore-tags=`<tags>`"
+        If the tiff:ignore-tags key is defined, then it is used as a list of comma-delimited integer TIFF tag values to ignore while reading the TIFF file. This is useful in order to be able to read files which which otherwise fail to read due to problems with TIFF tags. Note that some TIFF tags are required in order to be able to read the image data at all.
+        
+    ??? info "tiff:report-warnings={false|true}"
+        If the tiff:report-warnings key is defined and set to true, then TIFF warnings are reported as a warning exception rather than as a coder log message. Such warnings are reported after the image has been read or written. Most TIFF warnings are benign but sometimes they may help deduce problems with the TIFF file, or help detect that the TIFF file requires a special application to read successfully due to the use of proprietary or specialized extensions.
+        
+    ??? info "tiff:sample-format={unsigned|ieeefp}"
+        If the tiff:sample-format key is defined, GraphicsMagick will use it to determine the sample format used while writing TIFF files. The default is "unsigned". Specify "ieeefp" in order to write floating-point TIFF files with float (32-bit) or double (64-bit) values. Use the tiff:bits-per-sample define to determine the type of floating-point value to use.
+        
+    ??? info "tiff:max-sample-value=`<value>`"
+        If the tiff:max-sample-value key is defined, GraphicsMagick will use the assigned value as the maximum floating point value while reading or writing IEEE floating point TIFFs. Otherwise the maximum value is 1.0 or the value obtained from the file's SMaxSampleValue tag (if present). The floating point data is currently not scanned in advance to determine a best maximum sample value so if the range is not 1.0, or the SMaxSampleValue tag is not present, it may be necessary to (intelligently) use this parameter to properly read a file.
+        
+    ??? info "tiff:min-sample-value=`<value>`"
+        If the tiff:min-sample-value key is defined, GraphicsMagick will use the assigned value as the minimum floating point value while reading or writing IEEE floating point TIFFs. Otherwise the minimum value is 0.0 or the value obtained from the file's SMinSampleValue tag (if present).
+        
+    ??? info "tiff:bits-per-sample=`<value>`"
+        If the tiff:bits-per-sample key is defined, GraphicsMagick will write images with the specified bits per sample, overriding any existing depth value. Value may be any in the range of 1 to 32, or 64 when the default 'unsigned' format is written, or 16/32/24/64 if IEEEFP format is written. Please note that the baseline TIFF 6.0 specification only requires readers to handle certain powers of two, and the values to be handled depend on the nature of the image (e.g. colormapped, grayscale, RGB, CMYK).
+        
+    ??? info "tiff:samples-per-pixel=`<value>`"
+        If the tiff:samples-per-pixel key is defined to a value, the TIFF coder will write TIFF images with the defined samples per pixel, overriding any value stored in the image. This option should not normally be used.
+        tiff:rows-per-strip=`<value>`
+        Allows the user to specify the number of rows per TIFF strip. Rounded up to a multiple of 16 when using JPEG compression. Ignored when using tiles.
+        
+    ??? info "tiff:strip-per-page=true"
+        Requests that the image is written in a single TIFF strip. This is normally the default when group3 or group4 compression is requested within reasonable limits. Requesting a single strip for large images may result in failure due to resource consumption in the writer or reader.
+        
+    ??? info "tiff:tile"
+        Enable writing tiled TIFF (rather than stripped) using the default tile size. Tiled TIFF organizes the image as an array of smaller images (tiles) in order to enable random access.
+        
+    ??? info "tiff:tile-geometry=`<width>`x`<height>`"
+        Specify the tile size to use while writing tiled TIFF. Width and height should be a multiple of 16. If the value is not a multiple of 16, then it will be rounded down. Enables tiled TIFF if it has not already been enabled. GraphicsMagick does not use tiled storage internally so tiles need to be converted back and forth from the internal scanline-oriented storage to tile-oriented storage. Testing with typical RGB images shows that useful square tile size values range from 128x128 to 1024x1024. Large images which require using a disk-based pixel cache benefit from large tile sizes while images which fit in memory work well with smaller tile sizes.
+        
+    ??? info "tiff:tile-width=`<width>`"
+        Specify the tile width to use while writing tiled TIFF. The tile height is then defaulted to an appropriate size. Width should be a multiple of 16. If the value is not a multiple of 16, then it will be rounded down. Enables tiled TIFF if it has not already been enabled.
+        
+    ??? info "tiff:tile-height=`<height>`"
+        Specify the tile height to use while writing tiled TIFF. The tile width is then defaulted to an appropriate size. Height should be a multiple of 16. If the value is not a multiple of 16, then it will be rounded down. Enables tiled TIFF if it has not already been enabled.
+        
+    ??? info "webp:lossless={true|false}"
+        Enable lossless encoding.
+        
+    ??? info "webp:method={0-6}"
+        Quality/speed trade-off.
+        
+    ??? info "webp:image-hint={default,graph,photo,picture}"
+        Hint for image type.
+        
+    ??? info "webp:target-size=`<integer>`"
+        Target size in bytes.
+        
+    ??? info "webp:target-psnr=`<float>`"
+        Minimal distortion to try to achieve.
+        
+    ??? info "webp:segments={1-4}"
+        Maximum number of segments to use.
+        
+    ??? info "webp:sns-strength={0-100}"
+        Spatial Noise Shaping.
+        
+    ??? info "webp:filter-strength={0-100}"
+        Filter strength.
+        
+    ??? info "webp:filter-sharpness={0-7}"
+        Filter sharpness.
+        
+    ??? info "webp:filter-type={0,1}"
+        Filtering type. 0 = simple, 1 = strong (only used if filter-strength ??? info "0 or autofilter is enabled).
+        
+    ??? info "webp:auto-filter={true|false}"
+        Auto adjust filter's strength.
+        
+    ??? info "webp:alpha-compression=`<integer>`"
+        Algorithm for encoding the alpha plane (0 = none, 1 = compressed with WebP lossless). Default is 1.
+        
+    ??? info "webp:alpha-filtering=`<integer>`"
+        Predictive filtering method for alpha plane. 0: none, 1: fast, 2: best. Default is 1.
+        
+    ??? info "webp:alpha-quality={0-100}"
+        Between 0 (smallest size) and 100 (lossless). Default is 100.
+        
+    ??? info "webp:pass=[1..10]"
+        Number of entropy-analysis passes.
+        
+    ??? info "webp:show-compressed={true|false}"
+        Export the compressed picture back. In-loop filtering is not applied.
+        
+    ??? info "webp:preprocessing=[0,1,2]"
+        0=none, 1=segment-smooth, 2=pseudo-random dithering
+        
+    ??? info "webp:partitions=[0-3]"
+        log2(number of token partitions) in [0..3]. Default is 0 for easier progressive decoding.
+        
+    ??? info "webp:partition-limit={0-100}"
+        Quality degradation allowed to fit the 512k limit on prediction modes coding (0: no degradation, 100: maximum possible degradation).
+        
+    ??? info "webp:emulate-jpeg-size={true|false}"
+        If true, compression parameters will be remapped to better match the expected output size from JPEG compression. Generally, the output size will be similar but the degradation will be lower.
+        
+    ??? info "webp:thread-level=`<integer>`"
+        If non-zero, try and use multi-threaded encoding.
+        
+    ??? info "webp:low-memory={true|false}"
+        If set, reduce memory usage (but increase CPU use)
 
     For example, to create a postscript file that will render only the black pixels of a bilevel image, use:
 
+    ```sh
         gm convert bilevel.tif -define ps:imagemask eps3:stencil.ps
+    ```
 
 ??? info "-delay `<1/100ths of a second>`"
 

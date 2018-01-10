@@ -1,12 +1,12 @@
-# GraphicsMagick Image Processing System
+# GraphicsMagick 图像处理系统
 
-|version|note|
+|版本|说明|
 |-|-|
-|Current Release	|1.3.27a (Released December 11, 2017) download release|
-|Development Snapshots	|(Updated frequently) download development snapshots|
-|Mercurial Repository	|(Updated frequently) visit Mercurial repository|
+|当前版本	|1.3.27a (释放 December 11, 2017) [下载版本](http://sourceforge.net/projects/graphicsmagick/files/)|
+|开发快照	|(经常更新) [下载开发快照](ftp://ftp.graphicsmagick.org/pub/GraphicsMagick/snapshots/) |
+|活跃库	|(经常更新) [查看活跃库](http://sourceforge.net/p/graphicsmagick/code/) |
 
-Check [http://www.GraphicsMagick.org/](http://www.GraphicsMagick.org/) for the latest version of this page.
+查看 [http://www.GraphicsMagick.org/](http://www.GraphicsMagick.org/) 页面获取最新版本.
 
 GraphicsMagick is the swiss army knife of image processing. Comprised of 267K physical lines (according to David A. Wheeler's SLOCCount) of source code in the base package (or 1,225K including 3rd party libraries) it provides a robust and efficient collection of tools and libraries which support reading, writing, and manipulating an image in over 88 major formats including important formats like DPX, GIF, JPEG, JPEG-2000, PNG, PDF, PNM, and TIFF.
 

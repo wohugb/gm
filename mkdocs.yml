@@ -86,12 +86,12 @@ pages:
       - 基准: GraphicsMagick/Manual/benchmark.md
       - 比较: GraphicsMagick/Manual/compare.md
       - 合并: GraphicsMagick/Manual/composite.md
-      - 魔术: GraphicsMagick/Manual/conjure.md
+      - 脚本: GraphicsMagick/Manual/conjure.md
       - 转换: GraphicsMagick/Manual/convert.md
       - 显示: GraphicsMagick/Manual/display.md
       - 识别: GraphicsMagick/Manual/identify.md
       - 导入: GraphicsMagick/Manual/import.md
-      - mogrify: GraphicsMagick/Manual/mogrify.md
+      - 锐化: GraphicsMagick/Manual/mogrify.md
       - 蒙太奇: GraphicsMagick/Manual/montage.md
       - 时间: GraphicsMagick/Manual/time.md
       - 版本: GraphicsMagick/Manual/version.md
