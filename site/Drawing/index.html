@@ -738,8 +738,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../GraphicsMagick/Manual/conjure/" title="魔术" class="md-nav__link">
-      魔术
+    <a href="../GraphicsMagick/Manual/conjure/" title="脚本" class="md-nav__link">
+      脚本
     </a>
   </li>
 
@@ -798,8 +798,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../GraphicsMagick/Manual/mogrify/" title="mogrify" class="md-nav__link">
-      mogrify
+    <a href="../GraphicsMagick/Manual/mogrify/" title="锐化" class="md-nav__link">
+      锐化
     </a>
   </li>
 
@@ -892,39 +892,39 @@
                 
                 <h1 id="_1">基本绘图<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <p>查看 <a href="example/">drawing.js</a> 文件里的示例.</p>
-<details class="note"><summary>画 - draw</summary><p>Annotate an image with one or more graphic primitives (shapes, text, transformations, pixel operations). Used internally for all drawing methods.
+<details class="info"><summary>画 - draw</summary><p>Annotate an image with one or more graphic primitives (shapes, text, transformations, pixel operations). Used internally for all drawing methods.
 <div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">draw</span><span class="p">(</span><span class="nx">args</span><span class="p">)</span>
-</pre></div></p></details><details class="note"><summary>弧角 - drawArc</summary><p>Inscribe an elliptical arc within a rectangle. Requires a start and end point as well as the degrees of rotation.
+</pre></div></p></details><details class="info"><summary>弧角 - drawArc</summary><p>Inscribe an elliptical arc within a rectangle. Requires a start and end point as well as the degrees of rotation.
 <div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawArc</span><span class="p">(</span><span class="nx">x0</span><span class="p">,</span> <span class="nx">y0</span><span class="p">,</span> <span class="nx">x1</span><span class="p">,</span> <span class="nx">y1</span><span class="p">,</span> <span class="nx">r0</span><span class="p">,</span> <span class="nx">r1</span><span class="p">)</span>
-</pre></div></p></details><details class="note"><summary>贝塞尔曲线 - drawBezier</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawBezier</span><span class="p">([</span><span class="nx">x0</span><span class="p">,</span> <span class="nx">y0</span><span class="p">],</span> <span class="p">...</span> <span class="p">[</span><span class="nx">xn</span><span class="p">,</span> <span class="nx">yn</span><span class="p">])</span>
+</pre></div></p></details><details class="info"><summary>贝塞尔曲线 - drawBezier</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawBezier</span><span class="p">([</span><span class="nx">x0</span><span class="p">,</span> <span class="nx">y0</span><span class="p">],</span> <span class="p">...</span> <span class="p">[</span><span class="nx">xn</span><span class="p">,</span> <span class="nx">yn</span><span class="p">])</span>
 </pre></div>
-</details><details class="note"><summary>圆 - drawCircle</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawCircle</span><span class="p">(</span><span class="nx">x0</span><span class="p">,</span> <span class="nx">y0</span><span class="p">,</span> <span class="nx">x1</span><span class="p">,</span> <span class="nx">y1</span><span class="p">)</span>
+</details><details class="info"><summary>圆 - drawCircle</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawCircle</span><span class="p">(</span><span class="nx">x0</span><span class="p">,</span> <span class="nx">y0</span><span class="p">,</span> <span class="nx">x1</span><span class="p">,</span> <span class="nx">y1</span><span class="p">)</span>
 </pre></div>
-</details><details class="note"><summary>椭圆形 - drawEllipse</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawEllipse</span><span class="p">(</span><span class="nx">x0</span><span class="p">,</span> <span class="nx">y0</span><span class="p">,</span> <span class="nx">r0</span><span class="p">,</span> <span class="nx">ry</span><span class="p">,</span> <span class="nx">r0</span><span class="p">,</span> <span class="nx">r1</span><span class="p">)</span>
+</details><details class="info"><summary>椭圆形 - drawEllipse</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawEllipse</span><span class="p">(</span><span class="nx">x0</span><span class="p">,</span> <span class="nx">y0</span><span class="p">,</span> <span class="nx">r0</span><span class="p">,</span> <span class="nx">ry</span><span class="p">,</span> <span class="nx">r0</span><span class="p">,</span> <span class="nx">r1</span><span class="p">)</span>
 </pre></div>
-</details><details class="note"><summary>线 - drawLine</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawLine</span><span class="p">(</span><span class="nx">x0</span><span class="p">,</span> <span class="nx">y0</span><span class="p">,</span> <span class="nx">x1</span><span class="p">,</span> <span class="nx">y1</span><span class="p">)</span>
+</details><details class="info"><summary>线 - drawLine</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawLine</span><span class="p">(</span><span class="nx">x0</span><span class="p">,</span> <span class="nx">y0</span><span class="p">,</span> <span class="nx">x1</span><span class="p">,</span> <span class="nx">y1</span><span class="p">)</span>
 </pre></div>
-</details><details class="note"><summary>点 - drawPoint</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawPoint</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span>
+</details><details class="info"><summary>点 - drawPoint</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawPoint</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span>
 </pre></div>
-</details><details class="note"><summary>多边形 - drawPolygon</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawPolygon</span><span class="p">([</span><span class="nx">x0</span><span class="p">,</span> <span class="nx">y0</span><span class="p">]</span> <span class="p">...</span> <span class="p">[</span><span class="nx">xn</span><span class="p">,</span> <span class="nx">yn</span><span class="p">])</span>
+</details><details class="info"><summary>多边形 - drawPolygon</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawPolygon</span><span class="p">([</span><span class="nx">x0</span><span class="p">,</span> <span class="nx">y0</span><span class="p">]</span> <span class="p">...</span> <span class="p">[</span><span class="nx">xn</span><span class="p">,</span> <span class="nx">yn</span><span class="p">])</span>
 </pre></div>
-</details><details class="note"><summary>多段线 - drawPolyline</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawPolyline</span><span class="p">([</span><span class="nx">x0</span><span class="p">,</span> <span class="nx">y0</span><span class="p">]</span> <span class="p">...</span> <span class="p">[</span><span class="nx">xn</span><span class="p">,</span> <span class="nx">yn</span><span class="p">])</span>
+</details><details class="info"><summary>多段线 - drawPolyline</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawPolyline</span><span class="p">([</span><span class="nx">x0</span><span class="p">,</span> <span class="nx">y0</span><span class="p">]</span> <span class="p">...</span> <span class="p">[</span><span class="nx">xn</span><span class="p">,</span> <span class="nx">yn</span><span class="p">])</span>
 </pre></div>
-</details><details class="note"><summary>矩形 - drawRectangle</summary><p>wc and hc are optional and add roundness to the corners.
+</details><details class="info"><summary>矩形 - drawRectangle</summary><p>wc and hc are optional and add roundness to the corners.
 <div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawRectangle</span><span class="p">(</span><span class="nx">x0</span><span class="p">,</span> <span class="nx">y0</span><span class="p">,</span> <span class="nx">x1</span><span class="p">,</span> <span class="nx">y1</span> <span class="p">[,</span> <span class="nx">wc</span><span class="p">,</span> <span class="nx">hc</span><span class="p">])</span>
 </pre></div></p></details><details class="danger" open="open"><summary>文本 - drawText</summary><p>Draws text on an image at x/y coordinates.
 <div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">drawText</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">text</span> <span class="p">[,</span> <span class="nx">gravity</span><span class="p">])</span>
-</pre></div></p></details><details class="note"><summary>填充颜色 - fill</summary><p>Specifies the color to use when filling a drawn shape.
+</pre></div></p></details><details class="info"><summary>填充颜色 - fill</summary><p>Specifies the color to use when filling a drawn shape.
 <div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">fill</span><span class="p">(</span><span class="nx">color</span><span class="p">)</span>
-</pre></div></p></details><details class="note"><summary>字体 - font</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">font</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span>
+</pre></div></p></details><details class="info"><summary>字体 - font</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">font</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span>
 </pre></div>
-</details><details class="note"><summary>字体大小 - fontSize</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">fontSize</span><span class="p">(</span><span class="nx">size</span><span class="p">)</span>
+</details><details class="info"><summary>字体大小 - fontSize</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">fontSize</span><span class="p">(</span><span class="nx">size</span><span class="p">)</span>
 </pre></div>
-</details><details class="note"><summary>划 - stroke</summary><p>Specifies the color to use when stroking a drawn shape.
+</details><details class="info"><summary>划 - stroke</summary><p>Specifies the color to use when stroking a drawn shape.
 <div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">stroke</span><span class="p">(</span><span class="nx">color</span> <span class="p">[,</span> <span class="nx">width</span><span class="p">])</span>
-</pre></div></p></details><details class="note"><summary>设置边的宽度 - strokeWidth</summary><p>Specifies the stroke width to use when stroking a drawn shape.
+</pre></div></p></details><details class="info"><summary>设置边的宽度 - strokeWidth</summary><p>Specifies the stroke width to use when stroking a drawn shape.
 <div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">strokeWidth</span><span class="p">(</span><span class="nx">width</span><span class="p">)</span>
-</pre></div></p></details><details class="note"><summary>设置属性 - setDraw</summary><p>Sets drawing properties. property can be either "color" or "matte".
+</pre></div></p></details><details class="info"><summary>设置属性 - setDraw</summary><p>Sets drawing properties. property can be either "color" or "matte".
 <div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s2">&quot;img.png&quot;</span><span class="p">).</span><span class="nx">setDraw</span><span class="p">(</span><span class="nx">property</span><span class="p">,</span> <span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">method</span><span class="p">)</span>
 </pre></div></p></details>
                 

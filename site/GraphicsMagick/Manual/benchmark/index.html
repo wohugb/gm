@@ -722,43 +722,43 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#name" title="NAME" class="md-nav__link">
-    NAME
+  <a href="#_2" title="命名" class="md-nav__link">
+    命名
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#contents" title="Contents" class="md-nav__link">
-    Contents
+  <a href="#_3" title="内容" class="md-nav__link">
+    内容
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#synopsis" title="Synopsis" class="md-nav__link">
-    Synopsis
+  <a href="#_4" title="概要" class="md-nav__link">
+    概要
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#description" title="Description" class="md-nav__link">
-    Description
+  <a href="#_5" title="描述" class="md-nav__link">
+    描述
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#examples" title="Examples" class="md-nav__link">
-    Examples
+  <a href="#_6" title="示例" class="md-nav__link">
+    示例
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#options" title="Options" class="md-nav__link">
-    Options
+  <a href="#_7" title="选项" class="md-nav__link">
+    选项
   </a>
   
 </li>
@@ -802,8 +802,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../conjure/" title="魔术" class="md-nav__link">
-      魔术
+    <a href="../conjure/" title="脚本" class="md-nav__link">
+      脚本
     </a>
   </li>
 
@@ -862,8 +862,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../mogrify/" title="mogrify" class="md-nav__link">
-      mogrify
+    <a href="../mogrify/" title="锐化" class="md-nav__link">
+      锐化
     </a>
   </li>
 
@@ -947,43 +947,43 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#name" title="NAME" class="md-nav__link">
-    NAME
+  <a href="#_2" title="命名" class="md-nav__link">
+    命名
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#contents" title="Contents" class="md-nav__link">
-    Contents
+  <a href="#_3" title="内容" class="md-nav__link">
+    内容
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#synopsis" title="Synopsis" class="md-nav__link">
-    Synopsis
+  <a href="#_4" title="概要" class="md-nav__link">
+    概要
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#description" title="Description" class="md-nav__link">
-    Description
+  <a href="#_5" title="描述" class="md-nav__link">
+    描述
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#examples" title="Examples" class="md-nav__link">
-    Examples
+  <a href="#_6" title="示例" class="md-nav__link">
+    示例
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#options" title="Options" class="md-nav__link">
-    Options
+  <a href="#_7" title="选项" class="md-nav__link">
+    选项
   </a>
   
 </li>
@@ -1003,77 +1003,65 @@
               
                 
                 
-                <h1 id="gm-benchmark">gm benchmark<a class="headerlink" href="#gm-benchmark" title="Permanent link">&para;</a></h1>
-<h2 id="name">NAME<a class="headerlink" href="#name" title="Permanent link">&para;</a></h2>
+                <h1 id="_1">基准测试<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">命名<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>benchmark - benchmark the execution of a gm command</p>
-<h2 id="contents">Contents<a class="headerlink" href="#contents" title="Permanent link">&para;</a></h2>
-<p>Synopsis
-Description
-Examples
-Options</p>
-<h2 id="synopsis">Synopsis<a class="headerlink" href="#synopsis" title="Permanent link">&para;</a></h2>
-<p>gm benchmark [ options ... ] command</p>
-<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
+<h2 id="_3">内容<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>概要</li>
+<li>描述</li>
+<li>示例</li>
+<li>选项</li>
+</ul>
+<h2 id="_4">概要<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span>gm benchmark <span class="o">[</span> options ... <span class="o">]</span> <span class="nb">command</span>
+</pre></div>
+
+<h2 id="_5">描述<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <p>benchmark executes an arbitrary gm utility command (e.g. convert) for one or more loops, and/or a specified execution time, and reports many execution metrics. For builds using OpenMP, a mode is provided to execute the benchmark with an increasing number of threads and provide a report of speedup and multi-thread execution efficiency. If benchmark is used to execute a command without any additional benchmark options, then the command is run once.</p>
-<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
+<h2 id="_6">示例<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <p>To obtain benchmark information for a single execution of a command:</p>
-<p>% gm benchmark convert input.ppm -gaussian 0x1 output.ppm
-  Results: 32 threads 1 iter 6.20s user 0.41s total 2.439 iter/s 0.161 iter/cpu
+<p><div class="codehilite"><pre><span></span>    % gm benchmark convert input.ppm -gaussian 0x1 output.ppm
+    Results: <span class="m">32</span> threads <span class="m">1</span> iter <span class="m">6</span>.20s user <span class="m">0</span>.41s total <span class="m">2</span>.439 iter/s <span class="m">0</span>.161 iter/cpu
+</pre></div>
 To obtain benchmark information from 100 iterations of the command:</p>
-<p>% gm benchmark -iterations 100 convert input.ppm -gaussian 0x1 output.ppm
-  Results: 32 threads 100 iter 625.40s user 31.74s total 3.151 iter/s 0.160 iter/cpu
-To obtain benchmark information by iterating the command until a specified amount of time (in seconds) has been consumed:</p>
-<p>% gm benchmark -duration 30 convert input.ppm -gaussian 0x1 output.ppm
-  Results: 32 threads 91 iter 587.33s user 30.30s total 3.003 iter/s 0.155 iter/cpu
-To obtain a full performance report with an increasing number of threads (1-32 threads, stepping the number of threads by four each time):</p>
-<p>% gm benchmark -duration 3 -stepthreads 4 convert input.ppm -gaussian 0x2 output.ppm
-  Results: 1 threads 1 iter 8.84s user 8.84s total 0.113 iter/s 0.113 iter/cpu 1.00 speedup 1.000 karp-flatt
-  Results: 4 threads 2 iter 18.37s user 4.89s total 0.409 iter/s 0.109 iter/cpu 3.62 speedup 0.035 karp-flatt
-  Results: 8 threads 3 iter 29.81s user 4.09s total 0.733 iter/s 0.101 iter/cpu 6.48 speedup 0.033 karp-flatt
-  Results: 12 threads 3 iter 30.81s user 3.14s total 0.955 iter/s 0.097 iter/cpu 8.45 speedup 0.038 karp-flatt
-  Results: 16 threads 3 iter 35.02s user 3.01s total 0.997 iter/s 0.086 iter/cpu 8.81 speedup 0.054 karp-flatt
-  Results: 20 threads 4 iter 52.92s user 3.53s total 1.133 iter/s 0.076 iter/cpu 10.02 speedup 0.052 karp-flatt
-  Results: 24 threads 4 iter 60.66s user 3.39s total 1.180 iter/s 0.066 iter/cpu 10.43 speedup 0.057 karp-flatt
-  Results: 28 threads 4 iter 73.10s user 3.35s total 1.194 iter/s 0.055 iter/cpu 10.56 speedup 0.061 karp-flatt
-  Results: 32 threads 4 iter 82.10s user 3.09s total 1.294 iter/s 0.049 iter/cpu 11.44 speedup 0.058 karp-flatt
-Here is the interpretation of the output:</p>
-<p>threads - number of threads used.
-iter - number of command iterations executed.
-user - total user time consumed.
-total - total elapsed time consumed.
-iter/s - number of command iterations per second.
-iter/cpu - amount of CPU time consumed per iteration.
-speedup - speedup compared with one thread.
-karp-flatt - Karp-Flatt measure of speedup efficiency.
-Please note that the reported "speedup" is based on the execution time of just one thread. A preliminary warm-up pass is used before timing the first loop in order to ensure that the CPU is brought out of power-saving modes and that system caches are warmed up. Most modern CPUs provide a "turbo" mode where the CPU clock speed is increased (e.g. by a factor of two) when only one or two cores are active. If the CPU grows excessively hot (due to insufficient cooling), then it may dial back its clock rates as a form of thermal management. These factors result in an under-reporting of speedup compared to if "turbo" mode was disabled and the CPU does not need to worry about thermal management. The powertop utility available under Linux and Solaris provides a way to observe CPU core clock rates while a benchmark is running.</p>
-<p>Back to Contents  </p>
-<h2 id="options">Options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span>    % gm benchmark -iterations <span class="m">100</span> convert input.ppm -gaussian 0x1 output.ppm
+    Results: <span class="m">32</span> threads <span class="m">100</span> iter <span class="m">625</span>.40s user <span class="m">31</span>.74s total <span class="m">3</span>.151 iter/s <span class="m">0</span>.160 iter/cpu
+</pre></div>
+
+<p>To obtain benchmark information by iterating the command until a specified amount of time (in seconds) has been consumed:</p>
+<div class="codehilite"><pre><span></span>    % gm benchmark -duration <span class="m">30</span> convert input.ppm -gaussian 0x1 output.ppm
+    Results: <span class="m">32</span> threads <span class="m">91</span> iter <span class="m">587</span>.33s user <span class="m">30</span>.30s total <span class="m">3</span>.003 iter/s <span class="m">0</span>.155 iter/cpu
+</pre></div>
+
+<p>To obtain a full performance report with an increasing number of threads (1-32 threads, stepping the number of threads by four each time):</p>
+<div class="codehilite"><pre><span></span>  % gm benchmark -duration <span class="m">3</span> -stepthreads <span class="m">4</span> convert input.ppm -gaussian 0x2 output.ppm
+  Results: <span class="m">1</span> threads <span class="m">1</span> iter <span class="m">8</span>.84s user <span class="m">8</span>.84s total <span class="m">0</span>.113 iter/s <span class="m">0</span>.113 iter/cpu <span class="m">1</span>.00 speedup <span class="m">1</span>.000 karp-flatt
+  Results: <span class="m">4</span> threads <span class="m">2</span> iter <span class="m">18</span>.37s user <span class="m">4</span>.89s total <span class="m">0</span>.409 iter/s <span class="m">0</span>.109 iter/cpu <span class="m">3</span>.62 speedup <span class="m">0</span>.035 karp-flatt
+  Results: <span class="m">8</span> threads <span class="m">3</span> iter <span class="m">29</span>.81s user <span class="m">4</span>.09s total <span class="m">0</span>.733 iter/s <span class="m">0</span>.101 iter/cpu <span class="m">6</span>.48 speedup <span class="m">0</span>.033 karp-flatt
+  Results: <span class="m">12</span> threads <span class="m">3</span> iter <span class="m">30</span>.81s user <span class="m">3</span>.14s total <span class="m">0</span>.955 iter/s <span class="m">0</span>.097 iter/cpu <span class="m">8</span>.45 speedup <span class="m">0</span>.038 karp-flatt
+  Results: <span class="m">16</span> threads <span class="m">3</span> iter <span class="m">35</span>.02s user <span class="m">3</span>.01s total <span class="m">0</span>.997 iter/s <span class="m">0</span>.086 iter/cpu <span class="m">8</span>.81 speedup <span class="m">0</span>.054 karp-flatt
+  Results: <span class="m">20</span> threads <span class="m">4</span> iter <span class="m">52</span>.92s user <span class="m">3</span>.53s total <span class="m">1</span>.133 iter/s <span class="m">0</span>.076 iter/cpu <span class="m">10</span>.02 speedup <span class="m">0</span>.052 karp-flatt
+  Results: <span class="m">24</span> threads <span class="m">4</span> iter <span class="m">60</span>.66s user <span class="m">3</span>.39s total <span class="m">1</span>.180 iter/s <span class="m">0</span>.066 iter/cpu <span class="m">10</span>.43 speedup <span class="m">0</span>.057 karp-flatt
+  Results: <span class="m">28</span> threads <span class="m">4</span> iter <span class="m">73</span>.10s user <span class="m">3</span>.35s total <span class="m">1</span>.194 iter/s <span class="m">0</span>.055 iter/cpu <span class="m">10</span>.56 speedup <span class="m">0</span>.061 karp-flatt
+  Results: <span class="m">32</span> threads <span class="m">4</span> iter <span class="m">82</span>.10s user <span class="m">3</span>.09s total <span class="m">1</span>.294 iter/s <span class="m">0</span>.049 iter/cpu <span class="m">11</span>.44 speedup <span class="m">0</span>.058 karp-flatt
+</pre></div>
+
+<p>Here is the interpretation of the output:</p>
+<ul>
+<li><code>threads</code> - number of threads used.</li>
+<li><code>iter</code> - number of command iterations executed.</li>
+<li><code>user</code> - total user time consumed.</li>
+<li><code>total</code> - total elapsed time consumed.</li>
+<li><code>iter/s</code> - number of command iterations per second.</li>
+<li><code>iter/cpu</code> - amount of CPU time consumed per iteration.</li>
+<li><code>speedup</code> - speedup compared with one thread.</li>
+<li><code>karp-flatt</code> - Karp-Flatt measure of speedup efficiency.</li>
+</ul>
+<p>Please note that the reported "speedup" is based on the execution time of just one thread. A preliminary warm-up pass is used before timing the first loop in order to ensure that the CPU is brought out of power-saving modes and that system caches are warmed up. Most modern CPUs provide a "turbo" mode where the CPU clock speed is increased (e.g. by a factor of two) when only one or two cores are active. If the CPU grows excessively hot (due to insufficient cooling), then it may dial back its clock rates as a form of thermal management. These factors result in an under-reporting of speedup compared to if "turbo" mode was disabled and the CPU does not need to worry about thermal management. The powertop utility available under Linux and Solaris provides a way to observe CPU core clock rates while a benchmark is running.</p>
+<h2 id="_7">选项<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <p>Options are processed from left to right and must appear before any argument.</p>
-<blockquote>
-<p>-duration duration</p>
-</blockquote>
-<p>duration to run benchmark</p>
-<p>Specify the number of seconds to run the benchmark. The command is executed repeatedly until the specified amount of time has elapsed.</p>
-<blockquote>
-<p>-help</p>
-</blockquote>
-<p>Prints benchmark command help.</p>
-<blockquote>
-<p>-iterations loops</p>
-</blockquote>
-<p>number of command iterations</p>
-<p>Specify the number of iterations to run the benchmark. The command is executed repeatedly until the specified number of iterations has been reached.</p>
-<blockquote>
-<p>-rawcsv</p>
-</blockquote>
-<p>Print results in CSV format</p>
-<p>Print results in a comma-separated value (CSV) format which is easy to parse for plotting or importing into a spreadsheet or database. The values reported are threads, iterations, user_time, and elapsed_time.</p>
-<blockquote>
-<p>-stepthreads step</p>
-</blockquote>
-<p>execute a per-thread benchmark ramp</p>
-<p>Execute a per-thread benchmark ramp, incrementing the number of threads at each step by the specified value. The maximum number of threads is taken from the standard OMP_NUM_THREADS environment variable.
-Back to Contents  </p>
+<details class="info"><summary>-duration duration</summary><p>duration to run benchmark</p><p>Specify the number of seconds to run the benchmark. The command is executed repeatedly until the specified amount of time has elapsed.</p></details><details class="info"><summary>-help</summary><p>Prints benchmark command help.</p></details><details class="info"><summary>-iterations loops</summary><p>number of command iterations</p><p>Specify the number of iterations to run the benchmark. The command is executed repeatedly until the specified number of iterations has been reached.</p></details><details class="info"><summary>-rawcsv</summary><p>Print results in CSV format</p><p>Print results in a comma-separated value (CSV) format which is easy to parse for plotting or importing into a spreadsheet or database. The values reported are threads, iterations, user_time, and elapsed_time.</p></details><details class="info"><summary>-stepthreads step</summary><p>execute a per-thread benchmark ramp</p><p>Execute a per-thread benchmark ramp, incrementing the number of threads at each step by the specified value. The maximum number of threads is taken from the standard OMP_NUM_THREADS environment variable.</p></details>
                 
                   
                 

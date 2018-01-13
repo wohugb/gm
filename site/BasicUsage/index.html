@@ -734,8 +734,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../GraphicsMagick/Manual/conjure/" title="魔术" class="md-nav__link">
-      魔术
+    <a href="../GraphicsMagick/Manual/conjure/" title="脚本" class="md-nav__link">
+      脚本
     </a>
   </li>
 
@@ -794,8 +794,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../GraphicsMagick/Manual/mogrify/" title="mogrify" class="md-nav__link">
-      mogrify
+    <a href="../GraphicsMagick/Manual/mogrify/" title="锐化" class="md-nav__link">
+      锐化
     </a>
   </li>
 
@@ -892,14 +892,14 @@
   <span class="p">,</span> <span class="nx">gm</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;gm&#39;</span><span class="p">);</span>
 </pre></div>
 
-<details class="note" open="open"><summary>调整和删除EXIF配置文件数据</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s1">&#39;/path/to/my/img.jpg&#39;</span><span class="p">)</span>
+<details class="info" open="open"><summary>调整和删除EXIF配置文件数据</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s1">&#39;/path/to/my/img.jpg&#39;</span><span class="p">)</span>
 <span class="p">.</span><span class="nx">resize</span><span class="p">(</span><span class="mi">240</span><span class="p">,</span> <span class="mi">240</span><span class="p">)</span>
 <span class="p">.</span><span class="nx">noProfile</span><span class="p">()</span>
 <span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;/path/to/resize.png&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">err</span><span class="p">)</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;done&#39;</span><span class="p">);</span>
 <span class="p">});</span>
 </pre></div>
-</details><details class="note" open="open"><summary>忽略纵横比</summary><div class="codehilite"><pre><span></span><span class="c1">// some files would not be resized appropriately</span>
+</details><details class="info" open="open"><summary>忽略纵横比</summary><div class="codehilite"><pre><span></span><span class="c1">// some files would not be resized appropriately</span>
 <span class="c1">// http://stackoverflow.com/questions/5870466/imagemagick-incorrect-dimensions</span>
 <span class="c1">// you have two options:</span>
 <span class="c1">// use the &#39;!&#39; flag to ignore aspect ratio</span>
@@ -916,29 +916,29 @@
   <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">err</span><span class="p">)</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;done&#39;</span><span class="p">);</span>
 <span class="p">});</span>
 </pre></div>
-</details><details class="note" open="open"><summary>获取图像的大小</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s1">&#39;/path/to/my/img.jpg&#39;</span><span class="p">)</span>
+</details><details class="info" open="open"><summary>获取图像的大小</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s1">&#39;/path/to/my/img.jpg&#39;</span><span class="p">)</span>
 <span class="p">.</span><span class="nx">size</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">size</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">err</span><span class="p">)</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">size</span><span class="p">.</span><span class="nx">width</span> <span class="o">&gt;</span> <span class="nx">size</span><span class="p">.</span><span class="nx">height</span> <span class="o">?</span> <span class="s1">&#39;wider&#39;</span> <span class="o">:</span> <span class="s1">&#39;taller than you&#39;</span><span class="p">);</span>
 <span class="p">});</span>
 </pre></div>
-</details><details class="note" open="open"><summary>输出所有可用的图像属性</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s1">&#39;/path/to/img.png&#39;</span><span class="p">)</span>
+</details><details class="info" open="open"><summary>输出所有可用的图像属性</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s1">&#39;/path/to/img.png&#39;</span><span class="p">)</span>
 <span class="p">.</span><span class="nx">identify</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">err</span><span class="p">)</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>
 <span class="p">});</span>
 </pre></div>
-</details><details class="note" open="open"><summary>拉出动画GIF的第一帧，并保存为PNG</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s1">&#39;/path/to/animated.gif[0]&#39;</span><span class="p">)</span>
+</details><details class="info" open="open"><summary>拉出动画GIF的第一帧，并保存为PNG</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s1">&#39;/path/to/animated.gif[0]&#39;</span><span class="p">)</span>
 <span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;/path/to/firstframe.png&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;aaw, shucks&#39;</span><span class="p">);</span>
 <span class="p">});</span>
 </pre></div>
-</details><details class="note" open="open"><summary>自动定位图像</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s1">&#39;/path/to/img.jpg&#39;</span><span class="p">)</span>
+</details><details class="info" open="open"><summary>自动定位图像</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s1">&#39;/path/to/img.jpg&#39;</span><span class="p">)</span>
 <span class="p">.</span><span class="nx">autoOrient</span><span class="p">()</span>
 <span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;/path/to/oriented.jpg&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">...</span>
 <span class="p">})</span>
 </pre></div>
-</details><details class="note" open="open"><summary>疯狂的小镇</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s1">&#39;/path/to/my/img.jpg&#39;</span><span class="p">)</span>
+</details><details class="info" open="open"><summary>疯狂的小镇</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s1">&#39;/path/to/my/img.jpg&#39;</span><span class="p">)</span>
 <span class="p">.</span><span class="nx">flip</span><span class="p">()</span>
 <span class="p">.</span><span class="nx">magnify</span><span class="p">()</span>
 <span class="p">.</span><span class="nx">rotate</span><span class="p">(</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="mi">45</span><span class="p">)</span>
@@ -949,7 +949,7 @@
   <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">err</span><span class="p">)</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;crazytown has arrived&#39;</span><span class="p">);</span>
 <span class="p">})</span>
 </pre></div>
-</details><details class="note" open="open"><summary>注释一个图像</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s1">&#39;/path/to/my/img.jpg&#39;</span><span class="p">)</span>
+</details><details class="info" open="open"><summary>注释一个图像</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="s1">&#39;/path/to/my/img.jpg&#39;</span><span class="p">)</span>
 <span class="p">.</span><span class="nx">stroke</span><span class="p">(</span><span class="s2">&quot;#ffffff&quot;</span><span class="p">)</span>
 <span class="p">.</span><span class="nx">drawCircle</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 <span class="p">.</span><span class="nx">font</span><span class="p">(</span><span class="s2">&quot;Helvetica.ttf&quot;</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
@@ -958,7 +958,7 @@
   <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">err</span><span class="p">)</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;done&#39;</span><span class="p">);</span>
 <span class="p">});</span>
 </pre></div>
-</details><details class="note" open="open"><summary>创造一个形象</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="s2">&quot;#ddff99f3&quot;</span><span class="p">)</span>
+</details><details class="info" open="open"><summary>创造一个形象</summary><div class="codehilite"><pre><span></span><span class="nx">gm</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="s2">&quot;#ddff99f3&quot;</span><span class="p">)</span>
 <span class="p">.</span><span class="nx">drawText</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="s2">&quot;from scratch&quot;</span><span class="p">)</span>
 <span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">&quot;/path/to/brandNewImg.jpg&quot;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
   <span class="c1">// ...</span>
